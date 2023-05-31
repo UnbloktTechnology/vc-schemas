@@ -72,7 +72,7 @@
     },
     "revNonce": {
       "type": "integer",
-"description": "testing-a-description",
+      "description": "testing-a-description"
     },
     "version": {
       "type": "integer"
