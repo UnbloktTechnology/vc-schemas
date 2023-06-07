@@ -618,8 +618,7 @@
         "originalData",
         "personalDetails",
         "id"
-      ],
-      "additionalProperties": false
+      ]
     }
   }
 }
