@@ -90,49 +90,10 @@
           "properties": {
             "citizenship": {
               "type": "string"
-            },
-            "documentType": {
-              "type": "string"
-            },
-            "firstName": {
-              "type": "string"
-            },
-            "lastName": {
-              "type": "string"
-            },
-            "gender": {
-              "type": "string"
-            },
-            "addressLine1": {
-              "type": ["string", "null"]
-            },
-            "addressLine2": {
-              "type": ["string", "null"]
-            },
-            "birthday": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "placeOfBirth": {
-              "type": "string"
-            },
-            "countryOfResidence": {
-              "type": "string"
-            },
-            "age": {
-              "type": "string"
             }
           },
           "required": [
-            "citizenship",
-            "documentType",
-            "firstName",
-            "lastName",
-            "gender",
-            "birthday",
-            "placeOfBirth",
-            "countryOfResidence",
-            "age"
+            "citizenship"
           ],
           "additionalProperties": false
         },
