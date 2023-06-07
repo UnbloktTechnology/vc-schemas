@@ -85,6 +85,30 @@
         "journeyId": {
           "type": "string"
         },
+        "amendmentsData": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false
+        },
+        "originalData": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false
+        },
         "personalDetails": {
           "type": "object",
           "properties": {
@@ -142,6 +166,8 @@
       },
       "required": [
         "journeyId",
+        "amendmentsData",
+        "originalData",
         "personalDetails",
         "id"
       ]
