@@ -326,10 +326,234 @@
           "properties": {
             "data": {
               "type": "object"
+            },
+            "authenticateSPResult": {
+              "type": "object",
+              "properties": {
+                "AuthenticationID": { "type": "string" },
+                "Timestamp": { "type": "string", "format": "date-time" },
+                "CustomerRef": { "type": "string" },
+                "ProfileID": { "type": "string" },
+                "ProfileName": { "type": "string" },
+                "ProfileVersion": { "type": "integer" },
+                "ProfileRevision": { "type": "integer" },
+                "ProfileState": { "type": "string" },
+                "ResultCodes": {
+                  "type": "object",
+                  "properties": {
+                    "GlobalItemCheckResultCodes": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Name": { "type": "string" },
+                          "Description": { "type": "string" },
+                          "Comment": {
+                            "type": "object"
+                          },
+                          "Match": {
+                            "type": "object"
+                          },
+                          "Warning": {
+                            "type": "object"
+                          },
+                          "ID": { "type": "integer" },
+                          "Pass": { "type": "string" },
+                          "Address": { "type": "string" },
+                          "Forename": { "type": "string" },
+                          "Surname": { "type": "string" },
+                          "DOB": { "type": "string" },
+                          "Alert": { "type": "string" },
+                          "SanctionsMatches": {
+                            "type": ["object", "string"]
+                          }
+                        },
+                        "required": [
+                          "Name",
+                          "Description",
+                          "ID",
+                          "Pass",
+                          "Address",
+                          "Forename",
+                          "Surname",
+                          "DOB",
+                          "Alert"
+                        ]
+                      }
+                    }
+                  },
+                  "required": ["GlobalItemCheckResultCodes"],
+                  "additionalProperties": false
+                },
+                "Score": { "type": "integer" },
+                "BandText": { "type": "string" },
+                "Country": { "type": "string" }
+              },
+              "required": [
+                "AuthenticationID",
+                "Timestamp",
+                "CustomerRef",
+                "ProfileID",
+                "ProfileName",
+                "ProfileVersion",
+                "ProfileRevision",
+                "ProfileState",
+                "ResultCodes",
+                "Score",
+                "BandText",
+                "Country"
+              ]
+            },
+            "pepIntelligenceResult": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "Fullname": { "type": "string" },
+                  "Aliases": {
+                    "type": "object",
+                    "properties": {
+                      "a:string": {
+                        "type": "array",
+                        "items": { "type": "string" }
+                      }
+                    },
+                    "required": ["a:string"]
+                  },
+                  "SanctionsAddresses": {
+                    "type": "object",
+                    "properties": {
+                      "GlobalSanctionsAddress": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "AddressLine": { "type": "string" },
+                            "City": { "type": "string" },
+                            "Country": { "type": "string" },
+                            "Region": { "type": "string" }
+                          },
+                          "required": [
+                            "AddressLine",
+                            "City",
+                            "Country",
+                            "Region"
+                          ]
+                        }
+                      }
+                    },
+                    "required": ["GlobalSanctionsAddress"]
+                  },
+                  "SanctionsDates": {
+                    "type": "object",
+                    "properties": {
+                      "GlobalSanctionsDate": {
+                        "type": "object",
+                        "properties": {
+                          "DateType": { "type": "string" },
+                          "Day": { "type": "integer" },
+                          "Month": { "type": "integer" },
+                          "Year": { "type": "integer" }
+                        },
+                        "required": ["DateType", "Day", "Month", "Year"]
+                      }
+                    },
+                    "required": ["GlobalSanctionsDate"]
+                  },
+                  "IdentityInformation": { "type": "string" },
+                  "SanctionsPositions": { "type": "string" }
+                },
+                "required": [
+                  "Fullname",
+                  "Aliases",
+                  "SanctionsAddresses",
+                  "SanctionsDates",
+                  "IdentityInformation",
+                  "SanctionsPositions"
+                ]
+              }
+            },
+            "sanctionsEnforcementsResult": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "Fullname": { "type": "string" },
+                  "SanctionsBodies": {
+                    "type": "object",
+                    "properties": {
+                      "a:string": { "type": "integer" }
+                    },
+                    "required": ["a:string"]
+                  },
+                  "Aliases": {
+                    "type": "object",
+                    "properties": {
+                      "a:string": {
+                        "type": "array",
+                        "items": { "type": "string" }
+                      }
+                    },
+                    "required": ["a:string"]
+                  },
+                  "SanctionsAddresses": {
+                    "type": "object",
+                    "properties": {
+                      "GlobalSanctionsAddress": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "AddressLine": { "type": "string" },
+                            "City": { "type": "string" },
+                            "Country": { "type": "string" },
+                            "Region": { "type": "string" }
+                          },
+                          "required": [
+                            "AddressLine",
+                            "City",
+                            "Country",
+                            "Region"
+                          ]
+                        }
+                      }
+                    },
+                    "required": ["GlobalSanctionsAddress"]
+                  },
+                  "SanctionsDates": {
+                    "type": "object",
+                    "properties": {
+                      "GlobalSanctionsDate": {
+                        "type": "object",
+                        "properties": {
+                          "DateType": { "type": "string" },
+                          "Day": { "type": "integer" },
+                          "Month": { "type": "integer" },
+                          "Year": { "type": "integer" }
+                        },
+                        "required": ["DateType", "Day", "Month", "Year"]
+                      }
+                    },
+                    "required": ["GlobalSanctionsDate"]
+                  },
+                  "IdentityInformation": { "type": "string" }
+                },
+                "required": [
+                  "Fullname",
+                  "SanctionsBodies",
+                  "Aliases",
+                  "SanctionsAddresses",
+                  "SanctionsDates",
+                  "IdentityInformation"
+                ]
+              }
             }
           },
           "required": [
-            "data"
+            "data",
+            "authenticateSPResult",
+            "pepIntelligenceResult",
+            "sanctionsEnforcementsResult"
           ],
           "additionalProperties": false
         },
