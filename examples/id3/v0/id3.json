@@ -90,10 +90,38 @@
           "properties": {
             "citizenship": {
               "type": "string"
+            },
+            "documentType": {
+              "type": "string"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "placeOfBirth": {
+              "type": "string"
+            },
+            "countryOfResidence": {
+              "type": "string"
+            },
+            "age": {
+              "type": "string"
             }
           },
           "required": [
-            "citizenship"
+            "citizenship",
+            "documentType",
+            "firstName",
+            "lastName",
+            "gender",
+            "placeOfBirth",
+            "countryOfResidence",
+            "age"
           ],
           "additionalProperties": false
         },
