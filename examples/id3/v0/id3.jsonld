@@ -18,14 +18,6 @@
             "@id": "vocab:journeyId",
             "@type": "xsd:string"
           },
-          "amendmentsData": {
-            "@id": "vocab:amendmentsData",
-            "@type": "@id"
-          },
-          "originalData": {
-            "@id": "vocab:originalData",
-            "@type": "@id"
-          },
           "personalDetails": {
             "@id": "vocab:personalDetails",
             "@type": "@id"

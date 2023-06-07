@@ -85,30 +85,6 @@
         "journeyId": {
           "type": "string"
         },
-        "amendmentsData": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "type": "object"
-            }
-          },
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false
-        },
-        "originalData": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "type": "object"
-            }
-          },
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false
-        },
         "personalDetails": {
           "type": "object",
           "properties": {
@@ -133,10 +109,6 @@
             "addressLine2": {
               "type": ["string", "null"]
             },
-            "birthday": {
-              "type": "string",
-              "format": "date-time"
-            },
             "placeOfBirth": {
               "type": "string"
             },
@@ -153,7 +125,6 @@
             "firstName",
             "lastName",
             "gender",
-            "birthday",
             "placeOfBirth",
             "countryOfResidence",
             "age"
@@ -166,8 +137,6 @@
       },
       "required": [
         "journeyId",
-        "amendmentsData",
-        "originalData",
         "personalDetails",
         "id"
       ],
