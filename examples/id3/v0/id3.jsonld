@@ -17,6 +17,10 @@
           "journeyId": {
             "@id": "vocab:journeyId",
             "@type": "xsd:string"
+          },
+          "personalDetails": {
+            "@id": "vocab:personalDetails",
+            "@type": "@json"
           }
         }
       }
