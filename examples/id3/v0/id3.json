@@ -167,11 +167,157 @@
                 "BandText",
                 "Country"
               ]
+            },
+            "pepIntelligenceResult": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "Fullname": { "type": "string" },
+                  "Aliases": {
+                    "type": "object",
+                    "properties": {
+                      "a:string": {
+                        "type": "array",
+                        "items": { "type": "string" }
+                      }
+                    },
+                    "required": ["a:string"]
+                  },
+                  "SanctionsAddresses": {
+                    "type": "object",
+                    "properties": {
+                      "GlobalSanctionsAddress": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "AddressLine": { "type": "string" },
+                            "City": { "type": "string" },
+                            "Country": { "type": "string" },
+                            "Region": { "type": "string" }
+                          },
+                          "required": [
+                            "AddressLine",
+                            "City",
+                            "Country",
+                            "Region"
+                          ]
+                        }
+                      }
+                    },
+                    "required": ["GlobalSanctionsAddress"]
+                  },
+                  "SanctionsDates": {
+                    "type": "object",
+                    "properties": {
+                      "GlobalSanctionsDate": {
+                        "type": "object",
+                        "properties": {
+                          "DateType": { "type": "string" },
+                          "Day": { "type": "integer" },
+                          "Month": { "type": "integer" },
+                          "Year": { "type": "integer" }
+                        },
+                        "required": ["DateType", "Day", "Month", "Year"]
+                      }
+                    },
+                    "required": ["GlobalSanctionsDate"]
+                  },
+                  "IdentityInformation": { "type": "string" },
+                  "SanctionsPositions": { "type": "string" }
+                },
+                "required": [
+                  "Fullname",
+                  "Aliases",
+                  "SanctionsAddresses",
+                  "SanctionsDates",
+                  "IdentityInformation",
+                  "SanctionsPositions"
+                ]
+              }
+            },
+            "sanctionsEnforcementsResult": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "Fullname": { "type": "string" },
+                  "SanctionsBodies": {
+                    "type": "object",
+                    "properties": {
+                      "a:string": { "type": "integer" }
+                    },
+                    "required": ["a:string"]
+                  },
+                  "Aliases": {
+                    "type": "object",
+                    "properties": {
+                      "a:string": {
+                        "type": "array",
+                        "items": { "type": "string" }
+                      }
+                    },
+                    "required": ["a:string"]
+                  },
+                  "SanctionsAddresses": {
+                    "type": "object",
+                    "properties": {
+                      "GlobalSanctionsAddress": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "AddressLine": { "type": "string" },
+                            "City": { "type": "string" },
+                            "Country": { "type": "string" },
+                            "Region": { "type": "string" }
+                          },
+                          "required": [
+                            "AddressLine",
+                            "City",
+                            "Country",
+                            "Region"
+                          ]
+                        }
+                      }
+                    },
+                    "required": ["GlobalSanctionsAddress"]
+                  },
+                  "SanctionsDates": {
+                    "type": "object",
+                    "properties": {
+                      "GlobalSanctionsDate": {
+                        "type": "object",
+                        "properties": {
+                          "DateType": { "type": "string" },
+                          "Day": { "type": "integer" },
+                          "Month": { "type": "integer" },
+                          "Year": { "type": "integer" }
+                        },
+                        "required": ["DateType", "Day", "Month", "Year"]
+                      }
+                    },
+                    "required": ["GlobalSanctionsDate"]
+                  },
+                  "IdentityInformation": { "type": "string" }
+                },
+                "required": [
+                  "Fullname",
+                  "SanctionsBodies",
+                  "Aliases",
+                  "SanctionsAddresses",
+                  "SanctionsDates",
+                  "IdentityInformation"
+                ]
+              }
             }
           },
           "required": [
             "data",
-            "authenticateSPResult"
+            "authenticateSPResult",
+            "pepIntelligenceResult",
+            "sanctionsEnforcementsResult"
           ],
           "additionalProperties": false
         },
