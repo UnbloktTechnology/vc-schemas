@@ -90,10 +90,88 @@
           "properties": {
             "data": {
               "type": "object"
+            },
+            "authenticateSPResult": {
+              "type": "object",
+              "properties": {
+                "AuthenticationID": { "type": "string" },
+                "Timestamp": { "type": "string", "format": "date-time" },
+                "CustomerRef": { "type": "string" },
+                "ProfileID": { "type": "string" },
+                "ProfileName": { "type": "string" },
+                "ProfileVersion": { "type": "integer" },
+                "ProfileRevision": { "type": "integer" },
+                "ProfileState": { "type": "string" },
+                "ResultCodes": {
+                  "type": "object",
+                  "properties": {
+                    "GlobalItemCheckResultCodes": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Name": { "type": "string" },
+                          "Description": { "type": "string" },
+                          "Comment": {
+                            "type": "object"
+                          },
+                          "Match": {
+                            "type": "object"
+                          },
+                          "Warning": {
+                            "type": "object"
+                          },
+                          "ID": { "type": "integer" },
+                          "Pass": { "type": "string" },
+                          "Address": { "type": "string" },
+                          "Forename": { "type": "string" },
+                          "Surname": { "type": "string" },
+                          "DOB": { "type": "string" },
+                          "Alert": { "type": "string" },
+                          "SanctionsMatches": {
+                            "type": ["object", "string"]
+                          }
+                        },
+                        "required": [
+                          "Name",
+                          "Description",
+                          "ID",
+                          "Pass",
+                          "Address",
+                          "Forename",
+                          "Surname",
+                          "DOB",
+                          "Alert"
+                        ]
+                      }
+                    }
+                  },
+                  "required": ["GlobalItemCheckResultCodes"],
+                  "additionalProperties": false
+                },
+                "Score": { "type": "integer" },
+                "BandText": { "type": "string" },
+                "Country": { "type": "string" }
+              },
+              "required": [
+                "AuthenticationID",
+                "Timestamp",
+                "CustomerRef",
+                "ProfileID",
+                "ProfileName",
+                "ProfileVersion",
+                "ProfileRevision",
+                "ProfileState",
+                "ResultCodes",
+                "Score",
+                "BandText",
+                "Country"
+              ]
             }
           },
           "required": [
-            "data"
+            "data",
+            "authenticateSPResult"
           ],
           "additionalProperties": false
         },
