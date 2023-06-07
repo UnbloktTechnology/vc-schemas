@@ -20,15 +20,15 @@
           },
           "amendmentsData": {
             "@id": "vocab:amendmentsData",
-            "@type": "@id"
+            "@type": "@json"
           },
           "originalData": {
             "@id": "vocab:originalData",
-            "@type": "@id"
+            "@type": "@json"
           },
           "personalDetails": {
             "@id": "vocab:personalDetails",
-            "@type": "@id"
+            "@type": "@json"
           }
         }
       }
