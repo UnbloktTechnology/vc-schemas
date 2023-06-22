@@ -18,7 +18,7 @@ Base64 encoded image of the proof of residence.
 
 Document name of the proof of residence.
 
-`selfie.jpg`
+`passport.jpg`
 
 # type
 
