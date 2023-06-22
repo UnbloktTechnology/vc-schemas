@@ -6,7 +6,7 @@
       "id": "@id",
       "type": "@type",
       "IDScanSelfieV1": {
-        "@id": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/idScanSelfie/v1/idScanSelfie.jsonld#IdScanSelfieV1",
+        "@id": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/idScanSelfie/v1/idScanSelfie.jsonld#IDScanSelfieV1",
         "@context": {
           "@version": 1.1,
           "@protected": true,
