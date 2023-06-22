@@ -282,7 +282,7 @@
                           "Month": { "type": "integer" },
                           "Year": { "type": "integer" }
                         },
-                        "required": ["DateType", "Year"]
+                        "required": ["DateType"]
                       }
                     },
                     "required": ["GlobalSanctionsDate"]
@@ -334,7 +334,10 @@
                   "SanctionsBodies": {
                     "type": "object",
                     "properties": {
-                      "a:string": { "type": "integer" }
+                      "a:string": {
+                        "type": "array",
+                        "items": { "type": "integer" }
+                      }
                     },
                     "required": ["a:string"]
                   },
@@ -383,7 +386,7 @@
                           "Month": { "type": "integer" },
                           "Year": { "type": "integer" }
                         },
-                        "required": ["DateType", "Year"]
+                        "required": ["DateType"]
                       }
                     },
                     "required": ["GlobalSanctionsDate"]
@@ -573,7 +576,7 @@
                           "Month": { "type": "integer" },
                           "Year": { "type": "integer" }
                         },
-                        "required": ["DateType", "Year"]
+                        "required": ["DateType"]
                       }
                     },
                     "required": ["GlobalSanctionsDate"]
@@ -625,7 +628,10 @@
                   "SanctionsBodies": {
                     "type": "object",
                     "properties": {
-                      "a:string": { "type": "integer" }
+                      "a:string": {
+                        "type": "array",
+                        "items": { "type": "integer" }
+                      }
                     },
                     "required": ["a:string"]
                   },
@@ -674,7 +680,7 @@
                           "Month": { "type": "integer" },
                           "Year": { "type": "integer" }
                         },
-                        "required": ["DateType", "Year"]
+                        "required": ["DateType"]
                       }
                     },
                     "required": ["GlobalSanctionsDate"]
