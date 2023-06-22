@@ -288,7 +288,32 @@
                     "required": ["GlobalSanctionsDate"]
                   },
                   "IdentityInformation": { "type": "string" },
-                  "SanctionsPositions": { "type": "string" }
+                  "SanctionsPositions": {
+                    "type": "object",
+                    "properties": {
+                      "GlobalSanctionsPosition": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "Position": {
+                              "type": "string"
+                            },
+                            "Country": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "Position",
+                            "Country"
+                          ]
+                        }
+                      }
+                    },
+                    "required": [
+                      "GlobalSanctionsPosition"
+                    ]
+                  }
                 },
                 "required": [
                   "Fullname",
@@ -554,7 +579,32 @@
                     "required": ["GlobalSanctionsDate"]
                   },
                   "IdentityInformation": { "type": "string" },
-                  "SanctionsPositions": { "type": "string" }
+                  "SanctionsPositions": {
+                    "type": "object",
+                    "properties": {
+                      "GlobalSanctionsPosition": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "Position": {
+                              "type": "string"
+                            },
+                            "Country": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "Position",
+                            "Country"
+                          ]
+                        }
+                      }
+                    },
+                    "required": [
+                      "GlobalSanctionsPosition"
+                    ]
+                  }
                 },
                 "required": [
                   "Fullname",
