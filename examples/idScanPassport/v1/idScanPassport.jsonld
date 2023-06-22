@@ -5,7 +5,7 @@
       "@protected": true,
       "id": "@id",
       "type": "@type",
-      "ProofOfResidenceV6": {
+      "IDScanPassportV1": {
         "@id": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/idScanPassport/v1/idScanPassport.jsonld#idScanPassportV1",
         "@context": {
           "@version": 1.1,
