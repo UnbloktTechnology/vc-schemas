@@ -5,14 +5,14 @@
       "@protected": true,
       "id": "@id",
       "type": "@type",
-      "IDScan": {
-        "@id": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/idscan/v1/idscan.jsonld#IDScan",
+      "IDScanV2": {
+        "@id": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/idscan/V2/idscan.jsonld#IDScan",
         "@context": {
           "@version": 1.1,
           "@protected": true,
           "id": "@id",
           "type": "@type",
-          "vocab": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/idscan/v1/idscan-vocab.md#",
+          "vocab": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/idscan/V2/idscan-vocab.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
           "journeyId": {
             "@id": "vocab:journeyId",
