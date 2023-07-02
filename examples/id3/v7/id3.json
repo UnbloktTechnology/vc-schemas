@@ -354,11 +354,11 @@
                   "type": "string"
                 },
                 "addressLine1": {
-                  "type": ["string"],
+                  "type": "string",
                   "nullable": true
                 },
                 "addressLine2": {
-                  "type": ["string"],
+                  "type": "string",
                   "nullable": true
                 },
                 "birthday": {
@@ -571,11 +571,11 @@
               "type": "string"
             },
             "addressLine1": {
-              "type": ["string"],
+              "type": "string",
               "nullable": true
             },
             "addressLine2": {
-              "type": ["string"],
+              "type": "string",
               "nullable": true
             },
             "birthday": {
