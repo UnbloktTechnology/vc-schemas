@@ -179,7 +179,7 @@
                                 "items": {
                                   "type": "object",
                                   "properties": {
-                                    "Description": { "type": "object" },
+                                    "Description": { "type": "string" },
                                     "Code": { "type": "integer" }
                                   }
                                 }
@@ -194,7 +194,7 @@
                                 "items": {
                                   "type": "object",
                                   "properties": {
-                                    "Description": { "type": "object" },
+                                    "Description": { "type": "string" },
                                     "Code": { "type": "integer" }
                                   }
                                 }
@@ -209,7 +209,7 @@
                                 "items": {
                                   "type": "object",
                                   "properties": {
-                                    "Description": { "type": "object" },
+                                    "Description": { "type": "string" },
                                     "Code": { "type": "integer" }
                                   }
                                 }
@@ -224,7 +224,7 @@
                                 "items": {
                                   "type": "object",
                                   "properties": {
-                                    "Description": { "type": "object" },
+                                    "Description": { "type": "string" },
                                     "Code": { "type": "integer" }
                                   }
                                 }
