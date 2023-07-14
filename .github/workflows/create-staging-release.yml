@@ -1,0 +1,52 @@
+name: Create Staging Release
+on:
+  workflow_dispatch:
+    inputs:
+      versionName:
+        description: 'Name of version (ie dd.mm.yy)'
+        required: true
+jobs:
+  create_release_branch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          token: ${{ secrets.NPM_TOKEN }}
+          ref: development
+      - name: Create release branch
+        run: git checkout -b dev-to-staging-release/${{ github.event.inputs.versionName }}-rc
+      - name: Initialize mandatory git config
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email noreply@github.com
+      - name: Update branch in schema path files
+        run: |
+          # Replace "/development/" with "/staging/" in all schemas
+          find examples/**/*.json -type f -exec sed -i '' -e 's/\/development\//\/staging\//g' {} +
+          find examples/**/*.jsonld -type f -exec sed -i '' -e 's/\/development\//\/staging\//g' {} +
+      - name: Prepare commmit
+        run: |
+          git add .
+          git commit -m "Change development to staging branch in schema path files"
+      - name: Push new branch
+        run: git push origin dev-to-staging-release/${{ github.event.inputs.versionName }}-rc
+      - name: Create and push a new tag release
+        run: |
+          git tag -a release/${{ github.event.inputs.versionName }}-rc -m "Release ${{ github.event.inputs.versionName }}-rc"
+          git push origin release/${{ github.event.inputs.versionName }}-rc
+      - name: Create pull request into staging branch
+        uses: thomaseizinger/create-pull-request@1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          head: dev-to-staging-release/${{ github.event.inputs.versionName }}-rc
+          base: staging
+          title: release/${{ github.event.inputs.versionName }}-rc into staging
+          reviewers: ${{ github.event.issue.user.login }}
+          body: |
+            Hi!
+            This PR was created in response workflow running.
+            I've updated the version name and code commit: ${{ steps.make-commit.outputs.commit }}.
