@@ -8,6 +8,12 @@ Unique identifier of the journey which the proof of residence is associated with
 
 `17101e7c-d0d5-494c-a2ac-e2530261930f`
 
+# country
+
+Country of residence.
+
+`DEU`
+
 # base64
 
 Base64 encoded image of the proof of residence.

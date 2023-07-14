@@ -90,6 +90,11 @@
           "description": "The ID of the journey that this credential is associated with",
           "type": "string"
         },
+        "country": {
+          "title": "Country",
+          "description": "The country of residence",
+          "type": "string"
+        },
         "base64": {
           "title": "Base64",
           "description": "Base64 encoded image of the proof of residence",
@@ -110,6 +115,7 @@
       "required": [
         "id",
         "journeyId",
+        "country",
         "base64",
         "name",
         "documentType"

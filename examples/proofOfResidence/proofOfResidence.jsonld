@@ -19,6 +19,10 @@
             "@id": "vocab:journeyId",
             "@type": "xsd:string"
           },
+          "country": {
+            "@id": "vocab:country",
+            "@type": "xsd:string"
+          },
           "base64": {
             "@id": "vocab:base64",
             "@type": "xsd:string"
