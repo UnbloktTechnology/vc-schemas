@@ -6,13 +6,13 @@
       "id": "@id",
       "type": "@type",
       "ID3-v8": {
-        "@id": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/id3/v7/id3.jsonld#ID3-1",
+        "@id": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/id3/v8/id3.jsonld#ID3-v8",
         "@context": {
           "@version": 1.1,
           "@protected": true,
           "id": "@id",
           "type": "@type",
-          "vocab": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/id3/v7/id3.md#",
+          "vocab": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/id3/v8/id3.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
           "journeyId": {
             "@id": "vocab:journeyId",

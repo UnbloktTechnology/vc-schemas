@@ -6,13 +6,13 @@
       "id": "@id",
       "type": "@type",
       "IDScanSelfieV2": {
-        "@id": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/idScanSelfie/v1/idScanSelfie.jsonld#IDScanSelfieV1",
+        "@id": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/idScanSelfie/v2/idScanSelfie.jsonld#IDScanSelfieV2",
         "@context": {
           "@version": 1.1,
           "@protected": true,
           "id": "@id",
           "type": "@type",
-          "vocab": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/idScanSelfie/v1/idScanSelfie.md#",
+          "vocab": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/idScanSelfie/v2/idScanSelfie.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
 
           "journeyId": {

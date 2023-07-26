@@ -6,13 +6,13 @@
       "id": "@id",
       "type": "@type",
       "IDScanPassportV2": {
-        "@id": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/idScanPassport/v1/idScanPassport.jsonld#IDScanPassportV1",
+        "@id": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/idScanPassport/v2/idScanPassport.jsonld#IDScanPassportV2",
         "@context": {
           "@version": 1.1,
           "@protected": true,
           "id": "@id",
           "type": "@type",
-          "vocab": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/idScanPassport/v1/idScanPassport.md#",
+          "vocab": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/examples/idScanPassport/v2/idScanPassport.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
 
           "journeyId": {
