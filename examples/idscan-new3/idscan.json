@@ -1,0 +1,321 @@
+{
+  "$metadata": {
+    "uris": {
+      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/kris-test/examples/idscan-new3/idscan.jsonld"
+    },
+    "type": "IDScan",
+    "version": "1.3"
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "IDscan schema",
+  "title": "IDScan",
+  "properties": {
+    "credentialSubject": {
+      "description": "Stores the data of the credential",
+      "title": "Credential subject",
+      "type": "object",
+      "required": ["journeyId", "id"],
+      "properties": {
+        "highLevelResult": {
+          "description": "High level result of the kyc check",
+          "title": "High Level Result",
+          "type": "string"
+        },
+        "journeyId": {
+          "description": "Journey ID of when credential was generated",
+          "title": "Journey ID",
+          "type": "string"
+        },
+        "id": {
+          "description": "Stores the DID of the subject that owns the credential",
+          "title": "Credential subject ID",
+          "format": "uri",
+          "type": "string"
+        },
+        "firstName": {
+          "description": "First name of the credential subject",
+          "title": "First Name",
+          "type": "string",
+          "nullable": true
+        },
+        "middleName": {
+          "description": "Middle name of the credential subject",
+          "title": "Middle Name",
+          "type": "string",
+          "nullable": true
+        },
+        "lastName": {
+          "description": "Last name of the credential subject",
+          "title": "Last Name",
+          "type": "string",
+          "nullable": true
+        },
+        "gender": {
+          "description": "Gender of the credential subject",
+          "title": "Gender",
+          "type": "string",
+          "nullable": true
+        },
+        "age": {
+          "description": "Age of the credential subject",
+          "title": "Age",
+          "type": "number",
+          "nullable": true
+        },
+        "citizenship": {
+          "description": "Citizenship status of the credential subject",
+          "title": "Citizenship",
+          "type": "string",
+          "nullable": true
+        },
+        "documentCategory": {
+          "description": "Category of the document provided by the credential subject",
+          "title": "Document Category",
+          "type": "string",
+          "nullable": true
+        },
+        "documentName": {
+          "description": "Name of the document provided by the credential subject",
+          "title": "Document Name",
+          "type": "string",
+          "nullable": true
+        },
+        "documentSide": {
+          "description": "Side of the document provided by the credential subject",
+          "title": "Document Side",
+          "type": "string",
+          "nullable": true
+        },
+        "documentType": {
+          "description": "Type of the document provided by the credential subject",
+          "title": "Document Type",
+          "type": "string",
+          "nullable": true
+        },
+        "entryDate": {
+          "description": "Entry date associated with the credential",
+          "title": "Entry Date",
+          "type": "string",
+          "format": "date",
+          "nullable": true
+        },
+        "entryTime": {
+          "description": "Entry time associated with the credential",
+          "title": "Entry Time",
+          "type": "string",
+          "nullable": true
+        },
+        "fullName": {
+          "description": "Full name of the credential subject",
+          "title": "Full Name",
+          "type": "string",
+          "nullable": true
+        },
+        "addressLine1": {
+          "description": "First line of the address of the credential subject",
+          "title": "Address Line 1",
+          "type": "string",
+          "nullable": true
+        },
+        "addressLine2": {
+          "description": "Second line of the address of the credential subject",
+          "title": "Address Line 2",
+          "type": "string",
+          "nullable": true
+        },
+        "birthDate": {
+          "description": "Date of birth of the credential subject",
+          "title": "Birth Date",
+          "type": "string",
+          "format": "date",
+          "nullable": true
+        },
+        "birthPlace": {
+          "description": "Place of birth of the credential subject",
+          "title": "Birth Place",
+          "type": "string",
+          "nullable": true
+        },
+        "highLevelResultDetails": {
+          "description": "Detailed results of the high level KYC check",
+          "title": "High Level Result Details",
+          "type": "object",
+          "nullable": true,
+          "properties": {
+            "documentOverallValidation": {
+              "description": "Overall validation status of the document",
+              "title": "Document Overall Validation",
+              "type": "string"
+            },
+            "documentBlockingPolicy": {
+              "description": "Blocking policy of the document",
+              "title": "Document Blocking Policy",
+              "type": "string"
+            },
+            "documentExpiry": {
+              "description": "Expiry status of the document",
+              "title": "Document Expiry",
+              "type": "string"
+            },
+            "documentSupport": {
+              "description": "Support status of the document",
+              "title": "Document Support",
+              "type": "string"
+            },
+            "documentValidation": {
+              "description": "Validation status of the document",
+              "title": "Document Validation",
+              "type": "string"
+            },
+            "faceMatchValidation": {
+              "description": "Validation status of face match",
+              "title": "Face Match Validation",
+              "type": "string"
+            },
+            "accumulativeLivenessResult": {
+              "description": "Result of accumulative liveness check",
+              "title": "Accumulative Liveness Result",
+              "type": "string"
+            }
+          }
+        },
+        "faceMatchScore": {
+          "description": "Score for the face match validation",
+          "title": "Face Match Score",
+          "type": "string",
+          "nullable": true
+        },
+        "qualityCheckDetails": {
+          "description": "Details of quality checks performed",
+          "title": "Quality Check Details",
+          "type": "array",
+          "nullable": true,
+          "items": {
+            "description": "Quality check item details",
+            "title": "Quality Check Item",
+            "type": "object",
+            "properties": {
+              "id": {
+                "description": "ID of the quality check item",
+                "title": "Quality Check Item ID",
+                "type": "string"
+              },
+              "title": {
+                "description": "Title of the quality check item",
+                "title": "Quality Check Item Title",
+                "type": "string"
+              },
+              "description": {
+                "description": "Description of the quality check item",
+                "title": "Quality Check Item Description",
+                "type": "string"
+              },
+              "state": {
+                "description": "State of the quality check item",
+                "title": "Quality Check Item State",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "validationDetails": {
+          "description": "Details of the validation performed",
+          "title": "Validation Details",
+          "type": "array",
+          "nullable": true,
+          "items": {
+            "description": "Details of a specific validation item",
+            "title": "Validation Item",
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "Name of the validation item",
+                "title": "Validation Item Name",
+                "type": "string"
+              },
+              "description": {
+                "description": "Detailed description of the validation item",
+                "title": "Validation Item Description",
+                "type": "string"
+              },
+              "result": {
+                "description": "Result code of the validation",
+                "title": "Validation Result Code",
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "@context": {
+      "type": [
+        "string",
+        "array",
+        "object"
+      ]
+    },
+    "expirationDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "issuanceDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "issuer": {
+      "type": [
+        "string",
+        "object"
+      ],
+      "format": "uri",
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "type": {
+      "type": [
+        "string",
+        "array"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "credentialSchema": {
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "credentialSubject",
+    "@context",
+    "id",
+    "issuanceDate",
+    "issuer",
+    "type",
+    "credentialSchema"
+  ],
+  "type": "object"
+}
