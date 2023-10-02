@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/add-country-enums-where-applicable/polygon-id/proofOfResidence2/proofOfResidence.jsonld"
     },
     "type": "ProofOfResidence",
-    "version": "2.3.2"
+    "version": "2.3.3"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A proof of residence credential",
@@ -282,7 +282,7 @@
           "title": "Country",
           "description": "The country of residence - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
           "type": "string",
-          "$ref": "#/definitions/CountryCodes"
+          "$ref": "#/definitions/CountryCodes/enum"
         },
         "base64": {
           "title": "Base64",
