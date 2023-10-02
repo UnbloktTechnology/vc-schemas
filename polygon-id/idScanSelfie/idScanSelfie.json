@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/idScanSelfie/idScanSelfie.jsonld"
     },
     "type": "IDScanSelfie",
-    "version": "2.4.1"
+    "version": "2.4.2"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "IDScanSelfie schema",
@@ -38,7 +38,7 @@
           "title": "Type",
           "description": "Type of the document (e.g. image/jpeg, image/png)",
           "type": "string",
-          "enum": ["image/jpeg", "image/png"]
+          "enum": ["image/jpeg", "image/jpg", "image/png"]
         }
       },
       "required": ["id", "journeyId", "base64", "name", "documentType"]
