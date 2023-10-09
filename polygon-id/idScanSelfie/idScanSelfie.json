@@ -26,8 +26,7 @@
         "base64": {
           "title": "Base64",
           "description": "Base64 encoded image of the selfie image",
-          "type": "string",
-          "format": "base64"
+          "type": "string"
         },
         "name": {
           "title": "Name",

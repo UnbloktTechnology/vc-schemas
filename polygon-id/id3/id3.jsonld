@@ -9,7 +9,7 @@
         "@context":{
           "@propagate":true,
           "@protected":true,
-          "polygon-vocab":"urn:uuid:58acdc49-1a7d-45ff-bf8d-67c55831453b#",
+          "polygon-vocab": "urn:uuid:8dda1a9e-c83a-467b-90e4-0756b9402bea#",
           "xsd":"http://www.w3.org/2001/XMLSchema#",
           "journeyId":{
             "@id":"polygon-vocab:journeyId",
@@ -28,7 +28,7 @@
             "@type":"@json"
           }
         },
-        "@id":"urn:uuid:362d5804-a195-4549-b15b-edb5ef50d203"
+        "@id": "urn:uuid:0ee94577-ab8c-41e7-b6e9-5eb76e371f24"
       }
     }
   ]
