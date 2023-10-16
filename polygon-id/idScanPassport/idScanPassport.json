@@ -19,8 +19,8 @@
         "id": {
           "description": "Stores the DID of the subject that owns the credential",
           "title": "Credential subject ID",
-          "format": "uri",
-          "type": "string"
+          "type": "string",
+          "pattern": "^did:polygon:(mumbai|main):[0-9a-zA-Z]+$"
         },
         "journeyId": {
           "title": "Journey ID",

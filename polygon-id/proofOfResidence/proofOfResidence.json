@@ -16,7 +16,10 @@
       "type": "object",
       "properties": {
         "id": {
-          "type": "string"
+          "description": "Stores the DID of the subject that owns the credential",
+          "title": "Credential subject ID",
+          "type": "string",
+          "pattern": "^did:polygon:(mumbai|main):[0-9a-zA-Z]+$"
         },
         "journeyId": {
           "title": "Journey ID",
