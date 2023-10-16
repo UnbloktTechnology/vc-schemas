@@ -6,6 +6,10 @@ all
   id: regex for DID
     "type": "string",
     "pattern": "^did:polygon:(mumbai|main):[0-9a-zA-Z]+$"
+
+    or maybe it should just be a "uri"
+    
+
   journeyId
     "type": "string",
     "format: "uuid"
