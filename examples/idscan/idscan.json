@@ -109,7 +109,7 @@
           "nullable": true
         },
         "age": {
-          "type": "number",
+          "type": "integer",
           "nullable": true
         },
         "citizenship": {
@@ -237,10 +237,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "journeyId",
-        "id"
-      ]
+      "required": ["journeyId", "id"]
     }
   }
 }

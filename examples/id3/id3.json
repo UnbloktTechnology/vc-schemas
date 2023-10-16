@@ -127,7 +127,7 @@
                   "type": "string"
                 },
                 "age": {
-                  "type": "string"
+                  "type": "integer"
                 },
                 "city": {
                   "type": "string"
@@ -249,7 +249,7 @@
                                   "type": "object",
                                   "properties": {
                                     "SanctionID": {
-                                      "type": [ "integer", "string" ]
+                                      "type": ["integer", "string"]
                                     },
                                     "Url": { "type": "string" },
                                     "Rank": { "type": "integer" },
@@ -452,7 +452,7 @@
                   "format": "date"
                 },
                 "age": {
-                  "type": "string"
+                  "type": "integer"
                 }
               }
             },
@@ -675,7 +675,7 @@
               "type": "string"
             },
             "age": {
-              "type": "string"
+              "type": "integer"
             },
             "city": {
               "type": "string"
