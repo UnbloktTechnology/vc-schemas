@@ -22,10 +22,17 @@
         "id"
       ],
       "properties": {
+        "id": {
+          "description": "Stores the DID of the subject that owns the credential",
+          "title": "Credential subject ID",
+          "type": "string",
+          "pattern": "^did:polygon:(mumbai|main):[0-9a-zA-Z]+$"
+        },
         "journeyId": {
           "description": "Journey ID of when credential was generated",
           "title": "Journey ID",
-          "type": "string"
+          "type": "string",
+          "format": "uuid"
         },
         "amendmentsData": {
           "type": "object",
@@ -2407,12 +2414,6 @@
               "type": "string"
             }
           }
-        },
-        "id": {
-          "description": "Stores the DID of the subject that owns the credential",
-          "title": "Credential subject ID",
-          "type": "string",
-          "pattern": "^did:polygon:(mumbai|main):[0-9a-zA-Z]+$"
         }
       }
     },

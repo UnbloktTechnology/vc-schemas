@@ -24,7 +24,8 @@
         "journeyId": {
           "title": "Journey ID",
           "description": "The ID of the journey that this credential is associated with",
-          "type": "string"
+          "type": "string",
+          "format": "uuid"
         },
         "base64": {
           "title": "Base64",
