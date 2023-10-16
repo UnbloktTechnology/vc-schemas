@@ -1,0 +1,141 @@
+* Check test data and keep data there consistent with proper type.
+* We are inconsistent with regards to lowerCamelCase  versus CapitalizedCamelCase.
+
+
+all
+  id: regex for DID
+    "type": "string",
+    "pattern": "^did:polygon:(mumbai|main):[0-9a-zA-Z]+$"
+  journeyId
+    "type": "string",
+    "format: "uuid"
+
+idscanPassport, idscanSelfie, proofOfResidence
+    documentType: "image/jpeg" | "image/png" |??
+    base64: {
+            "type": "string",
+            "media": {
+                "binaryEncoding": "base64",
+                "type": ["image/png", "image/jpeg"],
+            }
+      }
+
+    note that with base 64 defined this way, we no longer would need a document type.
+    question - do we want any of the following types:
+
+      "image/gif": Used for Graphics Interchange Format (GIF) images.
+      "image/bmp": Used for Bitmap (BMP) images.
+      "image/webp": Used for WebP images, a modern image format developed by Google.
+      "image/svg+xml": Used for Scalable Vector Graphics (SVG) images.
+
+proofOfResidence
+  country 
+
+idscan  
+  age (number -> integer, "minimum": 0)
+  documentCategory: "Passport" | ??
+  documentSide "Front" | "Back"
+  documentType --> which ones do we want to allow?
+    | "Agents License"
+    | "Driving License"
+    | "Electoral Card"
+    | "Foreigner Identification Card"
+    | "Health Card"
+    | "Job License"
+    | "Membership Identification Card"
+    | "Military Identification Card"
+    | "National Identification Card"
+    | "Passport"
+    | "Proof of Age Card"
+    | "Travel Permit"
+    | "Visa"
+    | "Weapons Licence"
+
+
+  entryTime?? -- currently string -- should have format Time which will look like:  "23:53:40.630". miliseconds optional
+    "format": "time"
+  gender ?
+  highLevelResult: 
+    | "Refer"
+    | "NotAccepted"
+    | "Notsupported"
+    | "Passed"
+    | "Refer"
+    | "Undefined"
+
+  ProcessedDocuments [  (this array appears to be missing from schema??)
+    isValidated
+      | "true" 
+      | "false"
+      | "undetermined"
+    ScanDateTime
+      "format": "date-time"
+    DigitalTamperingValidator: "Passed" | "Failed"
+    FaceMatchConfidenceScore: type: "number" (currently a string) minimum 0 maximum 1
+  ]
+  DocumentImages [
+    url: 
+      string
+      format: "uri"
+  ]
+  LastDecision 
+    DecisionDateTime
+      format: "date-time"
+    DecisionId: 
+      format: "uuid"
+
+
+  highLevelResultDetails
+    documentOverallValidation: "Passed" | "Failed" | ???
+    documentBlockingPolicy
+    documentExpiry
+    documentSupport
+    documentValidation
+    faceMatchValidation
+    accumulativeLivenessResult
+
+id3.credentialSubject
+  amendmentsData, originalData  (both of these)
+    data
+      citizenship
+      countryOfResidence
+      documentType (use list from above)
+    authenticateSPResult
+      ResultCodes
+        GlobalItemCheckResultCodes
+          DOB  ("No Match" | ???)
+      Country
+       ProfileState: "Effective" | ???
+    pepIntelligenceResult [
+      SanctionsAddresses [
+        GlobalSanctionsAddress [
+          GlobalSanctionsAddress [
+            Country
+          ]
+        ]
+      ]
+      SanctionsPositions
+        GlobalSanctionsPosition [
+          Country
+      ]
+    ]
+    sanctionsEnforcementsResult [
+        SanctionsAddresses [
+        GlobalSanctionsAddress [
+          GlobalSanctionsAddress [
+            Country
+          ]
+        ]
+      ]
+    ]
+
+
+  personalDetails
+    citizenship
+    countryOfResidence
+    documentType (documentType)
+  
+
+
+
+
