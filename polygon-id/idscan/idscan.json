@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/fix/schema-ids/polygon-id/idscan/idscan.jsonld"
+      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/narrow-types/polygon-id/idscan/idscan.jsonld"
     },
     "type": "IDScan",
-    "version": "2.4.5-narrow-ids"
+    "version": "2.4.5-narrow-types"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDscan schema",
@@ -56,7 +56,9 @@
         "age": {
           "description": "Age of the credential subject",
           "title": "Age",
-          "type": "number"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 125
         },
         "citizenship": {
           "description": "Citizenship status of the credential subject - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
