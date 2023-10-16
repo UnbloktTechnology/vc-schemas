@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/fix/schema-ids/polygon-id/idscan/idscan.jsonld"
     },
     "type": "IDScan",
-    "version": "2.4.5"
+    "version": "2.4.5-narrow-ids"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDscan schema",
@@ -20,7 +20,7 @@
           "description": "Stores the DID of the subject that owns the credential",
           "title": "Credential subject ID",
           "type": "string",
-          "pattern": "^did:polygon:(mumbai|main):[0-9a-zA-Z]+$"
+          "pattern": "^did:polygon:(mumbai|main):[1-9A-HJ-NP-Za-km-z]+$"
         },
         "journeyId": {
           "description": "Journey ID of when credential was generated",
