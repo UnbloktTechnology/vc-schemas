@@ -55,7 +55,9 @@
         "age": {
           "description": "Age of the credential subject",
           "title": "Age",
-          "type": "number"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 150
         },
         "citizenship": {
           "description": "Citizenship status of the credential subject - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",

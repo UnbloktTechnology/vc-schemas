@@ -591,7 +591,9 @@
                 "age": {
                   "title": "Age",
                   "description": "Age of the credential subject",
-                  "type": "string"
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 150
                 },
                 "city": {
                   "title": "City",
@@ -1569,7 +1571,9 @@
                 "age": {
                   "title": "Age",
                   "description": "Age of the credential subject",
-                  "type": "string"
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 150
                 }
               }
             },
@@ -2131,7 +2135,9 @@
               "description": "ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)"
             },
             "age": {
-              "type": "string"
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 150
             },
             "city": {
               "type": "string"

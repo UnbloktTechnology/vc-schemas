@@ -86,7 +86,7 @@ idscan
 
 
   highLevelResultDetails
-    documentOverallValidation: "Passed" | "Failed" | ???
+    documentOverallValidation: "PASSED" | "Passed" | "Failed" | "NOTNEEDED", "SKIPPED" |???
     documentBlockingPolicy
     documentExpiry
     documentSupport
