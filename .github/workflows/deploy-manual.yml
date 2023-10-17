@@ -113,6 +113,13 @@ jobs:
           author_name: 'nexera-release[bot]'
           author_email: '137495321+nexera-release[bot]@users.noreply.github.com'
 
+      - name: Get latest commit hash
+        id: commit_hash
+        shell: bash
+        run: |
+          hash=$(git rev-parse --verify HEAD)
+          echo "hash=$hash" >> $GITHUB_OUTPUT
+
       - name: Upload schemas to issuer (mumbai)
         shell: bash
         run: |
@@ -135,7 +142,7 @@ jobs:
               -H "accept: application/json" \
               -H "content-type: application/json" \
               -u "${{ secrets.ISSUER_NODE_USERNAME_PROD }}:${{ secrets.ISSUER_NODE_PASSWORD_PROD }}" \
-              -d "{\"url\":\"https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/${{ inputs.branch }}/${file}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
+              -d "{\"url\":\"https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/${{ steps.commit_hash.outputs.hash }}/${{ inputs.branch }}/${file}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
           done
 
       - name: Upload schemas to issuer (mainnet)
@@ -154,7 +161,7 @@ jobs:
               -H "accept: application/json" \
               -H "content-type: application/json" \
               -u "${{ secrets.ISSUER_NODE_USERNAME_PROD_MAINNET }}:${{ secrets.ISSUER_NODE_PASSWORD_PROD_MAINNET }}" \
-              -d "{\"url\":\"https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/${{ inputs.branch }}/${file}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
+              -d "{\"url\":\"https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/${{ steps.commit_hash.outputs.hash }}/${{ inputs.branch }}/${file}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
           done
 
       - name: Go back one commit
