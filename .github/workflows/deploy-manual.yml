@@ -163,7 +163,12 @@ jobs:
         shell: bash
         run: |
           git remote -v
-          git config --global user.name "nexera-release[bot]"
-          git config --global user.email "137495321+nexera-release[bot]@users.noreply.github.com"
-          git reset --hard HEAD~1
-          git push --force origin ${{ inputs.branch }}
+#          git config --global user.name "nexera-release[bot]"
+#          git config --global user.email "137495321+nexera-release[bot]@users.noreply.github.com"
+#          git reset --hard HEAD~1
+#          git push --force origin ${{ inputs.branch }}
+
+      - name: Undo last push
+        uses: exions/undo-push@v1
+        with:
+          branch: ${{ inputs.branch }}
