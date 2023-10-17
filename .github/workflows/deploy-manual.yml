@@ -185,7 +185,7 @@ jobs:
       - name: Go back one commit
         shell: bash
         run: |
-          git revert $(git log -n1 --format="%h" | cat)
-          git push origin
+          git reset --hard HEAD~1
+          git push origin --force
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
