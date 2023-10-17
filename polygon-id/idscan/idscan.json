@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/idscan/idscan.jsonld"
+      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/chore/high-level-result-enum/polygon-id/idscan/idscan.jsonld"
     },
     "type": "IDScan",
-    "version": "2.4.5"
+    "version": "2.4.5-high-level-result-enum"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDscan schema",
@@ -19,7 +19,14 @@
         "highLevelResult": {
           "description": "High level result of the kyc check",
           "title": "High Level Result",
-          "type": "string"
+          "enum": [
+            "Refer",
+            "NotAccepted",
+            "Notsupported",
+            "Passed",
+            "Refer",
+            "Undefined"
+          ]
         },
         "journeyId": {
           "description": "Journey ID of when credential was generated",
