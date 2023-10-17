@@ -31,6 +31,7 @@
         "highLevelResult": {
           "description": "High level result of the kyc check",
           "title": "High Level Result",
+          "type": "string",
           "enum": [
             "Refer",
             "NotAccepted",
@@ -336,11 +337,13 @@
         "documentSide": {
           "description": "Side of the document provided by the credential subject",
           "title": "Document Side",
+          "type": "string",
           "enum": ["Front", "Back"]
         },
         "documentType": {
           "description": "Type of the document provided by the credential subject",
           "title": "Document Type",
+          "type": "string",
           "enum": [
             "Agents License",
             "Driving License",

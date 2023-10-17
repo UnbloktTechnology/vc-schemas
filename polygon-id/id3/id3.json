@@ -301,6 +301,7 @@
                 "documentType": {
                   "title": "Document Type",
                   "description": "The type of document used to verify the credential subject",
+                  "type": "string",
                   "enum": [
                     "Agents License",
                     "Driving License",
@@ -1557,6 +1558,7 @@
                 "documentType": {
                   "title": "Document Type",
                   "description": "The type of document used to verify the credential subject",
+                  "type": "string",
                   "enum": [
                     "Agents License",
                     "Driving License",
@@ -1892,6 +1894,7 @@
             "documentType": {
               "title": "Document Type",
               "description": "The type of document used to verify the credential subject",
+              "type": "string",
               "enum": [
                 "Agents License",
                 "Driving License",
