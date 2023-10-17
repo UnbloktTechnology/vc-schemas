@@ -31,7 +31,14 @@
         "highLevelResult": {
           "description": "High level result of the kyc check",
           "title": "High Level Result",
-          "type": "string"
+          "enum": [
+            "Refer",
+            "NotAccepted",
+            "Notsupported",
+            "Passed",
+            "Refer",
+            "Undefined"
+          ]
         },
         "firstName": {
           "description": "First name of the credential subject",

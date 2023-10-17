@@ -2,21 +2,38 @@
 * We are inconsistent with regards to lowerCamelCase  versus CapitalizedCamelCase.
 
 
+
+Completed
+---------
+
 all
   id: regex for DID
     "type": "string",
     "pattern": "^did:polygon:(mumbai|main):[0-9a-zA-Z]+$"
-<<<<<<< HEAD
-=======
-
-    or maybe it should just be a "uri"
-    
-
->>>>>>> fix/schema-review-focus-age
   journeyId
     "type": "string",
     "format: "uuid"
 
+idscan, id3
+  age (number -> integer, "minimum": 0)
+
+
+iscan
+  documentSide "Front" | "Back"
+
+highLevelResult: 
+  | "Refer"
+  | "NotAccepted"
+  | "Notsupported"
+  | "Passed"
+  | "Refer"
+  | "Undefined"
+
+
+
+
+Still to Complete
+-----------------
 idscanPassport, idscanSelfie, proofOfResidence
     documentType: "image/jpeg" | "image/png" |??
     base64: {
@@ -35,13 +52,12 @@ idscanPassport, idscanSelfie, proofOfResidence
       "image/webp": Used for WebP images, a modern image format developed by Google.
       "image/svg+xml": Used for Scalable Vector Graphics (SVG) images.
 
+
 proofOfResidence
   country 
 
 idscan  
-  age (number -> integer, "minimum": 0)
   documentCategory: "Passport" | ??
-  documentSide "Front" | "Back"
   documentType --> which ones do we want to allow?
     | "Agents License"
     | "Driving License"
@@ -62,13 +78,6 @@ idscan
   entryTime?? -- currently string -- should have format Time which will look like:  "23:53:40.630". miliseconds optional
     "format": "time"
   gender ?
-  highLevelResult: 
-    | "Refer"
-    | "NotAccepted"
-    | "Notsupported"
-    | "Passed"
-    | "Refer"
-    | "Undefined"
 
   ProcessedDocuments [  (this array appears to be missing from schema??)
     isValidated
