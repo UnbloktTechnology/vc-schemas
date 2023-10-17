@@ -10,6 +10,7 @@ on:
           - dev
           - staging
           - prod
+        description: Polygon issuer
         default: dev
       branch:
         required: true
@@ -25,13 +26,12 @@ jobs:
         id: generate_token
         uses: tibdex/github-app-token@v2
         with:
-          app_id: ${{ secrets.APP_ID }}
-          private_key: ${{ secrets.PRIVATE_KEY }}
+          app_id: ${{ secrets.MERGE_BOT_APP_ID }}
+          private_key: ${{ secrets.MERGE_BOT_PRIVATE_KEY }}
 
       - uses: actions/checkout@v4
         with:
           token: ${{ steps.generate_token.outputs.token }}
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
           ref: ${{ inputs.branch }}
 
@@ -51,8 +51,10 @@ jobs:
         id: versions
         shell: bash
         run: |
+          timestamp=$(date +%s%3N)
+          
           current=$(cat polygon-id/id3/id3.json | jq -r '.["$metadata"].version')
-          target=$(semver bump patch $current)
+          target="$current-${{ inputs.branch }}-$timestamp"
 
           echo "$current"
           echo "$target"
@@ -111,6 +113,13 @@ jobs:
           author_name: 'nexera-release[bot]'
           author_email: '137495321+nexera-release[bot]@users.noreply.github.com'
 
+      - name: Get latest commit hash
+        id: commit_hash
+        shell: bash
+        run: |
+          hash=$(git rev-parse --verify HEAD)
+          echo "hash=$hash" >> $GITHUB_OUTPUT
+
       - name: Upload schemas to issuer (mumbai)
         shell: bash
         run: |
@@ -133,7 +142,7 @@ jobs:
               -H "accept: application/json" \
               -H "content-type: application/json" \
               -u "${{ secrets.ISSUER_NODE_USERNAME_PROD }}:${{ secrets.ISSUER_NODE_PASSWORD_PROD }}" \
-              -d "{\"url\":\"https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/${{ inputs.branch }}/${file}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
+              -d "{\"url\":\"https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/${{ steps.commit_hash.outputs.hash }}/${file}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
           done
 
       - name: Upload schemas to issuer (mainnet)
@@ -152,5 +161,13 @@ jobs:
               -H "accept: application/json" \
               -H "content-type: application/json" \
               -u "${{ secrets.ISSUER_NODE_USERNAME_PROD_MAINNET }}:${{ secrets.ISSUER_NODE_PASSWORD_PROD_MAINNET }}" \
-              -d "{\"url\":\"https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/${{ inputs.branch }}/${file}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
+              -d "{\"url\":\"https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/${{ steps.commit_hash.outputs.hash }}/${file}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
           done
+
+      - name: Go back one commit
+        shell: bash
+        run: |
+          git revert $(git log -n1 --format="%h" | cat)
+          git push origin
+        env:
+          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
