@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/idscan/idscan.jsonld"
+      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/chore/document-side-enum/polygon-id/idscan/idscan.jsonld"
     },
     "type": "IDScan",
-    "version": "2.4.5"
+    "version": "2.4.5-document-side-enum"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDscan schema",
@@ -329,7 +329,7 @@
         "documentSide": {
           "description": "Side of the document provided by the credential subject",
           "title": "Document Side",
-          "type": "string"
+          "enum": ["Front", "Back"]
         },
         "documentType": {
           "description": "Type of the document provided by the credential subject",
