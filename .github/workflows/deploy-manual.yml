@@ -158,6 +158,31 @@ jobs:
               -d "{\"url\":\"https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/${{ inputs.branch }}/${file}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
           done
 
+  revert:
+    needs:
+      - release
+    name: Revert schemas
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate token
+        id: generate_token
+        uses: tibdex/github-app-token@v2
+        with:
+          app_id: ${{ secrets.MERGE_BOT_APP_ID }}
+          private_key: ${{ secrets.MERGE_BOT_PRIVATE_KEY }}
+
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ steps.generate_token.outputs.token }}
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
+          ref: ${{ inputs.branch }}
+
+      - name: Initialize git config
+        run: |
+          git config --global user.name "nexera-release[bot]"
+          git config --global user.email "137495321+nexera-release[bot]@users.noreply.github.com"
+
       - name: Go back one commit
         continue-on-error: true
         shell: bash
