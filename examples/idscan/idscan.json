@@ -109,7 +109,7 @@
           "nullable": true
         },
         "age": {
-          "type": "integer",
+          "type": "number",
           "nullable": true
         },
         "citizenship": {

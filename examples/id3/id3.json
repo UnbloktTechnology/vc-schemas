@@ -127,7 +127,7 @@
                   "type": "string"
                 },
                 "age": {
-                  "type": "integer"
+                  "type": "string"
                 },
                 "city": {
                   "type": "string"
@@ -452,7 +452,7 @@
                   "format": "date"
                 },
                 "age": {
-                  "type": "integer"
+                  "type": "string"
                 }
               }
             },
@@ -675,7 +675,7 @@
               "type": "string"
             },
             "age": {
-              "type": "integer"
+              "type": "string"
             },
             "city": {
               "type": "string"
