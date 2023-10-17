@@ -162,10 +162,15 @@ jobs:
         continue-on-error: true
         shell: bash
         run: |
-          git remote -v
-          git config --global user.name "nexera-release[bot]"
-          git config --global user.email "137495321+nexera-release[bot]@users.noreply.github.com"
-          git reset --hard HEAD~1
-          git push --force origin ${{ inputs.branch }}
+          git revert $(git log -n1 --format="%h" | cat)
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+
+      - name: "Revert: Commit & Push changes"
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ steps.generate_token.outputs.token }}
+          branch: ${{ inputs.branch }}
+          message: 'chore: revert deployed IPFS schemas [skip ci]'
+          author_name: 'nexera-release[bot]'
+          author_email: '137495321+nexera-release[bot]@users.noreply.github.com'
