@@ -105,14 +105,14 @@ jobs:
             jq '.["$metadata"].uris.jsonLdContext = "ipfs://'"$ipfs_hash"'"' "$json_file_path" > temp.json && mv temp.json "$json_file_path"
           done
 
-#      - name: Commit & Push changes
-#        uses: actions-js/push@master
-#        with:
-#          github_token: ${{ steps.generate_token.outputs.token }}
-#          branch: ${{ inputs.branch }}
-#          message: 'chore: Update IPFS schemas [skip ci]'
-#          author_name: 'nexera-release[bot]'
-#          author_email: '137495321+nexera-release[bot]@users.noreply.github.com'
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ steps.generate_token.outputs.token }}
+          branch: ${{ inputs.branch }}
+          message: 'chore: Update IPFS schemas [skip ci]'
+          author_name: 'nexera-release[bot]'
+          author_email: '137495321+nexera-release[bot]@users.noreply.github.com'
 
       - name: Upload schemas to issuer (mumbai)
         shell: bash
@@ -157,3 +157,18 @@ jobs:
               -u "${{ secrets.ISSUER_NODE_USERNAME_PROD_MAINNET }}:${{ secrets.ISSUER_NODE_PASSWORD_PROD_MAINNET }}" \
               -d "{\"url\":\"https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/${{ inputs.branch }}/${file}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
           done
+
+      - name: Go back one commit
+        continue-on-error: true
+        shell: bash
+        run: |
+          git reset --hard HEAD~1
+
+      - name: "Revert: Commit & Push changes"
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ steps.generate_token.outputs.token }}
+          branch: ${{ inputs.branch }}
+          message: 'chore: revert IPFS schemas [skip ci]'
+          author_name: 'nexera-release[bot]'
+          author_email: '137495321+nexera-release[bot]@users.noreply.github.com'
