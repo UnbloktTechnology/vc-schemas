@@ -10,6 +10,7 @@ on:
           - dev
           - staging
           - prod
+        description: Polygon issuer
         default: dev
       branch:
         required: true
@@ -51,8 +52,10 @@ jobs:
         id: versions
         shell: bash
         run: |
+          timestamp=$(date +%s%3N)
+          
           current=$(cat polygon-id/id3/id3.json | jq -r '.["$metadata"].version')
-          target=$(semver bump patch $current)
+          target="$current-${{ inputs.branch }}-$timestamp"
 
           echo "$current"
           echo "$target"
@@ -102,14 +105,14 @@ jobs:
             jq '.["$metadata"].uris.jsonLdContext = "ipfs://'"$ipfs_hash"'"' "$json_file_path" > temp.json && mv temp.json "$json_file_path"
           done
 
-      - name: Commit & Push changes
-        uses: actions-js/push@master
-        with:
-          github_token: ${{ steps.generate_token.outputs.token }}
-          branch: ${{ inputs.branch }}
-          message: 'chore: Update IPFS schemas [skip ci]'
-          author_name: 'nexera-release[bot]'
-          author_email: '137495321+nexera-release[bot]@users.noreply.github.com'
+#      - name: Commit & Push changes
+#        uses: actions-js/push@master
+#        with:
+#          github_token: ${{ steps.generate_token.outputs.token }}
+#          branch: ${{ inputs.branch }}
+#          message: 'chore: Update IPFS schemas [skip ci]'
+#          author_name: 'nexera-release[bot]'
+#          author_email: '137495321+nexera-release[bot]@users.noreply.github.com'
 
       - name: Upload schemas to issuer (mumbai)
         shell: bash
