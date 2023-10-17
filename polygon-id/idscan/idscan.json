@@ -341,7 +341,22 @@
         "documentType": {
           "description": "Type of the document provided by the credential subject",
           "title": "Document Type",
-          "type": "string"
+          "enum": [
+            "Agents License",
+            "Driving License",
+            "Electoral Card",
+            "Foreigner Identification Card",
+            "Health Card",
+            "Job License",
+            "Membership Identification Card",
+            "Military Identification Card",
+            "National Identification Card",
+            "Passport",
+            "Proof of Age Card",
+            "Travel Permit",
+            "Visa",
+            "Weapons Licence"
+          ]
         },
         "entryDate": {
           "description": "Entry date associated with the credential",

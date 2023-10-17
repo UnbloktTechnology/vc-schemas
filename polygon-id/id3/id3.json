@@ -301,7 +301,22 @@
                 "documentType": {
                   "title": "Document Type",
                   "description": "The type of document used to verify the credential subject",
-                  "type": "string"
+                  "enum": [
+                    "Agents License",
+                    "Driving License",
+                    "Electoral Card",
+                    "Foreigner Identification Card",
+                    "Health Card",
+                    "Job License",
+                    "Membership Identification Card",
+                    "Military Identification Card",
+                    "National Identification Card",
+                    "Passport",
+                    "Proof of Age Card",
+                    "Travel Permit",
+                    "Visa",
+                    "Weapons Licence"
+                  ]
                 },
                 "firstName": {
                   "title": "First Name",
@@ -1542,7 +1557,22 @@
                 "documentType": {
                   "title": "Document Type",
                   "description": "The type of document used to verify the credential subject",
-                  "type": "string"
+                  "enum": [
+                    "Agents License",
+                    "Driving License",
+                    "Electoral Card",
+                    "Foreigner Identification Card",
+                    "Health Card",
+                    "Job License",
+                    "Membership Identification Card",
+                    "Military Identification Card",
+                    "National Identification Card",
+                    "Passport",
+                    "Proof of Age Card",
+                    "Travel Permit",
+                    "Visa",
+                    "Weapons Licence"
+                  ]
                 },
                 "firstName": {
                   "title": "First Name",
@@ -1860,7 +1890,24 @@
               "type": "string"
             },
             "documentType": {
-              "type": "string"
+              "title": "Document Type",
+              "description": "The type of document used to verify the credential subject",
+              "enum": [
+                "Agents License",
+                "Driving License",
+                "Electoral Card",
+                "Foreigner Identification Card",
+                "Health Card",
+                "Job License",
+                "Membership Identification Card",
+                "Military Identification Card",
+                "National Identification Card",
+                "Passport",
+                "Proof of Age Card",
+                "Travel Permit",
+                "Visa",
+                "Weapons Licence"
+              ]
             },
             "firstName": {
               "type": "string"

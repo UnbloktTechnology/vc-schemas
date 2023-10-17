@@ -30,6 +30,21 @@ highLevelResult:
   | "Undefined"
 
 
+documentType --> which ones do we want to allow?
+  | "Agents License"
+  | "Driving License"
+  | "Electoral Card"
+  | "Foreigner Identification Card"
+  | "Health Card"
+  | "Job License"
+  | "Membership Identification Card"
+  | "Military Identification Card"
+  | "National Identification Card"
+  | "Passport"
+  | "Proof of Age Card"
+  | "Travel Permit"
+  | "Visa"
+  | "Weapons Licence"
 
 
 Still to Complete
@@ -58,21 +73,6 @@ proofOfResidence
 
 idscan  
   documentCategory: "Passport" | ??
-  documentType --> which ones do we want to allow?
-    | "Agents License"
-    | "Driving License"
-    | "Electoral Card"
-    | "Foreigner Identification Card"
-    | "Health Card"
-    | "Job License"
-    | "Membership Identification Card"
-    | "Military Identification Card"
-    | "National Identification Card"
-    | "Passport"
-    | "Proof of Age Card"
-    | "Travel Permit"
-    | "Visa"
-    | "Weapons Licence"
 
 
   entryTime?? -- currently string -- should have format Time which will look like:  "23:53:40.630". miliseconds optional
