@@ -1,20 +1,19 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/narrow-types/polygon-id/idScanPassport/idScanPassport.jsonld"
+      "jsonLdContext": "ipfs://QmYoDQKUHSMEZk2ZwaXWvdHbYoLXShVWxRdsu1jsXxhN6F"
     },
-    "type": "IDScanPassport",
+    "type": "IDScanSelfie",
     "version": "2.4.5-narrow-types-narrow-types-1697578695402"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "IDScanPassport schema",
-  "title": "IDScanPassport",
+  "description": "IDScanSelfie schema",
+  "title": "IDScanSelfie",
   "properties": {
     "credentialSubject": {
       "description": "Stores the data of the credential",
       "title": "Credential subject",
       "type": "object",
-      "required": ["id", "journeyId", "base64", "name", "documentType"],
       "properties": {
         "id": {
           "description": "Stores the DID of the subject that owns the credential",
@@ -30,13 +29,13 @@
         },
         "base64": {
           "title": "Base64",
-          "description": "Base64 encoded image of the passport image",
+          "description": "Base64 encoded image of the selfie image",
           "type": "string",
           "format": "base64"
         },
         "name": {
           "title": "Name",
-          "description": "Name of the docuemnt (e.g. passport.jpg)",
+          "description": "Name of the docuemnt (e.g. selfie.jpg)",
           "type": "string"
         },
         "documentType": {
@@ -44,10 +43,21 @@
           "description": "Type of the document (e.g. image/jpeg, image/png)",
           "type": "string"
         }
-      }
+      },
+      "required": [
+        "id",
+        "journeyId",
+        "base64",
+        "name",
+        "documentType"
+      ]
     },
     "@context": {
-      "type": ["string", "array", "object"]
+      "type": [
+        "string",
+        "array",
+        "object"
+      ]
     },
     "expirationDate": {
       "format": "date-time",
@@ -61,7 +71,10 @@
       "type": "string"
     },
     "issuer": {
-      "type": ["string", "object"],
+      "type": [
+        "string",
+        "object"
+      ],
       "format": "uri",
       "properties": {
         "id": {
@@ -69,10 +82,15 @@
           "type": "string"
         }
       },
-      "required": ["id"]
+      "required": [
+        "id"
+      ]
     },
     "type": {
-      "type": ["string", "array"],
+      "type": [
+        "string",
+        "array"
+      ],
       "items": {
         "type": "string"
       }
@@ -87,18 +105,22 @@
           "type": "string"
         }
       },
-      "required": ["id", "type"],
+      "required": [
+        "id",
+        "type"
+      ],
       "type": "object"
     }
   },
   "required": [
-    "credentialSubject",
     "@context",
     "id",
-    "issuanceDate",
-    "issuer",
     "type",
-    "credentialSchema"
+    "issuanceDate",
+    "credentialSubject",
+    "credentialSchema",
+    "credentialStatus",
+    "issuer"
   ],
   "type": "object"
 }
