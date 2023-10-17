@@ -142,7 +142,7 @@ jobs:
               -H "accept: application/json" \
               -H "content-type: application/json" \
               -u "${{ secrets.ISSUER_NODE_USERNAME_PROD }}:${{ secrets.ISSUER_NODE_PASSWORD_PROD }}" \
-              -d "{\"url\":\"https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/${{ steps.commit_hash.outputs.hash }}/${{ inputs.branch }}/${file}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
+              -d "{\"url\":\"https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/${{ steps.commit_hash.outputs.hash }}/${file}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
           done
 
       - name: Upload schemas to issuer (mainnet)
@@ -161,7 +161,7 @@ jobs:
               -H "accept: application/json" \
               -H "content-type: application/json" \
               -u "${{ secrets.ISSUER_NODE_USERNAME_PROD_MAINNET }}:${{ secrets.ISSUER_NODE_PASSWORD_PROD_MAINNET }}" \
-              -d "{\"url\":\"https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/${{ steps.commit_hash.outputs.hash }}/${{ inputs.branch }}/${file}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
+              -d "{\"url\":\"https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/${{ steps.commit_hash.outputs.hash }}/${file}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
           done
 
       - name: Go back one commit
