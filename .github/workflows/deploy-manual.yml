@@ -188,14 +188,6 @@ jobs:
         shell: bash
         run: |
           git revert $(git log -n1 --format="%h" | cat)
+          git push origin
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-
-      - name: "Revert: Commit & Push changes"
-        uses: actions-js/push@master
-        with:
-          github_token: ${{ steps.generate_token.outputs.token }}
-          branch: ${{ inputs.branch }}
-          message: 'chore: revert deployed IPFS schemas [skip ci]'
-          author_name: 'nexera-release[bot]'
-          author_email: '137495321+nexera-release[bot]@users.noreply.github.com'
