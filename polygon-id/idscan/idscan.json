@@ -370,7 +370,8 @@
         "entryTime": {
           "description": "Entry time associated with the credential",
           "title": "Entry Time",
-          "type": "string"
+          "type": "string",
+          "format": "time"
         },
         "fullName": {
           "description": "Full name of the credential subject",
