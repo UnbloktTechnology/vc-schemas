@@ -1,7 +1,7 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/narrow-types/polygon-id/idscan/idscan.jsonld"
+      "jsonLdContext": "ipfs://QmaoyFJjwbkMSTwWurK4tYFxWd3CDnMLu2KustmWL8Ruks"
     },
     "type": "IDScan",
     "version": "2.4.5-narrow-types-narrow-types-1697641705759"
@@ -14,7 +14,10 @@
       "description": "Stores the data of the credential",
       "title": "Credential subject",
       "type": "object",
-      "required": ["journeyId", "id"],
+      "required": [
+        "journeyId",
+        "id"
+      ],
       "properties": {
         "id": {
           "description": "Stores the DID of the subject that owns the credential",
@@ -338,7 +341,10 @@
           "description": "Side of the document provided by the credential subject",
           "title": "Document Side",
           "type": "string",
-          "enum": ["Front", "Back"]
+          "enum": [
+            "Front",
+            "Back"
+          ]
         },
         "documentType": {
           "description": "Type of the document provided by the credential subject",
@@ -506,7 +512,11 @@
       }
     },
     "@context": {
-      "type": ["string", "array", "object"]
+      "type": [
+        "string",
+        "array",
+        "object"
+      ]
     },
     "expirationDate": {
       "format": "date-time",
@@ -520,7 +530,10 @@
       "type": "string"
     },
     "issuer": {
-      "type": ["string", "object"],
+      "type": [
+        "string",
+        "object"
+      ],
       "format": "uri",
       "properties": {
         "id": {
@@ -528,10 +541,15 @@
           "type": "string"
         }
       },
-      "required": ["id"]
+      "required": [
+        "id"
+      ]
     },
     "type": {
-      "type": ["string", "array"],
+      "type": [
+        "string",
+        "array"
+      ],
       "items": {
         "type": "string"
       }
@@ -546,7 +564,10 @@
           "type": "string"
         }
       },
-      "required": ["id", "type"],
+      "required": [
+        "id",
+        "type"
+      ],
       "type": "object"
     }
   },
