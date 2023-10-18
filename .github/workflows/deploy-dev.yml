@@ -183,9 +183,16 @@ jobs:
             schema=$(cat "$file" | jq -r '.["$metadata"].type')
             echo "$schema"
 
+            response=$(curl "https://ipfs.infura.io:5001/api/v0/add" -X POST -F file=@"$file" -u "${{ secrets.INFURA_IPFS_API_KEY }}:${{ secrets.INFURA_IPFS_API_KEY_SECRET }}")
+            echo "$response"
+          
+            # Parse HASH from uploaded file
+            ipfs_hash=$(echo "$response" | jq -r '.Hash')
+            echo "$ipfs_hash"
+
             curl -X POST "https://mumbai-issuer-node-dev.nexera.id/v1/schemas" \
               -H "accept: application/json" \
               -H "content-type: application/json" \
               -u "${{ secrets.ISSUER_NODE_USERNAME_DEV }}:${{ secrets.ISSUER_NODE_PASSWORD_DEV }}" \
-              -d "{\"url\":\"https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/${file}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
+              -d "{\"url\":\"https://nexera.infura-ipfs.io/ipfs/${ipfs_hash}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
           done
