@@ -59,10 +59,6 @@ id3.credentialSubject
 
 id3.credentialSubject
   amendmentsData, originalData  (both of these)
-    authenticateSPResult
-      ResultCodes
-        GlobalItemCheckResultCodes
-      Country
     pepIntelligenceResult [
       SanctionsAddresses [
         GlobalSanctionsAddress [
@@ -70,10 +66,6 @@ id3.credentialSubject
             Country
           ]
         ]
-      ]
-      SanctionsPositions
-        GlobalSanctionsPosition [
-          Country
       ]
     ]
     sanctionsEnforcementsResult [
