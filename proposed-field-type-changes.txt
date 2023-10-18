@@ -47,6 +47,48 @@ documentType --> which ones do we want to allow?
   | "Weapons Licence"
 
 
+id3.credentialSubject
+  amendmentsData, originalData  (both of these)
+    data
+      documentType (use list from above)
+      citizenship
+      countryOfResidence
+  personalDetails
+    documentType (documentType)
+
+
+id3.credentialSubject
+  amendmentsData, originalData  (both of these)
+    authenticateSPResult
+      ResultCodes
+        GlobalItemCheckResultCodes
+      Country
+    pepIntelligenceResult [
+      SanctionsAddresses [
+        GlobalSanctionsAddress [
+          GlobalSanctionsAddress [
+            Country
+          ]
+        ]
+      ]
+      SanctionsPositions
+        GlobalSanctionsPosition [
+          Country
+      ]
+    ]
+    sanctionsEnforcementsResult [
+        SanctionsAddresses [
+        GlobalSanctionsAddress [
+          GlobalSanctionsAddress [
+            Country
+          ]
+        ]
+      ]
+    ]
+
+
+
+
 Still to Complete
 -----------------
 idscanPassport, idscanSelfie, proofOfResidence
@@ -67,9 +109,6 @@ idscanPassport, idscanSelfie, proofOfResidence
       "image/webp": Used for WebP images, a modern image format developed by Google.
       "image/svg+xml": Used for Scalable Vector Graphics (SVG) images.
 
-
-proofOfResidence
-  country 
 
 idscan  
   documentCategory: "Passport" | ??
@@ -112,44 +151,13 @@ idscan
 
 id3.credentialSubject
   amendmentsData, originalData  (both of these)
-    data
-      citizenship
-      countryOfResidence
-      documentType (use list from above)
     authenticateSPResult
       ResultCodes
         GlobalItemCheckResultCodes
           DOB  ("No Match" | ???)
-      Country
-       ProfileState: "Effective" | ???
-    pepIntelligenceResult [
-      SanctionsAddresses [
-        GlobalSanctionsAddress [
-          GlobalSanctionsAddress [
-            Country
-          ]
-        ]
-      ]
-      SanctionsPositions
-        GlobalSanctionsPosition [
-          Country
-      ]
-    ]
-    sanctionsEnforcementsResult [
-        SanctionsAddresses [
-        GlobalSanctionsAddress [
-          GlobalSanctionsAddress [
-            Country
-          ]
-        ]
-      ]
-    ]
+          ProfileState: "Effective" | ???
 
 
-  personalDetails
-    citizenship
-    countryOfResidence
-    documentType (documentType)
   
 
 
