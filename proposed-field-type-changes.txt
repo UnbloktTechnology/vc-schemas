@@ -78,7 +78,7 @@ id3.credentialSubject
       ]
     ]
 
-  entryTime?? -- currently string -- should have format Time which will look like:  "23:53:40.630". miliseconds optional
+  entryTime -- currently string -- should have format Time which will look like:  "23:53:40.630". miliseconds optional
     "format": "time"
 
 
