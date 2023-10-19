@@ -406,37 +406,44 @@
             "documentOverallValidation": {
               "description": "Overall validation status of the document",
               "title": "Document Overall Validation",
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "documentBlockingPolicy": {
               "description": "Blocking policy of the document",
               "title": "Document Blocking Policy",
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "documentExpiry": {
               "description": "Expiry status of the document",
               "title": "Document Expiry",
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "documentSupport": {
               "description": "Support status of the document",
               "title": "Document Support",
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "documentValidation": {
               "description": "Validation status of the document",
               "title": "Document Validation",
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "faceMatchValidation": {
               "description": "Validation status of face match",
               "title": "Face Match Validation",
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "accumulativeLivenessResult": {
               "description": "Result of accumulative liveness check",
               "title": "Accumulative Liveness Result",
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             }
           }
         },
