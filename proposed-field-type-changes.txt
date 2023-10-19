@@ -78,6 +78,8 @@ id3.credentialSubject
       ]
     ]
 
+  entryTime?? -- currently string -- should have format Time which will look like:  "23:53:40.630". miliseconds optional
+    "format": "time"
 
 
 
@@ -106,8 +108,6 @@ idscan
   documentCategory: "Passport" | ??
 
 
-  entryTime?? -- currently string -- should have format Time which will look like:  "23:53:40.630". miliseconds optional
-    "format": "time"
   gender ?
 
   ProcessedDocuments [  (this array appears to be missing from schema??)
