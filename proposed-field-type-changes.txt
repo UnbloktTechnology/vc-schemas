@@ -108,10 +108,10 @@ idscanPassport, idscanSelfie, proofOfResidence
 
 
 idscan  
-  documentCategory: "Passport" | ??
+  documentCategory: "Passport" | ?? -- just a string
+  faceMatchScore -- seems like this should be a number.
 
-
-  gender ?
+  gender ? -- just a string
 
   ProcessedDocuments [  (this array appears to be missing from schema??)
     isValidated
@@ -135,19 +135,12 @@ idscan
       format: "uuid"
 
 
-
-/NexeraID/apps/kyc/src/features/gbg/journey/config/gbg/wsdk-v14.0.1/idscan-jcs.d.ts
-
-
-
-
-
 id3.credentialSubject
   amendmentsData, originalData  (both of these)
     authenticateSPResult
       ResultCodes
         GlobalItemCheckResultCodes
-          DOB  ("No Match" | ???)
+          DOB  ("No Match" | ???) - just a string
           ProfileState: "Effective" | ???
 
 
