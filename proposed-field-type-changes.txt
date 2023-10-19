@@ -79,6 +79,11 @@ id3.credentialSubject
   entryTime -- currently string -- should have format Time which will look like:  "23:53:40.630". miliseconds optional
     "format": "time"
 
+  highLevelResultDetails
+    all  
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
+
 
 
 Still to Complete
@@ -130,14 +135,12 @@ idscan
       format: "uuid"
 
 
-  highLevelResultDetails
-    documentOverallValidation: "PASSED" | "Passed" | "Failed" | "NOTNEEDED", "SKIPPED" |???
-    documentBlockingPolicy
-    documentExpiry
-    documentSupport
-    documentValidation
-    faceMatchValidation
-    accumulativeLivenessResult
+
+/NexeraID/apps/kyc/src/features/gbg/journey/config/gbg/wsdk-v14.0.1/idscan-jcs.d.ts
+
+
+
+
 
 id3.credentialSubject
   amendmentsData, originalData  (both of these)

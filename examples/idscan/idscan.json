@@ -167,25 +167,32 @@
           "nullable": true,
           "properties": {
             "documentOverallValidation": {
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "documentBlockingPolicy": {
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "documentExpiry": {
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "documentSupport": {
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "documentValidation": {
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "faceMatchValidation": {
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "accumulativeLivenessResult": {
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             }
           }
         },
