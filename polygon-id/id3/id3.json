@@ -35,11 +35,13 @@
           "format": "uuid"
         },
         "amendmentsData": {
+          "@id": "polygon-vocab:amendmentsData",
           "type": "object",
           "title": "Amendments Data",
           "description": "Details related to the amendments made to the original data.",
           "properties": {
             "data": {
+              "@id": "polygon-vocab:data",
               "title": "Amendments Data",
               "description": "Data manually amended by the holder/user during the verification process.",
               "type": "object",
@@ -909,6 +911,7 @@
               }
             },
             "authenticateSPResult": {
+              "@id": "polygon-vocab:authenticateSPResult",
               "title": "Authenticate SP Result",
               "description": "Result of the authentication request",
               "type": "object",
@@ -955,6 +958,7 @@
                   "type": "string"
                 },
                 "ResultCodes": {
+                  "@id": "polygon-vocab:ResultCodes",
                   "type": "object",
                   "properties": {
                     "GlobalItemCheckResultCodes": {
@@ -1114,6 +1118,7 @@
                   "type": "string"
                 },
                 "ItemCheckDecisionBands": {
+                  "@id": "polygon-vocab:ItemCheckDecisionBands",
                   "type": "object",
                   "properties": {
                     "GlobalItemCheckDecisionBands": {
@@ -1818,11 +1823,13 @@
           }
         },
         "originalData": {
+          "@id": "polygon-vocab:originalData",
           "title": "Original Data",
           "description": "Details related to the original data before any amendments",
           "type": "object",
           "properties": {
             "data": {
+              "@id": "polygon-vocab:data",
               "type": "object",
               "properties": {
                 "citizenship": {
@@ -2143,6 +2150,7 @@
               }
             },
             "authenticateSPResult": {
+              "@id": "polygon-vocab:authenticateSPResult",
               "type": "object",
               "properties": {
                 "AuthenticationID": {
@@ -2171,6 +2179,7 @@
                   "type": "string"
                 },
                 "ResultCodes": {
+                  "@id": "polygon-vocab:ResultCodes",
                   "type": "object",
                   "properties": {
                     "GlobalItemCheckResultCodes": {
@@ -2914,6 +2923,7 @@
           }
         },
         "personalDetails": {
+          "@id": "polygon-vocab:personalDetails",
           "title": "Personal Details",
           "description": "Personal details of the credential subject",
           "type": "object",
