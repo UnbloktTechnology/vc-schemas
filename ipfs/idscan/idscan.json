@@ -1,7 +1,7 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/idscan/idscan.jsonld"
+      "jsonLdContext": "ipfs://QmaoyFJjwbkMSTwWurK4tYFxWd3CDnMLu2KustmWL8Ruks"
     },
     "type": "IDScan",
     "version": "2.4.6-narrow-types-1697823858950"
@@ -14,7 +14,10 @@
       "description": "Stores the data of the credential",
       "title": "Credential subject",
       "type": "object",
-      "required": ["journeyId", "id"],
+      "required": [
+        "journeyId",
+        "id"
+      ],
       "properties": {
         "id": {
           "description": "Stores the DID of the subject that owns the credential",
@@ -338,7 +341,10 @@
           "description": "Side of the document provided by the credential subject",
           "title": "Document Side",
           "type": "string",
-          "enum": ["Front", "Back"]
+          "enum": [
+            "Front",
+            "Back"
+          ]
         },
         "documentType": {
           "description": "Type of the document provided by the credential subject",
@@ -407,43 +413,78 @@
               "description": "Overall validation status of the document",
               "title": "Document Overall Validation",
               "type": "string",
-              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
+              "enum": [
+                "FAILED",
+                "NOTNEEDED",
+                "PASSED",
+                "SKIPPED"
+              ]
             },
             "documentBlockingPolicy": {
               "description": "Blocking policy of the document",
               "title": "Document Blocking Policy",
               "type": "string",
-              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
+              "enum": [
+                "FAILED",
+                "NOTNEEDED",
+                "PASSED",
+                "SKIPPED"
+              ]
             },
             "documentExpiry": {
               "description": "Expiry status of the document",
               "title": "Document Expiry",
               "type": "string",
-              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
+              "enum": [
+                "FAILED",
+                "NOTNEEDED",
+                "PASSED",
+                "SKIPPED"
+              ]
             },
             "documentSupport": {
               "description": "Support status of the document",
               "title": "Document Support",
               "type": "string",
-              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
+              "enum": [
+                "FAILED",
+                "NOTNEEDED",
+                "PASSED",
+                "SKIPPED"
+              ]
             },
             "documentValidation": {
               "description": "Validation status of the document",
               "title": "Document Validation",
               "type": "string",
-              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
+              "enum": [
+                "FAILED",
+                "NOTNEEDED",
+                "PASSED",
+                "SKIPPED"
+              ]
             },
             "faceMatchValidation": {
               "description": "Validation status of face match",
               "title": "Face Match Validation",
               "type": "string",
-              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
+              "enum": [
+                "FAILED",
+                "NOTNEEDED",
+                "PASSED",
+                "SKIPPED"
+              ]
             },
             "accumulativeLivenessResult": {
               "description": "Result of accumulative liveness check",
               "title": "Accumulative Liveness Result",
               "type": "string",
-              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
+              "enum": [
+                "FAILED",
+                "NOTNEEDED",
+                "PASSED",
+                "SKIPPED"
+              ]
             }
           }
         },
@@ -514,7 +555,11 @@
       }
     },
     "@context": {
-      "type": ["string", "array", "object"]
+      "type": [
+        "string",
+        "array",
+        "object"
+      ]
     },
     "expirationDate": {
       "format": "date-time",
@@ -528,7 +573,10 @@
       "type": "string"
     },
     "issuer": {
-      "type": ["string", "object"],
+      "type": [
+        "string",
+        "object"
+      ],
       "format": "uri",
       "properties": {
         "id": {
@@ -536,10 +584,15 @@
           "type": "string"
         }
       },
-      "required": ["id"]
+      "required": [
+        "id"
+      ]
     },
     "type": {
-      "type": ["string", "array"],
+      "type": [
+        "string",
+        "array"
+      ],
       "items": {
         "type": "string"
       }
@@ -554,7 +607,10 @@
           "type": "string"
         }
       },
-      "required": ["id", "type"],
+      "required": [
+        "id",
+        "type"
+      ],
       "type": "object"
     }
   },
