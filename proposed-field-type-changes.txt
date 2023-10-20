@@ -6,7 +6,7 @@ Remaining Issues/Questions:
 * narrow-types branch on vc-schemas will need to merge with development before chore/narrow-types branch on NexeraID is merged. Also the version should be bumped to whatever the proper version number should be.  Is there somewhere the version number needs to be set in NexeraID?
 * faceMatchScore really seems like it should be a number. currently it is a string.
 * Why are ProcessedDocuments not defined in schema for idscan?
-
+* download-schema:* needs to be set back to development from narrow-types
 
 
 
