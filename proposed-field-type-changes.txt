@@ -1,5 +1,13 @@
-* Check test data and keep data there consistent with proper type.
-* We are inconsistent with regards to lowerCamelCase  versus CapitalizedCamelCase.
+Remaining Issues/Questions:
+
+* We are inconsistent with regards to lowerCamelCase versus CapitalizedCamelCase. For example: the "Country" fields -- they should all probably be "country". But there are many more.
+* Although I think I was able to get pnpm test:unit --filter @nexeraprotocol/vc-issuer-polygon-id to run locally, I see that there are some hardcoded "dev" env props. Is this OK? It does not work from vc-issuer-polygon-id folder.
+* References to narrow-types in envToBranch in packages/libs/schemas/src/compliance/vc-schemas/vc-utils.ts will have to be changed back to development before we merge with development.
+* narrow-types branch on vc-schemas will need to merge with development before chore/narrow-types branch on NexeraID is merged. Also the version should be bumped to whatever the proper version number should be.  Is there somewhere the version number needs to be set in NexeraID?
+* faceMatchScore really seems like it should be a number. currently it is a string.
+* Why are ProcessedDocuments not defined in schema for idscan?
+
+
 
 
 
@@ -106,12 +114,8 @@ idscanPassport, idscanSelfie, proofOfResidence
       "image/webp": Used for WebP images, a modern image format developed by Google.
       "image/svg+xml": Used for Scalable Vector Graphics (SVG) images.
 
-
 idscan  
-  documentCategory: "Passport" | ?? -- just a string
   faceMatchScore -- seems like this should be a number.
-
-  gender ? -- just a string
 
   ProcessedDocuments [  (this array appears to be missing from schema??)
     isValidated
@@ -135,6 +139,16 @@ idscan
       format: "uuid"
 
 
+Not Doing / Nothing to Do
+-------------------------
+
+idscan  
+  documentCategory: "Passport" | ?? -- just a string
+
+  gender ? -- just a string
+
+
+
 id3.credentialSubject
   amendmentsData, originalData  (both of these)
     authenticateSPResult
@@ -145,7 +159,5 @@ id3.credentialSubject
 
 
   
-
-
 
 
