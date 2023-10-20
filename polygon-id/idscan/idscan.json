@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/idscan/idscan.jsonld"
     },
     "type": "IDScan",
-    "version": "2.4.5"
+    "version": "2.4.6"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDscan schema",
@@ -16,21 +16,30 @@
       "type": "object",
       "required": ["journeyId", "id"],
       "properties": {
-        "highLevelResult": {
-          "description": "High level result of the kyc check",
-          "title": "High Level Result",
-          "type": "string"
-        },
-        "journeyId": {
-          "description": "Journey ID of when credential was generated",
-          "title": "Journey ID",
-          "type": "string"
-        },
         "id": {
           "description": "Stores the DID of the subject that owns the credential",
           "title": "Credential subject ID",
           "format": "uri",
           "type": "string"
+        },
+        "journeyId": {
+          "description": "Journey ID of when credential was generated",
+          "title": "Journey ID",
+          "type": "string",
+          "format": "uuid"
+        },
+        "highLevelResult": {
+          "description": "High level result of the kyc check",
+          "title": "High Level Result",
+          "type": "string",
+          "enum": [
+            "Refer",
+            "NotAccepted",
+            "Notsupported",
+            "Passed",
+            "Refer",
+            "Undefined"
+          ]
         },
         "firstName": {
           "description": "First name of the credential subject",
@@ -55,7 +64,9 @@
         "age": {
           "description": "Age of the credential subject",
           "title": "Age",
-          "type": "number"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 125
         },
         "citizenship": {
           "description": "Citizenship status of the credential subject - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
@@ -326,12 +337,29 @@
         "documentSide": {
           "description": "Side of the document provided by the credential subject",
           "title": "Document Side",
-          "type": "string"
+          "type": "string",
+          "enum": ["Front", "Back"]
         },
         "documentType": {
           "description": "Type of the document provided by the credential subject",
           "title": "Document Type",
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Agents License",
+            "Driving License",
+            "Electoral Card",
+            "Foreigner Identification Card",
+            "Health Card",
+            "Job License",
+            "Membership Identification Card",
+            "Military Identification Card",
+            "National Identification Card",
+            "Passport",
+            "Proof of Age Card",
+            "Travel Permit",
+            "Visa",
+            "Weapons Licence"
+          ]
         },
         "entryDate": {
           "description": "Entry date associated with the credential",
@@ -342,7 +370,8 @@
         "entryTime": {
           "description": "Entry time associated with the credential",
           "title": "Entry Time",
-          "type": "string"
+          "type": "string",
+          "format": "time"
         },
         "fullName": {
           "description": "Full name of the credential subject",
@@ -377,37 +406,44 @@
             "documentOverallValidation": {
               "description": "Overall validation status of the document",
               "title": "Document Overall Validation",
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "documentBlockingPolicy": {
               "description": "Blocking policy of the document",
               "title": "Document Blocking Policy",
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "documentExpiry": {
               "description": "Expiry status of the document",
               "title": "Document Expiry",
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "documentSupport": {
               "description": "Support status of the document",
               "title": "Document Support",
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "documentValidation": {
               "description": "Validation status of the document",
               "title": "Document Validation",
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "faceMatchValidation": {
               "description": "Validation status of face match",
               "title": "Face Match Validation",
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             },
             "accumulativeLivenessResult": {
               "description": "Result of accumulative liveness check",
               "title": "Accumulative Liveness Result",
-              "type": "string"
+              "type": "string",
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
             }
           }
         },
@@ -443,7 +479,7 @@
               "state": {
                 "description": "State of the quality check item",
                 "title": "Quality Check Item State",
-                "type": "number"
+                "type": "integer"
               }
             }
           }
