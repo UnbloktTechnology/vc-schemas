@@ -47,8 +47,8 @@
               "type": "object",
               "properties": {
                 "citizenship": {
-                  "title": "Citizenship - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
-                  "description": "The country of citizenship of the credential subject",
+                  "title": "Citizenship",
+                  "description": "The country of citizenship of the credential subject. ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
                   "type": "string",
                   "enum": [
                     "AFG",
