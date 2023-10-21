@@ -4,7 +4,7 @@
       "jsonLdContext": "ipfs://QmYoDQKUHSMEZk2ZwaXWvdHbYoLXShVWxRdsu1jsXxhN6F"
     },
     "type": "IDScanSelfie",
-    "version": "2.4.7-fix-id3-jsonld-1697916403715"
+    "version": "2.4.7"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "IDScanSelfie schema",
