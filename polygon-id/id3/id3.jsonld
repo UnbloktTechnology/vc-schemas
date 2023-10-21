@@ -155,15 +155,15 @@
                           },
                           "Comment":{
                             "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Comment",
-                            "@type":"@object"
+                            "@type":"@json"
                           },
                           "Match":{
                             "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Match",
-                            "@type":"@object"
+                            "@type":"@json"
                           },
                           "Warning":{
                             "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Warning",
-                            "@type":"@object"
+                            "@type":"@json"
                           },
                           "ID":{
                             "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.ID",
@@ -196,7 +196,7 @@
                           "SanctionsMatches":{
                             "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.SanctionsMatches",
                             "@type":[
-                              "@object",
+                              "@json",
                               "xsd:string"
                             ]
                           }
@@ -337,15 +337,15 @@
                           },
                           "Comment":{
                             "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Comment",
-                            "@type":"@object"
+                            "@type":"@json"
                           },
                           "Match":{
                             "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Match",
-                            "@type":"@object"
+                            "@type":"@json"
                           },
                           "Warning":{
                             "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Warning",
-                            "@type":"@object"
+                            "@type":"@json"
                           },
                           "ID":{
                             "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.ID",
@@ -378,7 +378,7 @@
                           "SanctionsMatches":{
                             "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.SanctionsMatches",
                             "@type":[
-                              "@object",
+                              "@json",
                               "xsd:string"
                             ]
                           }
