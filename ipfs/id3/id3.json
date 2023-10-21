@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "ipfs://QmQLu9wiV5YE93T7cKoKdY1xykivi2GJXsYUVfFpJoD6De"
+      "jsonLdContext": "ipfs://QmRgjPAzKvSekG3Eb8eS32tL6UnmFKymbzVjp3M6Bvjh7d"
     },
     "type": "ID3",
-    "version": "2.4.7"
+    "version": "2.4.7-fix-id3-jsonld-1697914344704"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "ID3 Schema",
