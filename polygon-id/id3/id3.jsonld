@@ -228,11 +228,11 @@
                 "@id":"polygon-vocab:authenticateSPResult"
               },
               "pepIntelligenceResult": {
-                "id": "polygon-vocab:pepIntelligenceResult",
+                "@id": "polygon-vocab:pepIntelligenceResult",
                 "type": "@json"
               },
               "sanctionsEnforcementsResult": {
-                "id": "polygon-vocab:sanctionsEnforcementsResult",
+                "@id": "polygon-vocab:sanctionsEnforcementsResult",
                 "type": "@json"
               }
             },
@@ -393,11 +393,11 @@
                 "@id":"polygon-vocab:authenticateSPResult"
               },
               "pepIntelligenceResult": {
-                "id": "polygon-vocab:pepIntelligenceResult",
+                "@id": "polygon-vocab:pepIntelligenceResult",
                 "type": "@json"
               },
               "sanctionsEnforcementsResult": {
-                "id": "polygon-vocab:sanctionsEnforcementsResult",
+                "@id": "polygon-vocab:sanctionsEnforcementsResult",
                 "type": "@json"
               }
             },
