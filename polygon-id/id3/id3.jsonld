@@ -229,11 +229,11 @@
               },
               "pepIntelligenceResult": {
                 "@id": "polygon-vocab:pepIntelligenceResult",
-                "type": "@json"
+                "@type": "@json"
               },
               "sanctionsEnforcementsResult": {
                 "@id": "polygon-vocab:sanctionsEnforcementsResult",
-                "type": "@json"
+                "@type": "@json"
               }
             },
             "@id":"polygon-vocab:amendmentsData"
@@ -394,11 +394,11 @@
               },
               "pepIntelligenceResult": {
                 "@id": "polygon-vocab:pepIntelligenceResult",
-                "type": "@json"
+                "@type": "@json"
               },
               "sanctionsEnforcementsResult": {
                 "@id": "polygon-vocab:sanctionsEnforcementsResult",
-                "type": "@json"
+                "@type": "@json"
               }
             },
             "@id":"polygon-vocab:originalData"
