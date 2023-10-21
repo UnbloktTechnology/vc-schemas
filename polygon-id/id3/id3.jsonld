@@ -143,87 +143,86 @@
                   "ResultCodes":{
                     "@context":{
                       "GlobalItemCheckResultCodes":{
-                        "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes",
                         "@context":{
                           "Name":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Name",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Name",
                             "@type":"xsd:string"
                           },
                           "Description":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Description",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Description",
                             "@type":"xsd:string"
                           },
                           "Comment":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Comment",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Comment",
                             "@type":"@json"
                           },
                           "Match":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Match",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Match",
                             "@type":"@json"
                           },
                           "Warning":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Warning",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Warning",
                             "@type":"@json"
                           },
                           "ID":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.ID",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.ID",
                             "@type":"xsd:integer"
                           },
                           "Pass":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Pass",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Pass",
                             "@type":"xsd:string"
                           },
                           "Address":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Address",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Address",
                             "@type":"xsd:string"
                           },
                           "Forename":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Forename",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Forename",
                             "@type":"xsd:string"
                           },
                           "Surname":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Surname",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Surname",
                             "@type":"xsd:string"
                           },
                           "DOB":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.DOB",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.DOB",
                             "@type":"xsd:string"
                           },
                           "Alert":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Alert",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Alert",
                             "@type":"xsd:string"
                           },
                           "SanctionsMatches":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.SanctionsMatches",
-                            "@type":
-                              "@json"
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.SanctionsMatches",
+                            "@type": "@json"
                           }
-                        }
+                        },
+                        "@id":"polygon-vocab:GlobalItemCheckResultCodes"
                       }
                     },
                     "@id":"polygon-vocab:ResultCodes"
                   },
                   "ItemCheckDecisionBands":{
-                    "@id":"polygon-vocab:ItemCheckDecisionBands",
                     "@context": {
                       "GlobalItemCheckDecisionBands":{
-                        "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands",
                         "@context":{
                           "ID":{
-                            "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands.ID",
+                            "@id":"polygon-vocab:GlobalItemCheckDecisionBands.ID",
                             "@type":"xsd:integer"
                           },
                           "BandScore":{
-                            "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands.BandScore",
+                            "@id":"polygon-vocab:GlobalItemCheckDecisionBands.BandScore",
                             "@type":"xsd:integer"
                           },
                           "BandText":{
-                            "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands.BandText",
+                            "@id":"polygon-vocab:GlobalItemCheckDecisionBands.BandText",
                             "@type":"xsd:string"
                           }
-                        }
+                        },
+                        "@id":"polygon-vocab:GlobalItemCheckDecisionBands"
                       }
-                    }
+                    },
+                    "@id":"polygon-vocab:ItemCheckDecisionBands"
                   }
                 },
                 "@id":"polygon-vocab:authenticateSPResult"
@@ -323,61 +322,61 @@
                   "ResultCodes":{
                     "@context":{
                       "GlobalItemCheckResultCodes":{
-                        "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes",
                         "@context":{
                           "Name":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Name",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Name",
                             "@type":"xsd:string"
                           },
                           "Description":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Description",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Description",
                             "@type":"xsd:string"
                           },
                           "Comment":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Comment",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Comment",
                             "@type":"@json"
                           },
                           "Match":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Match",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Match",
                             "@type":"@json"
                           },
                           "Warning":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Warning",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Warning",
                             "@type":"@json"
                           },
                           "ID":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.ID",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.ID",
                             "@type":"xsd:integer"
                           },
                           "Pass":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Pass",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Pass",
                             "@type":"xsd:string"
                           },
                           "Address":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Address",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Address",
                             "@type":"xsd:string"
                           },
                           "Forename":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Forename",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Forename",
                             "@type":"xsd:string"
                           },
                           "Surname":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Surname",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Surname",
                             "@type":"xsd:string"
                           },
                           "DOB":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.DOB",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.DOB",
                             "@type":"xsd:string"
                           },
                           "Alert":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Alert",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.Alert",
                             "@type":"xsd:string"
                           },
                           "SanctionsMatches":{
-                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.SanctionsMatches",
+                            "@id":"polygon-vocab:GlobalItemCheckResultCodes.SanctionsMatches",
                             "@type": "@json"
                           }
-                        }
+                        },
+                        "@id":"polygon-vocab:GlobalItemCheckResultCodes"
                       }
                     },
                     "@id":"polygon-vocab:ResultCodes"
