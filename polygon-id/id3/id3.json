@@ -2121,6 +2121,8 @@
               }
             },
             "authenticateSPResult": {
+              "title": "Authenticate SP Result",
+              "description": "The result of the Authenticate SP check",
               "type": "object",
               "properties": {
                 "AuthenticationID": {
@@ -2213,6 +2215,8 @@
             },
             "pepIntelligenceResult": {
               "type": "array",
+              "title": "PEP Intelligence Result",
+              "description": "The result of the PEP Intelligence check",
               "items": {
                 "type": "object",
                 "properties": {
@@ -2556,6 +2560,8 @@
             },
             "sanctionsEnforcementsResult": {
               "type": "array",
+              "title": "Sanctions Enforcements Result",
+              "description": "The result of the Sanctions Enforcements check",
               "items": {
                 "type": "object",
                 "properties": {
