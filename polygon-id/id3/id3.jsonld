@@ -207,20 +207,22 @@
                   },
                   "ItemCheckDecisionBands":{
                     "@id":"polygon-vocab:ItemCheckDecisionBands",
-                    "GlobalItemCheckDecisionBands":{
-                      "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands",
-                      "@context":{
-                        "ID":{
-                          "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands.ID",
-                          "@type":"xsd:integer"
-                        },
-                        "BandScore":{
-                          "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands.BandScore",
-                          "@type":"xsd:integer"
-                        },
-                        "BandText":{
-                          "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands.BandText",
-                          "@type":"xsd:string"
+                    "@context": {
+                      "GlobalItemCheckDecisionBands":{
+                        "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands",
+                        "@context":{
+                          "ID":{
+                            "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands.ID",
+                            "@type":"xsd:integer"
+                          },
+                          "BandScore":{
+                            "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands.BandScore",
+                            "@type":"xsd:integer"
+                          },
+                          "BandText":{
+                            "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands.BandText",
+                            "@type":"xsd:string"
+                          }
                         }
                       }
                     }
