@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "ipfs://QmSgzzZwZ8Ws6j7gYeE7Rn3k14K3Ak6qWXQonpjfLAwVAX"
+      "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/QmSgzzZwZ8Ws6j7gYeE7Rn3k14K3Ak6qWXQonpjfLAwVAX"
     },
     "type": "ProofOfResidence",
-    "version": "2.4.8"
+    "version": "2.4.9"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A proof of residence credential",

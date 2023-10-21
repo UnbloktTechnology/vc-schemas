@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "ipfs://QmaoyFJjwbkMSTwWurK4tYFxWd3CDnMLu2KustmWL8Ruks"
+      "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/QmaoyFJjwbkMSTwWurK4tYFxWd3CDnMLu2KustmWL8Ruks"
     },
     "type": "IDScan",
-    "version": "2.4.8"
+    "version": "2.4.9"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDscan schema",
