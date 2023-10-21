@@ -16,7 +16,7 @@
             "@type":"xsd:string"
           },
           "amendmentsData":{
-            "@context":{
+            "@context": {
               "data":{
                 "@context":{
                   "citizenship":{
@@ -226,12 +226,20 @@
                   }
                 },
                 "@id":"polygon-vocab:authenticateSPResult"
+              },
+              "pepIntelligenceResult": {
+                "id": "polygon-vocab:pepIntelligenceResult",
+                "type": "@json"
+              },
+              "sanctionsEnforcementsResult": {
+                "id": "polygon-vocab:sanctionsEnforcementsResult",
+                "type": "@json"
               }
             },
             "@id":"polygon-vocab:amendmentsData"
           },
           "originalData":{
-            "@context":{
+            "@context": {
               "data":{
                 "@context":{
                   "citizenship":{
@@ -383,6 +391,14 @@
                   }
                 },
                 "@id":"polygon-vocab:authenticateSPResult"
+              },
+              "pepIntelligenceResult": {
+                "id": "polygon-vocab:pepIntelligenceResult",
+                "type": "@json"
+              },
+              "sanctionsEnforcementsResult": {
+                "id": "polygon-vocab:sanctionsEnforcementsResult",
+                "type": "@json"
               }
             },
             "@id":"polygon-vocab:originalData"
