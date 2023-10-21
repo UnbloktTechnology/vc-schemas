@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "ipfs://QmQLu9wiV5YE93T7cKoKdY1xykivi2GJXsYUVfFpJoD6De"
+      "jsonLdContext": "ipfs://QmW3wBD2rsG4NeJgth3EBphoXr7BgVu57NFAqQSD3hnqCN"
     },
     "type": "ID3",
-    "version": "2.4.7"
+    "version": "2.4.7-fix-id3-jsonld-1697917927324"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "ID3 Schema",
@@ -2124,6 +2124,8 @@
               }
             },
             "authenticateSPResult": {
+              "title": "Authenticate SP Result",
+              "description": "The result of the Authenticate SP check",
               "type": "object",
               "properties": {
                 "AuthenticationID": {
@@ -2219,6 +2221,8 @@
             },
             "pepIntelligenceResult": {
               "type": "array",
+              "title": "PEP Intelligence Result",
+              "description": "The result of the PEP Intelligence check",
               "items": {
                 "type": "object",
                 "properties": {
@@ -2562,6 +2566,8 @@
             },
             "sanctionsEnforcementsResult": {
               "type": "array",
+              "title": "Sanctions Enforcements Result",
+              "description": "The result of the Sanctions Enforcements check",
               "items": {
                 "type": "object",
                 "properties": {
