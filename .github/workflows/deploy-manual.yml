@@ -101,7 +101,7 @@ jobs:
             echo "JSON file: $json_file_path"
 
             # Perform update
-            jq '.["$metadata"].uris.jsonLdContext = "ipfs://'"$ipfs_hash"'"' "$json_file_path" > temp.json && mv temp.json "$json_file_path"
+            jq '.["$metadata"].uris.jsonLdContext = "https://nexera.infura-ipfs.io/ipfs/'"$ipfs_hash"'"' "$json_file_path" > temp.json && mv temp.json "$json_file_path"
           done
 
       - name: Commit & Push changes
