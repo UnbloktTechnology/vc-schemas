@@ -1,472 +1,477 @@
 {
-  "@context": [
+  "@context":[
     {
-      "@protected": true,
-      "@version": 1.1,
-      "id": "@id",
-      "type": "@type",
-      "ID3": {
-        "@context": {
-          "@propagate": true,
-          "@protected": true,
-          "polygon-vocab": "urn:uuid:85323b0b-a770-4da1-aef1-5c84438aebe5#",
-          "xsd": "http://www.w3.org/2001/XMLSchema#",
-          "journeyId": {
-            "@id": "polygon-vocab:journeyId",
-            "@type": "xsd:string"
+      "@protected":true,
+      "@version":1.1,
+      "id":"@id",
+      "type":"@type",
+      "ID3":{
+        "@context":{
+          "@propagate":true,
+          "@protected":true,
+          "polygon-vocab":"urn:uuid:85323b0b-a770-4da1-aef1-5c84438aebe5#",
+          "xsd":"http://www.w3.org/2001/XMLSchema#",
+          "journeyId":{
+            "@id":"polygon-vocab:journeyId",
+            "@type":"xsd:string"
           },
-          "amendmentsData": {
-            "@context": {
-              "data": {
-                "@context": {
-                  "citizenship": {
-                    "@id": "polygon-vocab:citizenship",
-                    "@type": "xsd:string"
+          "amendmentsData":{
+            "@context":{
+              "data":{
+                "@context":{
+                  "citizenship":{
+                    "@id":"polygon-vocab:citizenship",
+                    "@type":"xsd:string"
                   },
-                  "documentType": {
-                    "@id": "polygon-vocab:documentType",
-                    "@type": "xsd:string"
+                  "documentType":{
+                    "@id":"polygon-vocab:documentType",
+                    "@type":"xsd:string"
                   },
-                  "firstName": {
-                    "@id": "polygon-vocab:firstName",
-                    "@type": "xsd:string"
+                  "firstName":{
+                    "@id":"polygon-vocab:firstName",
+                    "@type":"xsd:string"
                   },
-                  "lastName": {
-                    "@id": "polygon-vocab:lastName",
-                    "@type": "xsd:string"
+                  "lastName":{
+                    "@id":"polygon-vocab:lastName",
+                    "@type":"xsd:string"
                   },
-                  "gender": {
-                    "@id": "polygon-vocab:gender",
-                    "@type": "xsd:string"
+                  "gender":{
+                    "@id":"polygon-vocab:gender",
+                    "@type":"xsd:string"
                   },
-                  "addressLine1": {
-                    "@id": "polygon-vocab:addressLine1",
-                    "@type": "xsd:string"
+                  "addressLine1":{
+                    "@id":"polygon-vocab:addressLine1",
+                    "@type":"xsd:string"
                   },
-                  "addressLine2": {
-                    "@id": "polygon-vocab:addressLine2",
-                    "@type": "xsd:string"
+                  "addressLine2":{
+                    "@id":"polygon-vocab:addressLine2",
+                    "@type":"xsd:string"
                   },
-                  "birthday": {
-                    "@id": "polygon-vocab:birthday",
-                    "@type": "xsd:dateTime"
+                  "birthday":{
+                    "@id":"polygon-vocab:birthday",
+                    "@type":"xsd:dateTime"
                   },
-                  "placeOfBirth": {
-                    "@id": "polygon-vocab:placeOfBirth",
-                    "@type": "xsd:string"
+                  "placeOfBirth":{
+                    "@id":"polygon-vocab:placeOfBirth",
+                    "@type":"xsd:string"
                   },
-                  "countryOfResidence": {
-                    "@id": "polygon-vocab:countryOfResidence",
-                    "@type": "xsd:string"
+                  "countryOfResidence":{
+                    "@id":"polygon-vocab:countryOfResidence",
+                    "@type":"xsd:string"
                   },
-                  "age": {
-                    "@id": "polygon-vocab:age",
-                    "@type": "xsd:integer"
+                  "age":{
+                    "@id":"polygon-vocab:age",
+                    "@type":"xsd:integer"
                   },
-                  "city": {
-                    "@id": "polygon-vocab:city",
-                    "@type": "xsd:string"
+                  "city":{
+                    "@id":"polygon-vocab:city",
+                    "@type":"xsd:string"
                   },
-                  "province": {
-                    "@id": "polygon-vocab:province",
-                    "@type": "xsd:string"
+                  "province":{
+                    "@id":"polygon-vocab:province",
+                    "@type":"xsd:string"
                   },
-                  "postalCode": {
-                    "@id": "polygon-vocab:postalCode",
-                    "@type": "xsd:string"
+                  "postalCode":{
+                    "@id":"polygon-vocab:postalCode",
+                    "@type":"xsd:string"
                   },
-                  "emailAddress": {
-                    "@id": "polygon-vocab:emailAddress",
-                    "@type": "xsd:string"
+                  "emailAddress":{
+                    "@id":"polygon-vocab:emailAddress",
+                    "@type":"xsd:string"
                   },
-                  "phoneNumber": {
-                    "@id": "polygon-vocab:phoneNumber",
-                    "@type": "xsd:string"
+                  "phoneNumber":{
+                    "@id":"polygon-vocab:phoneNumber",
+                    "@type":"xsd:string"
                   },
-                  "countryOfBirth": {
-                    "@id": "polygon-vocab:countryOfBirth",
-                    "@type": "xsd:string"
+                  "countryOfBirth":{
+                    "@id":"polygon-vocab:countryOfBirth",
+                    "@type":"xsd:string"
                   },
-                  "middleName": {
-                    "@id": "polygon-vocab:middleName",
-                    "@type": "xsd:string"
+                  "middleName":{
+                    "@id":"polygon-vocab:middleName",
+                    "@type":"xsd:string"
                   }
                 },
-                "@id": "polygon-vocab:data"
+                "@id":"polygon-vocab:data"
               },
-              "authenticateSPResult": {
-                "@context": {
-                  "AuthenticationID": {
-                    "@id": "polygon-vocab:AuthenticationID",
-                    "@type": "xsd:string"
+              "authenticateSPResult":{
+                "@context":{
+                  "AuthenticationID":{
+                    "@id":"polygon-vocab:AuthenticationID",
+                    "@type":"xsd:string"
                   },
-                  "Timestamp": {
-                    "@id": "polygon-vocab:Timestamp",
-                    "@type": "xsd:dateTime"
+                  "Timestamp":{
+                    "@id":"polygon-vocab:Timestamp",
+                    "@type":"xsd:dateTime"
                   },
-                  "CustomerRef": {
-                    "@id": "polygon-vocab:CustomerRef",
-                    "@type": "xsd:string"
+                  "CustomerRef":{
+                    "@id":"polygon-vocab:CustomerRef",
+                    "@type":"xsd:string"
                   },
-                  "ProfileID": {
-                    "@id": "polygon-vocab:ProfileID",
-                    "@type": "xsd:string"
+                  "ProfileID":{
+                    "@id":"polygon-vocab:ProfileID",
+                    "@type":"xsd:string"
                   },
-                  "ProfileName": {
-                    "@id": "polygon-vocab:ProfileName",
-                    "@type": "xsd:string"
+                  "ProfileName":{
+                    "@id":"polygon-vocab:ProfileName",
+                    "@type":"xsd:string"
                   },
-                  "ProfileVersion": {
-                    "@id": "polygon-vocab:ProfileVersion",
-                    "@type": "xsd:integer"
+                  "ProfileVersion":{
+                    "@id":"polygon-vocab:ProfileVersion",
+                    "@type":"xsd:integer"
                   },
-                  "ProfileRevision": {
-                    "@id": "polygon-vocab:ProfileRevision",
-                    "@type": "xsd:integer"
+                  "ProfileRevision":{
+                    "@id":"polygon-vocab:ProfileRevision",
+                    "@type":"xsd:integer"
                   },
-                  "ProfileState": {
-                    "@id": "polygon-vocab:ProfileState",
-                    "@type": "xsd:string"
+                  "ProfileState":{
+                    "@id":"polygon-vocab:ProfileState",
+                    "@type":"xsd:string"
                   },
-                  "Score": {
-                    "@id": "polygon-vocab:Score",
-                    "@type": "xsd:integer"
+                  "Score":{
+                    "@id":"polygon-vocab:Score",
+                    "@type":"xsd:integer"
                   },
-                  "BandText": {
-                    "@id": "polygon-vocab:BandText",
-                    "@type": "xsd:string"
+                  "BandText":{
+                    "@id":"polygon-vocab:BandText",
+                    "@type":"xsd:string"
                   },
-                  "Country": {
-                    "@id": "polygon-vocab:Country",
-                    "@type": "xsd:string"
+                  "Country":{
+                    "@id":"polygon-vocab:Country",
+                    "@type":"xsd:string"
                   },
-                  "ResultCodes": {
-                    "@context": {
-                      "GlobalItemCheckResultCodes": {
-                        "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes",
-                        "@context": {
-                          "Name": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Name",
-                            "@type": "xsd:string"
+                  "ResultCodes":{
+                    "@context":{
+                      "GlobalItemCheckResultCodes":{
+                        "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes",
+                        "@context":{
+                          "Name":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Name",
+                            "@type":"xsd:string"
                           },
-                          "Description": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Description",
-                            "@type": "xsd:string"
+                          "Description":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Description",
+                            "@type":"xsd:string"
                           },
-                          "Comment": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Comment",
-                            "@type": "@object"
+                          "Comment":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Comment",
+                            "@type":"@json"
                           },
-                          "Match": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Match",
-                            "@type": "@object"
+                          "Match":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Match",
+                            "@type":"@json"
                           },
-                          "Warning": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Warning",
-                            "@type": "@object"
+                          "Warning":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Warning",
+                            "@type":"@json"
                           },
-                          "ID": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.ID",
-                            "@type": "xsd:integer"
+                          "ID":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.ID",
+                            "@type":"xsd:integer"
                           },
-                          "Pass": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Pass",
-                            "@type": "xsd:string"
+                          "Pass":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Pass",
+                            "@type":"xsd:string"
                           },
-                          "Address": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Address",
-                            "@type": "xsd:string"
+                          "Address":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Address",
+                            "@type":"xsd:string"
                           },
-                          "Forename": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Forename",
-                            "@type": "xsd:string"
+                          "Forename":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Forename",
+                            "@type":"xsd:string"
                           },
-                          "Surname": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Surname",
-                            "@type": "xsd:string"
+                          "Surname":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Surname",
+                            "@type":"xsd:string"
                           },
-                          "DOB": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.DOB",
-                            "@type": "xsd:string"
+                          "DOB":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.DOB",
+                            "@type":"xsd:string"
                           },
-                          "Alert": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Alert",
-                            "@type": "xsd:string"
+                          "Alert":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Alert",
+                            "@type":"xsd:string"
                           },
-                          "SanctionsMatches": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.SanctionsMatches",
-                            "@type": ["@object", "xsd:string"]
+                          "SanctionsMatches":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.SanctionsMatches",
+                            "@type":[
+                              "@json",
+                              "xsd:string"
+                            ]
                           }
                         }
                       }
                     },
-                    "@id": "polygon-vocab:ResultCodes"
-
+                    "@id":"polygon-vocab:ResultCodes"
                   },
-                  "ItemCheckDecisionBands": {
-                    "@id": "polygon-vocab:ItemCheckDecisionBands",
-                    "GlobalItemCheckDecisionBands": {
-                      "@id": "polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands",
-                      "@context": {
-                        "ID": {
-                          "@id": "polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands.ID",
-                          "@type": "xsd:integer"
-                        },
-                        "BandScore": {
-                          "@id": "polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands.BandScore",
-                          "@type": "xsd:integer"
-                        },
-                        "BandText": {
-                          "@id": "polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands.BandText",
-                          "@type": "xsd:string"
+                  "ItemCheckDecisionBands":{
+                    "@id":"polygon-vocab:ItemCheckDecisionBands",
+                    "@context": {
+                      "GlobalItemCheckDecisionBands":{
+                        "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands",
+                        "@context":{
+                          "ID":{
+                            "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands.ID",
+                            "@type":"xsd:integer"
+                          },
+                          "BandScore":{
+                            "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands.BandScore",
+                            "@type":"xsd:integer"
+                          },
+                          "BandText":{
+                            "@id":"polygon-vocab:ItemCheckDecisionBands.GlobalItemCheckDecisionBands.BandText",
+                            "@type":"xsd:string"
+                          }
                         }
                       }
                     }
                   }
-                }
-              },
-                "@id": "polygon-vocab:authenticateSPResult"
+                },
+                "@id":"polygon-vocab:authenticateSPResult"
               }
             },
-            "@id": "polygon-vocab:amendmentsData"
+            "@id":"polygon-vocab:amendmentsData"
           },
-          "originalData": {
-            "@context": {
-              "data": {
-                "@context": {
-                  "citizenship": {
-                    "@id": "polygon-vocab:citizenship",
-                    "@type": "xsd:string"
+          "originalData":{
+            "@context":{
+              "data":{
+                "@context":{
+                  "citizenship":{
+                    "@id":"polygon-vocab:citizenship",
+                    "@type":"xsd:string"
                   },
-                  "documentType": {
-                    "@id": "polygon-vocab:documentType",
-                    "@type": "xsd:string"
+                  "documentType":{
+                    "@id":"polygon-vocab:documentType",
+                    "@type":"xsd:string"
                   },
-                  "firstName": {
-                    "@id": "polygon-vocab:firstName",
-                    "@type": "xsd:string"
+                  "firstName":{
+                    "@id":"polygon-vocab:firstName",
+                    "@type":"xsd:string"
                   },
-                  "lastName": {
-                    "@id": "polygon-vocab:lastName",
-                    "@type": "xsd:string"
+                  "lastName":{
+                    "@id":"polygon-vocab:lastName",
+                    "@type":"xsd:string"
                   },
-                  "gender": {
-                    "@id": "polygon-vocab:gender",
-                    "@type": "xsd:string"
+                  "gender":{
+                    "@id":"polygon-vocab:gender",
+                    "@type":"xsd:string"
                   },
-                  "addressLine1": {
-                    "@id": "polygon-vocab:addressLine1",
-                    "@type": "xsd:string"
+                  "addressLine1":{
+                    "@id":"polygon-vocab:addressLine1",
+                    "@type":"xsd:string"
                   },
-                  "addressLine2": {
-                    "@id": "polygon-vocab:addressLine2",
-                    "@type": "xsd:string"
+                  "addressLine2":{
+                    "@id":"polygon-vocab:addressLine2",
+                    "@type":"xsd:string"
                   },
-                  "birthday": {
-                    "@id": "polygon-vocab:birthday",
-                    "@type": "xsd:dateTime"
+                  "birthday":{
+                    "@id":"polygon-vocab:birthday",
+                    "@type":"xsd:dateTime"
                   },
-                  "age": {
-                    "@id": "polygon-vocab:age",
-                    "@type": "xsd:integer"
+                  "age":{
+                    "@id":"polygon-vocab:age",
+                    "@type":"xsd:integer"
                   }
                 },
-                "@id": "polygon-vocab:data"
+                "@id":"polygon-vocab:data"
               },
-              "authenticateSPResult": {
-                "@context": {
-                  "AuthenticationID": {
-                    "@id": "polygon-vocab:AuthenticationID",
-                    "@type": "xsd:string"
+              "authenticateSPResult":{
+                "@context":{
+                  "AuthenticationID":{
+                    "@id":"polygon-vocab:AuthenticationID",
+                    "@type":"xsd:string"
                   },
-                  "Timestamp": {
-                    "@id": "polygon-vocab:Timestamp",
-                    "@type": "xsd:dateTime"
+                  "Timestamp":{
+                    "@id":"polygon-vocab:Timestamp",
+                    "@type":"xsd:dateTime"
                   },
-                  "CustomerRef": {
-                    "@id": "polygon-vocab:CustomerRef",
-                    "@type": "xsd:string"
+                  "CustomerRef":{
+                    "@id":"polygon-vocab:CustomerRef",
+                    "@type":"xsd:string"
                   },
-                  "ProfileID": {
-                    "@id": "polygon-vocab:ProfileID",
-                    "@type": "xsd:string"
+                  "ProfileID":{
+                    "@id":"polygon-vocab:ProfileID",
+                    "@type":"xsd:string"
                   },
-                  "ProfileName": {
-                    "@id": "polygon-vocab:ProfileName",
-                    "@type": "xsd:string"
+                  "ProfileName":{
+                    "@id":"polygon-vocab:ProfileName",
+                    "@type":"xsd:string"
                   },
-                  "ProfileVersion": {
-                    "@id": "polygon-vocab:ProfileVersion",
-                    "@type": "xsd:integer"
+                  "ProfileVersion":{
+                    "@id":"polygon-vocab:ProfileVersion",
+                    "@type":"xsd:integer"
                   },
-                  "ProfileRevision": {
-                    "@id": "polygon-vocab:ProfileRevision",
-                    "@type": "xsd:integer"
+                  "ProfileRevision":{
+                    "@id":"polygon-vocab:ProfileRevision",
+                    "@type":"xsd:integer"
                   },
-                  "ProfileState": {
-                    "@id": "polygon-vocab:ProfileState",
-                    "@type": "xsd:string"
+                  "ProfileState":{
+                    "@id":"polygon-vocab:ProfileState",
+                    "@type":"xsd:string"
                   },
-                  "Score": {
-                    "@id": "polygon-vocab:Score",
-                    "@type": "xsd:integer"
+                  "Score":{
+                    "@id":"polygon-vocab:Score",
+                    "@type":"xsd:integer"
                   },
-                  "BandText": {
-                    "@id": "polygon-vocab:BandText",
-                    "@type": "xsd:string"
+                  "BandText":{
+                    "@id":"polygon-vocab:BandText",
+                    "@type":"xsd:string"
                   },
-                  "Country": {
-                    "@id": "polygon-vocab:Country",
-                    "@type": "xsd:string"
+                  "Country":{
+                    "@id":"polygon-vocab:Country",
+                    "@type":"xsd:string"
                   },
-                  "ResultCodes": {
-                    "@context": {
-                      "GlobalItemCheckResultCodes": {
-                        "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes",
-                        "@context": {
-                          "Name": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Name",
-                            "@type": "xsd:string"
+                  "ResultCodes":{
+                    "@context":{
+                      "GlobalItemCheckResultCodes":{
+                        "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes",
+                        "@context":{
+                          "Name":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Name",
+                            "@type":"xsd:string"
                           },
-                          "Description": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Description",
-                            "@type": "xsd:string"
+                          "Description":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Description",
+                            "@type":"xsd:string"
                           },
-                          "Comment": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Comment",
-                            "@type": "@object"
+                          "Comment":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Comment",
+                            "@type":"@json"
                           },
-                          "Match": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Match",
-                            "@type": "@object"
+                          "Match":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Match",
+                            "@type":"@json"
                           },
-                          "Warning": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Warning",
-                            "@type": "@object"
+                          "Warning":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Warning",
+                            "@type":"@json"
                           },
-                          "ID": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.ID",
-                            "@type": "xsd:integer"
+                          "ID":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.ID",
+                            "@type":"xsd:integer"
                           },
-                          "Pass": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Pass",
-                            "@type": "xsd:string"
+                          "Pass":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Pass",
+                            "@type":"xsd:string"
                           },
-                          "Address": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Address",
-                            "@type": "xsd:string"
+                          "Address":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Address",
+                            "@type":"xsd:string"
                           },
-                          "Forename": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Forename",
-                            "@type": "xsd:string"
+                          "Forename":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Forename",
+                            "@type":"xsd:string"
                           },
-                          "Surname": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Surname",
-                            "@type": "xsd:string"
+                          "Surname":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Surname",
+                            "@type":"xsd:string"
                           },
-                          "DOB": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.DOB",
-                            "@type": "xsd:string"
+                          "DOB":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.DOB",
+                            "@type":"xsd:string"
                           },
-                          "Alert": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Alert",
-                            "@type": "xsd:string"
+                          "Alert":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.Alert",
+                            "@type":"xsd:string"
                           },
-                          "SanctionsMatches": {
-                            "@id": "polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.SanctionsMatches",
-                            "@type": ["@object", "xsd:string"]
+                          "SanctionsMatches":{
+                            "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.SanctionsMatches",
+                            "@type":[
+                              "@json",
+                              "xsd:string"
+                            ]
                           }
                         }
                       }
                     },
-                    "@id": "polygon-vocab:ResultCodes"
-
+                    "@id":"polygon-vocab:ResultCodes"
                   }
                 },
-                "@id": "polygon-vocab:authenticateSPResult"
+                "@id":"polygon-vocab:authenticateSPResult"
               }
             },
-            "@id": "polygon-vocab:originalData"
+            "@id":"polygon-vocab:originalData"
           },
-          "personalDetails": {
-            "@context": {
-              "citizenship": {
-                "@id": "polygon-vocab:citizenship",
-                "@type": "xsd:string"
+          "personalDetails":{
+            "@context":{
+              "citizenship":{
+                "@id":"polygon-vocab:citizenship",
+                "@type":"xsd:string"
               },
-              "documentType": {
-                "@id": "polygon-vocab:documentType",
-                "@type": "xsd:string"
+              "documentType":{
+                "@id":"polygon-vocab:documentType",
+                "@type":"xsd:string"
               },
-              "firstName": {
-                "@id": "polygon-vocab:firstName",
-                "@type": "xsd:string"
+              "firstName":{
+                "@id":"polygon-vocab:firstName",
+                "@type":"xsd:string"
               },
-              "lastName": {
-                "@id": "polygon-vocab:lastName",
-                "@type": "xsd:string"
+              "lastName":{
+                "@id":"polygon-vocab:lastName",
+                "@type":"xsd:string"
               },
-              "gender": {
-                "@id": "polygon-vocab:gender",
-                "@type": "xsd:string"
+              "gender":{
+                "@id":"polygon-vocab:gender",
+                "@type":"xsd:string"
               },
-              "addressLine1": {
-                "@id": "polygon-vocab:addressLine1",
-                "@type": "xsd:string"
+              "addressLine1":{
+                "@id":"polygon-vocab:addressLine1",
+                "@type":"xsd:string"
               },
-              "addressLine2": {
-                "@id": "polygon-vocab:addressLine2",
-                "@type": "xsd:string"
+              "addressLine2":{
+                "@id":"polygon-vocab:addressLine2",
+                "@type":"xsd:string"
               },
-              "birthday": {
-                "@id": "polygon-vocab:birthday",
-                "@type": "xsd:dateTime"
+              "birthday":{
+                "@id":"polygon-vocab:birthday",
+                "@type":"xsd:dateTime"
               },
-              "placeOfBirth": {
-                "@id": "polygon-vocab:placeOfBirth",
-                "@type": "xsd:string"
+              "placeOfBirth":{
+                "@id":"polygon-vocab:placeOfBirth",
+                "@type":"xsd:string"
               },
-              "countryOfResidence": {
-                "@id": "polygon-vocab:countryOfResidence",
-                "@type": "xsd:string"
+              "countryOfResidence":{
+                "@id":"polygon-vocab:countryOfResidence",
+                "@type":"xsd:string"
               },
-              "age": {
-                "@id": "polygon-vocab:age",
-                "@type": "xsd:integer"
+              "age":{
+                "@id":"polygon-vocab:age",
+                "@type":"xsd:integer"
               },
-              "city": {
-                "@id": "polygon-vocab:city",
-                "@type": "xsd:string"
+              "city":{
+                "@id":"polygon-vocab:city",
+                "@type":"xsd:string"
               },
-              "province": {
-                "@id": "polygon-vocab:province",
-                "@type": "xsd:string"
+              "province":{
+                "@id":"polygon-vocab:province",
+                "@type":"xsd:string"
               },
-              "postalCode": {
-                "@id": "polygon-vocab:postalCode",
-                "@type": "xsd:string"
+              "postalCode":{
+                "@id":"polygon-vocab:postalCode",
+                "@type":"xsd:string"
               },
-              "emailAddress": {
-                "@id": "polygon-vocab:emailAddress",
-                "@type": "xsd:string"
+              "emailAddress":{
+                "@id":"polygon-vocab:emailAddress",
+                "@type":"xsd:string"
               },
-              "phoneNumber": {
-                "@id": "polygon-vocab:phoneNumber",
-                "@type": "xsd:string"
+              "phoneNumber":{
+                "@id":"polygon-vocab:phoneNumber",
+                "@type":"xsd:string"
               },
-              "countryOfBirth": {
-                "@id": "polygon-vocab:countryOfBirth",
-                "@type": "xsd:string"
+              "countryOfBirth":{
+                "@id":"polygon-vocab:countryOfBirth",
+                "@type":"xsd:string"
               },
-              "middleName": {
-                "@id": "polygon-vocab:middleName",
-                "@type": "xsd:string"
+              "middleName":{
+                "@id":"polygon-vocab:middleName",
+                "@type":"xsd:string"
               }
             },
-            "@id": "polygon-vocab:personalDetails"
+            "@id":"polygon-vocab:personalDetails"
           }
         },
-        "@id": "urn:uuid:bccfa23c-99c7-4447-84b3-86a28424bc97"
+        "@id":"urn:uuid:bccfa23c-99c7-4447-84b3-86a28424bc97"
       }
     }
   ]
