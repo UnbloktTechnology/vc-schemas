@@ -141,11 +141,11 @@
                     "@type": "xsd:string"
                   },
                   "ResultCodes": {
-                    "@context": {},
+                    "@type":"@json",
                     "@id": "polygon-vocab:ResultCodes"
                   },
                   "ItemCheckDecisionBands": {
-                    "@context": {},
+                    "@type":"@json",
                     "@id": "polygon-vocab:ItemCheckDecisionBands"
                   }
                 },
@@ -244,7 +244,7 @@
                     "@type": "xsd:string"
                   },
                   "ResultCodes": {
-                    "@context": {},
+                    "@type":"@json",
                     "@id": "polygon-vocab:ResultCodes"
                   }
                 },
