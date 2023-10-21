@@ -195,10 +195,8 @@
                           },
                           "SanctionsMatches":{
                             "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.SanctionsMatches",
-                            "@type":[
-                              "@json",
-                              "xsd:string"
-                            ]
+                            "@type":
+                              "@json"
                           }
                         }
                       }
@@ -377,10 +375,7 @@
                           },
                           "SanctionsMatches":{
                             "@id":"polygon-vocab:ResultCodes.GlobalItemCheckResultCodes.SanctionsMatches",
-                            "@type":[
-                              "@json",
-                              "xsd:string"
-                            ]
+                            "@type": "@json"
                           }
                         }
                       }
