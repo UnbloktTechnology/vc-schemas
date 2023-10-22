@@ -374,23 +374,23 @@
                       "GlobalSanctionsDate": {
                         "@context": {
                           "DateType": {
-                            "@id": "polygon-vocab:SanctionsDates.DateType",
+                            "@id": "polygon-vocab:GlobalSanctionsDate.DateType",
                             "@type": "xsd:string"
                           },
                           "Day": {
-                            "@id": "polygon-vocab:SanctionsDates.Day",
+                            "@id": "polygon-vocab:GlobalSanctionsDate.Day",
                             "@type": "xsd:integer"
                           },
                           "Month": {
-                            "@id": "polygon-vocab:SanctionsDates.Month",
+                            "@id": "polygon-vocab:GlobalSanctionsDate.Month",
                             "@type": "xsd:integer"
                           },
                           "Year": {
-                            "@id": "polygon-vocab:SanctionsDates.Year",
+                            "@id": "polygon-vocab:GlobalSanctionsDate.Year",
                             "@type": "xsd:integer"
                           }
                         },
-                        "@id": "polygon-vocab:SanctionsDates.GlobalSanctionsDate"
+                        "@id": "polygon-vocab:GlobalSanctionsDate"
                       }
                     },
                     "@id": "polygon-vocab:SanctionsDates"
@@ -706,23 +706,23 @@
                       "GlobalSanctionsDate": {
                         "@context": {
                           "DateType": {
-                            "@id": "polygon-vocab:SanctionsDates.DateType",
+                            "@id": "polygon-vocab:GlobalSanctionsDate.DateType",
                             "@type": "xsd:string"
                           },
                           "Day": {
-                            "@id": "polygon-vocab:SanctionsDates.Day",
+                            "@id": "polygon-vocab:GlobalSanctionsDate.Day",
                             "@type": "xsd:integer"
                           },
                           "Month": {
-                            "@id": "polygon-vocab:SanctionsDates.Month",
+                            "@id": "polygon-vocab:GlobalSanctionsDate.Month",
                             "@type": "xsd:integer"
                           },
                           "Year": {
-                            "@id": "polygon-vocab:SanctionsDates.Year",
+                            "@id": "polygon-vocab:GlobalSanctionsDate.Year",
                             "@type": "xsd:integer"
                           }
                         },
-                        "@id": "polygon-vocab:SanctionsDates.GlobalSanctionsDate"
+                        "@id": "polygon-vocab:GlobalSanctionsDate"
                       }
                     },
                     "@id": "polygon-vocab:SanctionsDates"
