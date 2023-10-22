@@ -1,7 +1,7 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/id3/id3.jsonld"
+      "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/QmVyZoWVBMyDBurUpW1EivQwchjajQJbKX84Lc1M2fc74p"
     },
     "type": "ID3",
     "version": "2.4.9"
@@ -40,8 +40,6 @@
           "description": "Details related to the amendments made to the original data.",
           "properties": {
             "data": {
-              "title": "Amendments Data",
-              "description": "Data manually amended by the holder/user during the verification process.",
               "type": "object",
               "properties": {
                 "citizenship": {
@@ -909,8 +907,6 @@
               }
             },
             "authenticateSPResult": {
-              "title": "Authenticate SP Result",
-              "description": "Result of the authentication request",
               "type": "object",
               "properties": {
                 "AuthenticationID": {
@@ -925,33 +921,21 @@
                   "description": "The timestamp of the authentication request"
                 },
                 "CustomerRef": {
-                  "title": "Customer Reference",
-                  "description": "The customer reference of the authentication request",
                   "type": "string"
                 },
                 "ProfileID": {
-                  "title": "Profile ID",
-                  "description": "The ID of the profile used for the authentication request",
                   "type": "string"
                 },
                 "ProfileName": {
-                  "title": "Profile Name",
-                  "description": "The name of the profile used for the authentication request",
                   "type": "string"
                 },
                 "ProfileVersion": {
-                  "title": "Profile Version",
-                  "description": "The version of the profile used for the authentication request",
                   "type": "integer"
                 },
                 "ProfileRevision": {
-                  "title": "Profile Revision",
-                  "description": "The revision of the profile used for the authentication request",
                   "type": "integer"
                 },
                 "ProfileState": {
-                  "title": "Profile State",
-                  "description": "The state of the profile used for the authentication request",
                   "type": "string"
                 },
                 "ResultCodes": {
@@ -1074,7 +1058,10 @@
                                   "type": "object",
                                   "properties": {
                                     "SanctionID": {
-                                      "type": ["integer", "string"]
+                                      "type": [
+                                        "integer",
+                                        "string"
+                                      ]
                                     },
                                     "Url": {
                                       "type": "string"
@@ -1099,18 +1086,12 @@
                   }
                 },
                 "Score": {
-                  "title": "Score",
-                  "description": "The score of the authentication request",
                   "type": "integer"
                 },
                 "BandText": {
-                  "title": "Band Text",
-                  "description": "The band text of the authentication request",
                   "type": "string"
                 },
                 "Country": {
-                  "title": "Country",
-                  "description": "Country type of the authentication request",
                   "type": "string"
                 },
                 "ItemCheckDecisionBands": {
@@ -2217,7 +2198,10 @@
                             "type": "string"
                           },
                           "SanctionsMatches": {
-                            "type": ["object", "string"]
+                            "type": [
+                              "object",
+                              "string"
+                            ]
                           }
                         }
                       }
@@ -2925,8 +2909,8 @@
           "type": "object",
           "properties": {
             "citizenship": {
-              "title": "Citizenship",
-              "description": "The country of citizenship of the credential subject ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
+              "title": "Citizenship - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
+              "description": "The country of citizenship of the credential subject",
               "type": "string",
               "enum": [
                 "AFG",
@@ -3764,7 +3748,11 @@
       }
     },
     "@context": {
-      "type": ["string", "array", "object"]
+      "type": [
+        "string",
+        "array",
+        "object"
+      ]
     },
     "expirationDate": {
       "format": "date-time",
@@ -3778,7 +3766,10 @@
       "type": "string"
     },
     "issuer": {
-      "type": ["string", "object"],
+      "type": [
+        "string",
+        "object"
+      ],
       "format": "uri",
       "properties": {
         "id": {
@@ -3786,10 +3777,15 @@
           "type": "string"
         }
       },
-      "required": ["id"]
+      "required": [
+        "id"
+      ]
     },
     "type": {
-      "type": ["string", "array"],
+      "type": [
+        "string",
+        "array"
+      ],
       "items": {
         "type": "string"
       }
@@ -3804,7 +3800,10 @@
           "type": "string"
         }
       },
-      "required": ["id", "type"],
+      "required": [
+        "id",
+        "type"
+      ],
       "type": "object"
     }
   },
