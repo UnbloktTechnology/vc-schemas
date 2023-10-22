@@ -235,9 +235,10 @@
                   },
                   "Aliases": {
                     "@context": {
-                      "a:string": {
-                        "@id": "polygon-vocab:Aliases.a:string",
-                        "@type": "xsd:string"
+                      "elements": {
+                        "@id": "polygon-vocab:elements",
+                        "@type": "xsd:string",
+                        "@container": "@list"
                       }
                     },
                     "@id": "polygon-vocab:Aliases"
@@ -327,18 +328,20 @@
                   },
                   "SanctionsBodies": {
                     "@context": {
-                      "a:string": {
-                        "@id": "polygon-vocab:SanctionsBodies.a:string",
-                        "@type": "xsd:integer"
+                      "elements": {
+                        "@id": "polygon-vocab:SanctionsBodies.elements",
+                        "@type": "xsd:integer",
+                        "@container": "@list"
                       }
                     },
                     "@id": "polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
                   },
                   "Aliases": {
                     "@context": {
-                      "a:string": {
-                        "@id": "polygon-vocab:Aliases.a:string",
-                        "@type": "xsd:string"
+                      "elements": {
+                        "@id": "polygon-vocab:elements",
+                        "@type": "xsd:string",
+                        "@container": "@list"
                       }
                     },
                     "@id": "polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
@@ -567,9 +570,10 @@
                   },
                   "Aliases": {
                     "@context": {
-                      "a:string": {
-                        "@id": "polygon-vocab:Aliases.a:string",
-                        "@type": "xsd:string"
+                      "elements": {
+                        "@id": "polygon-vocab:elements",
+                        "@type": "xsd:string",
+                        "@container": "@list"
                       }
                     },
                     "@id": "polygon-vocab:Aliases"
@@ -659,18 +663,20 @@
                   },
                   "SanctionsBodies": {
                     "@context": {
-                      "a:string": {
-                        "@id": "polygon-vocab:SanctionsBodies.a:string",
-                        "@type": "xsd:integer"
+                      "elements": {
+                        "@id": "polygon-vocab:SanctionsBodies.elements",
+                        "@type": "xsd:integer",
+                        "@container": "@list"
                       }
                     },
                     "@id": "polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
                   },
                   "Aliases": {
                     "@context": {
-                      "a:string": {
-                        "@id": "polygon-vocab:Aliases.a:string",
-                        "@type": "xsd:string"
+                      "elements": {
+                        "@id": "polygon-vocab:elements",
+                        "@type": "xsd:string",
+                        "@container": "@list"
                       }
                     },
                     "@id": "polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
@@ -820,4 +826,3 @@
     }
   ]
 }
-
