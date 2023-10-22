@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/idscan/idscan.jsonld"
     },
     "type": "IDScan",
-    "version": "2.4.9-improve-id3-json-ld-1698005139053-improve-id3-json-ld-1698008830758"
+    "version": "2.4.9-improve-id3-json-ld-1698005139053"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDscan schema",
