@@ -247,23 +247,23 @@
                       "GlobalSanctionsAddress": {
                         "@context": {
                           "AddressLine": {
-                            "@id": "polygon-vocab:SanctionsAddresses.AddressLine",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.AddressLine",
                             "@type": "xsd:string"
                           },
                           "City": {
-                            "@id": "polygon-vocab:SanctionsAddresses.City",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.City",
                             "@type": "xsd:string"
                           },
                           "Country": {
-                            "@id": "polygon-vocab:SanctionsAddresses.Country",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Country",
                             "@type": "xsd:string"
                           },
                           "Region": {
-                            "@id": "polygon-vocab:SanctionsAddresses.Region",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Region",
                             "@type": "xsd:string"
                           }
                         },
-                        "@id": "polygon-vocab:SanctionsAddresses.GlobalSanctionsAddress"
+                        "@id": "polygon-vocab:GlobalSanctionsAddress"
                       }
                     },
                     "@id": "polygon-vocab:SanctionsAddresses"
@@ -273,19 +273,19 @@
                       "GlobalSanctionsDate": {
                         "@context": {
                           "DateType": {
-                            "@id": "polygon-vocab:SanctionsDates.DateType",
+                            "@id": "polygon-vocab:DateType",
                             "@type": "xsd:string"
                           },
                           "Day": {
-                            "@id": "polygon-vocab:SanctionsDates.Day",
+                            "@id": "polygon-vocab:Day",
                             "@type": "xsd:integer"
                           },
                           "Month": {
-                            "@id": "polygon-vocab:SanctionsDates.Month",
+                            "@id": "polygon-vocab:Month",
                             "@type": "xsd:integer"
                           },
                           "Year": {
-                            "@id": "polygon-vocab:SanctionsDates.Year",
+                            "@id": "polygon-vocab:Year",
                             "@type": "xsd:integer"
                           }
                         },
@@ -303,15 +303,15 @@
                       "GlobalSanctionsPosition": {
                         "@context": {
                           "Position": {
-                            "@id": "polygon-vocab:SanctionsPositions.Position",
+                            "@id": "polygon-vocab:GlobalSanctionsPosition.Position",
                             "@type": "xsd:string"
                           },
                           "Country": {
-                            "@id": "polygon-vocab:SanctionsPositions.Country",
+                            "@id": "polygon-vocab:GlobalSanctionsPosition.Country",
                             "@type": "xsd:string"
                           }
                         },
-                        "@id": "polygon-vocab:SanctionsPositions.GlobalSanctionsPosition"
+                        "@id": "polygon-vocab:GlobalSanctionsPosition"
                       }
                     },
                     "@id": "polygon-vocab:SanctionsPositions"
@@ -322,40 +322,49 @@
               "sanctionsEnforcementsResult": {
                 "@context": {
                   "Fullname": {
-                    "@id": "polygon-vocab:Fullname",
+                    "@id": "polygon-vocab:sanctionsEnforcementsResult.Fullname",
                     "@type": "xsd:string"
                   },
-                  "SanctionsAliases": {
+                  "SanctionsBodies": {
                     "@context": {
                       "a:string": {
-                        "@id": "polygon-vocab:SanctionsAliases.a:string",
+                        "@id": "polygon-vocab:SanctionsBodies.a:string",
+                        "@type": "xsd:integer"
+                      }
+                    },
+                    "@id": "polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
+                  },
+                  "Aliases": {
+                    "@context": {
+                      "a:string": {
+                        "@id": "polygon-vocab:Aliases.a:string",
                         "@type": "xsd:string"
                       }
                     },
-                    "@id": "polygon-vocab:SanctionsAliases"
+                    "@id": "polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
                   },
                   "SanctionsAddresses": {
                     "@context": {
                       "GlobalSanctionsAddress": {
                         "@context": {
                           "AddressLine": {
-                            "@id": "polygon-vocab:SanctionsAddresses.AddressLine",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.AddressLine",
                             "@type": "xsd:string"
                           },
                           "City": {
-                            "@id": "polygon-vocab:SanctionsAddresses.City",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.City",
                             "@type": "xsd:string"
                           },
                           "Country": {
-                            "@id": "polygon-vocab:SanctionsAddresses.Country",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Country",
                             "@type": "xsd:string"
                           },
                           "Region": {
-                            "@id": "polygon-vocab:SanctionsAddresses.Region",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Region",
                             "@type": "xsd:string"
                           }
                         },
-                        "@id": "polygon-vocab:SanctionsAddresses.GlobalSanctionsAddress"
+                        "@id": "polygon-vocab:GlobalSanctionsAddress"
                       }
                     },
                     "@id": "polygon-vocab:SanctionsAddresses"
@@ -388,28 +397,6 @@
                   },
                   "IdentityInformation": {
                     "@id": "polygon-vocab:IdentityInformation",
-                    "@type": "xsd:string"
-                  },
-                  "SanctionsPositions": {
-                    "@context": {
-                      "GlobalSanctionsPosition": {
-                        "@context": {
-                          "Position": {
-                            "@id": "polygon-vocab:SanctionsPositions.Position",
-                            "@type": "xsd:string"
-                          },
-                          "Country": {
-                            "@id": "polygon-vocab:SanctionsPositions.Country",
-                            "@type": "xsd:string"
-                          }
-                        },
-                        "@id": "polygon-vocab:SanctionsPositions.GlobalSanctionsPosition"
-                      }
-                    },
-                    "@id": "polygon-vocab:SanctionsPositions"
-                  },
-                  "AdditionalInformation": {
-                    "@id": "polygon-vocab:AdditionalInformation",
                     "@type": "xsd:string"
                   }
                 },
@@ -592,23 +579,23 @@
                       "GlobalSanctionsAddress": {
                         "@context": {
                           "AddressLine": {
-                            "@id": "polygon-vocab:SanctionsAddresses.AddressLine",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.AddressLine",
                             "@type": "xsd:string"
                           },
                           "City": {
-                            "@id": "polygon-vocab:SanctionsAddresses.City",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.City",
                             "@type": "xsd:string"
                           },
                           "Country": {
-                            "@id": "polygon-vocab:SanctionsAddresses.Country",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Country",
                             "@type": "xsd:string"
                           },
                           "Region": {
-                            "@id": "polygon-vocab:SanctionsAddresses.Region",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Region",
                             "@type": "xsd:string"
                           }
                         },
-                        "@id": "polygon-vocab:SanctionsAddresses.GlobalSanctionsAddress"
+                        "@id": "polygon-vocab:GlobalSanctionsAddress"
                       }
                     },
                     "@id": "polygon-vocab:SanctionsAddresses"
@@ -618,19 +605,19 @@
                       "GlobalSanctionsDate": {
                         "@context": {
                           "DateType": {
-                            "@id": "polygon-vocab:SanctionsDates.DateType",
+                            "@id": "polygon-vocab:DateType",
                             "@type": "xsd:string"
                           },
                           "Day": {
-                            "@id": "polygon-vocab:SanctionsDates.Day",
+                            "@id": "polygon-vocab:Day",
                             "@type": "xsd:integer"
                           },
                           "Month": {
-                            "@id": "polygon-vocab:SanctionsDates.Month",
+                            "@id": "polygon-vocab:Month",
                             "@type": "xsd:integer"
                           },
                           "Year": {
-                            "@id": "polygon-vocab:SanctionsDates.Year",
+                            "@id": "polygon-vocab:Year",
                             "@type": "xsd:integer"
                           }
                         },
@@ -648,15 +635,15 @@
                       "GlobalSanctionsPosition": {
                         "@context": {
                           "Position": {
-                            "@id": "polygon-vocab:SanctionsPositions.Position",
+                            "@id": "polygon-vocab:GlobalSanctionsPosition.Position",
                             "@type": "xsd:string"
                           },
                           "Country": {
-                            "@id": "polygon-vocab:SanctionsPositions.Country",
+                            "@id": "polygon-vocab:GlobalSanctionsPosition.Country",
                             "@type": "xsd:string"
                           }
                         },
-                        "@id": "polygon-vocab:SanctionsPositions.GlobalSanctionsPosition"
+                        "@id": "polygon-vocab:GlobalSanctionsPosition"
                       }
                     },
                     "@id": "polygon-vocab:SanctionsPositions"
@@ -667,40 +654,49 @@
               "sanctionsEnforcementsResult": {
                 "@context": {
                   "Fullname": {
-                    "@id": "polygon-vocab:Fullname",
+                    "@id": "polygon-vocab:sanctionsEnforcementsResult.Fullname",
                     "@type": "xsd:string"
                   },
-                  "SanctionsAliases": {
+                  "SanctionsBodies": {
                     "@context": {
                       "a:string": {
-                        "@id": "polygon-vocab:SanctionsAliases.a:string",
+                        "@id": "polygon-vocab:SanctionsBodies.a:string",
+                        "@type": "xsd:integer"
+                      }
+                    },
+                    "@id": "polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
+                  },
+                  "Aliases": {
+                    "@context": {
+                      "a:string": {
+                        "@id": "polygon-vocab:Aliases.a:string",
                         "@type": "xsd:string"
                       }
                     },
-                    "@id": "polygon-vocab:SanctionsAliases"
+                    "@id": "polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
                   },
                   "SanctionsAddresses": {
                     "@context": {
                       "GlobalSanctionsAddress": {
                         "@context": {
                           "AddressLine": {
-                            "@id": "polygon-vocab:SanctionsAddresses.AddressLine",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.AddressLine",
                             "@type": "xsd:string"
                           },
                           "City": {
-                            "@id": "polygon-vocab:SanctionsAddresses.City",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.City",
                             "@type": "xsd:string"
                           },
                           "Country": {
-                            "@id": "polygon-vocab:SanctionsAddresses.Country",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Country",
                             "@type": "xsd:string"
                           },
                           "Region": {
-                            "@id": "polygon-vocab:SanctionsAddresses.Region",
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Region",
                             "@type": "xsd:string"
                           }
                         },
-                        "@id": "polygon-vocab:SanctionsAddresses.GlobalSanctionsAddress"
+                        "@id": "polygon-vocab:GlobalSanctionsAddress"
                       }
                     },
                     "@id": "polygon-vocab:SanctionsAddresses"
@@ -733,28 +729,6 @@
                   },
                   "IdentityInformation": {
                     "@id": "polygon-vocab:IdentityInformation",
-                    "@type": "xsd:string"
-                  },
-                  "SanctionsPositions": {
-                    "@context": {
-                      "GlobalSanctionsPosition": {
-                        "@context": {
-                          "Position": {
-                            "@id": "polygon-vocab:SanctionsPositions.Position",
-                            "@type": "xsd:string"
-                          },
-                          "Country": {
-                            "@id": "polygon-vocab:SanctionsPositions.Country",
-                            "@type": "xsd:string"
-                          }
-                        },
-                        "@id": "polygon-vocab:SanctionsPositions.GlobalSanctionsPosition"
-                      }
-                    },
-                    "@id": "polygon-vocab:SanctionsPositions"
-                  },
-                  "AdditionalInformation": {
-                    "@id": "polygon-vocab:AdditionalInformation",
                     "@type": "xsd:string"
                   }
                 },
