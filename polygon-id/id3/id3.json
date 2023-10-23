@@ -40,8 +40,8 @@
           "description": "Details related to the amendments made to the original data.",
           "properties": {
             "data": {
-              "title": "Amendments Data",
-              "description": "Data manually amended by the holder/user during the verification process.",
+              "title": "Amendments Data - Personal Details",
+              "description": "Personal details manually amended by the holder/user during authentication process.",
               "type": "object",
               "properties": {
                 "citizenship": {
@@ -955,6 +955,8 @@
                   "type": "string"
                 },
                 "ResultCodes": {
+                  "title": "Result Codes",
+                  "description": "The result codes of the authentication request",
                   "type": "object",
                   "properties": {
                     "GlobalItemCheckResultCodes": {
@@ -1114,6 +1116,8 @@
                   "type": "string"
                 },
                 "ItemCheckDecisionBands": {
+                  "title": "Item Check Decision Bands",
+                  "description": "The item check decision bands of the authentication request",
                   "type": "object",
                   "properties": {
                     "GlobalItemCheckDecisionBands": {
@@ -1823,6 +1827,8 @@
           "type": "object",
           "properties": {
             "data": {
+              "title": "Original Data - Personal Details",
+              "description": "Unmodified personal details imported directly from document during authentication process.",
               "type": "object",
               "properties": {
                 "citizenship": {
@@ -2695,32 +2701,50 @@
               "type": "object",
               "properties": {
                 "AuthenticationID": {
-                  "type": "string"
+                  "type": "string",
+                  "title": "Authentication ID",
+                  "description": "The ID of the authentication request"
                 },
                 "Timestamp": {
                   "type": "string",
-                  "format": "date-time"
+                  "format": "date-time",
+                  "title": "Timestamp",
+                  "description": "The date and time of the authentication request"
                 },
                 "CustomerRef": {
-                  "type": "string"
+                  "type": "string",
+                  "title": "Customer Reference",
+                  "description": "The customer reference of the authentication request"
                 },
                 "ProfileID": {
-                  "type": "string"
+                  "type": "string",
+                  "title": "Profile ID",
+                  "description": "The ID of the profile used for the authentication request"
                 },
                 "ProfileName": {
-                  "type": "string"
+                  "type": "string",
+                  "title": "Profile Name",
+                  "description": "The name of the profile used for the authentication request"
                 },
                 "ProfileVersion": {
-                  "type": "integer"
+                  "type": "integer",
+                  "title": "Profile Version",
+                  "description": "The version of the profile used for the authentication request"
                 },
                 "ProfileRevision": {
-                  "type": "integer"
+                  "type": "integer",
+                  "title": "Profile Revision",
+                  "description": "The revision of the profile used for the authentication request"
                 },
                 "ProfileState": {
-                  "type": "string"
+                  "type": "string",
+                  "title": "Profile State",
+                  "description": "The state of the profile used for the authentication request"
                 },
                 "ResultCodes": {
                   "type": "object",
+                  "title": "Result Codes",
+                  "description": "The result codes of the authentication request",
                   "properties": {
                     "GlobalItemCheckResultCodes": {
                       "type": "array",
@@ -2772,13 +2796,19 @@
                   }
                 },
                 "Score": {
-                  "type": "integer"
+                  "type": "integer",
+                  "title": "Score",
+                  "description": "The score of the authentication request"
                 },
                 "BandText": {
-                  "type": "string"
+                  "type": "string",
+                  "title": "Band Text",
+                  "description": "The band text of the authentication request"
                 },
                 "Country": {
-                  "type": "string"
+                  "type": "string",
+                  "title": "Country",
+                  "description": "The country type of the authentication request"
                 }
               }
             },
