@@ -40,6 +40,8 @@
           "description": "Details related to the amendments made to the original data.",
           "properties": {
             "data": {
+              "title": "Amendments Data",
+              "description": "Data manually amended by the holder/user during the verification process.",
               "type": "object",
               "properties": {
                 "citizenship": {
@@ -907,6 +909,8 @@
               }
             },
             "authenticateSPResult": {
+              "title": "Authenticate SP Result",
+              "description": "Result of the authentication request",
               "type": "object",
               "properties": {
                 "AuthenticationID": {
@@ -921,21 +925,33 @@
                   "description": "The timestamp of the authentication request"
                 },
                 "CustomerRef": {
+                  "title": "Customer Reference",
+                  "description": "The customer reference of the authentication request",
                   "type": "string"
                 },
                 "ProfileID": {
+                  "title": "Profile ID",
+                  "description": "The ID of the profile used for the authentication request",
                   "type": "string"
                 },
                 "ProfileName": {
+                  "title": "Profile Name",
+                  "description": "The name of the profile used for the authentication request",
                   "type": "string"
                 },
                 "ProfileVersion": {
+                  "title": "Profile Version",
+                  "description": "The version of the profile used for the authentication request",
                   "type": "integer"
                 },
                 "ProfileRevision": {
+                  "title": "Profile Revision",
+                  "description": "The revision of the profile used for the authentication request",
                   "type": "integer"
                 },
                 "ProfileState": {
+                  "title": "Profile State",
+                  "description": "The state of the profile used for the authentication request",
                   "type": "string"
                 },
                 "ResultCodes": {
@@ -1083,12 +1099,18 @@
                   }
                 },
                 "Score": {
+                  "title": "Score",
+                  "description": "The score of the authentication request",
                   "type": "integer"
                 },
                 "BandText": {
+                  "title": "Band Text",
+                  "description": "The band text of the authentication request",
                   "type": "string"
                 },
                 "Country": {
+                  "title": "Country",
+                  "description": "Country type of the authentication request",
                   "type": "string"
                 },
                 "ItemCheckDecisionBands": {
@@ -3450,8 +3472,8 @@
           "type": "object",
           "properties": {
             "citizenship": {
-              "title": "Citizenship - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
-              "description": "The country of citizenship of the credential subject",
+              "title": "Citizenship",
+              "description": "The country of citizenship of the credential subject ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
               "type": "string",
               "enum": [
                 "AFG",
