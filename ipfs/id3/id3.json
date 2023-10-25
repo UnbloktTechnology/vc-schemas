@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/QmSoeBBhphKZhCRfxCBVpZEhPTXcufxtfaYQGb95zZLLaR"
+      "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/QmbtiDT2PCQt8G3sng51JVtH8HqejtugpEPfULAeUp1pXc"
     },
     "type": "ID3",
-    "version": "2.4.11-feature/web3-74-there-is-an-id3-verification-bug-in-dev-2-1698264012311"
+    "version": "2.4.11"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "ID3 Schema",
@@ -1076,7 +1076,10 @@
                                   "type": "object",
                                   "properties": {
                                     "SanctionID": {
-                                      "type": "string"
+                                      "type": [
+                                        "integer",
+                                        "string"
+                                      ]
                                     },
                                     "Url": {
                                       "type": "string"
@@ -2758,80 +2761,13 @@
                             "type": "string"
                           },
                           "Comment": {
-                            "type": "object",
-                            "properties": {
-                              "GlobalItemCheckResultCode": {
-                                "type": "array",
-                                "items": {
-                                  "type": "object",
-                                  "properties": {
-                                    "Description": {
-                                      "type": "string"
-                                    },
-                                    "Code": {
-                                      "type": "integer"
-                                    }
-                                  }
-                                }
-                              }
-                            }
+                            "type": "object"
                           },
                           "Match": {
-                            "type": "object",
-                            "properties": {
-                              "GlobalItemCheckResultCode": {
-                                "type": "array",
-                                "items": {
-                                  "type": "object",
-                                  "properties": {
-                                    "Description": {
-                                      "type": "string"
-                                    },
-                                    "Code": {
-                                      "type": "integer"
-                                    }
-                                  }
-                                }
-                              }
-                            }
+                            "type": "object"
                           },
                           "Warning": {
-                            "type": "object",
-                            "properties": {
-                              "GlobalItemCheckResultCode": {
-                                "type": "array",
-                                "items": {
-                                  "type": "object",
-                                  "properties": {
-                                    "Description": {
-                                      "type": "string"
-                                    },
-                                    "Code": {
-                                      "type": "integer"
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          },
-                          "Mismatch": {
-                            "type": "object",
-                            "properties": {
-                              "GlobalItemCheckResultCode": {
-                                "type": "array",
-                                "items": {
-                                  "type": "object",
-                                  "properties": {
-                                    "Description": {
-                                      "type": "string"
-                                    },
-                                    "Code": {
-                                      "type": "integer"
-                                    }
-                                  }
-                                }
-                              }
-                            }
+                            "type": "object"
                           },
                           "ID": {
                             "type": "integer"
@@ -2855,32 +2791,10 @@
                             "type": "string"
                           },
                           "SanctionsMatches": {
-                            "type": "object",
-                            "properties": {
-                              "GlobalSanctionsMatch": {
-                                "type": "array",
-                                "items": {
-                                  "type": "object",
-                                  "properties": {
-                                    "SanctionID": {
-                                      "type": "string"
-                                    },
-                                    "Url": {
-                                      "type": "string"
-                                    },
-                                    "Rank": {
-                                      "type": "integer"
-                                    },
-                                    "CaseID": {
-                                      "type": "string"
-                                    },
-                                    "SearchID": {
-                                      "type": "string"
-                                    }
-                                  }
-                                }
-                              }
-                            }
+                            "type": [
+                              "object",
+                              "string"
+                            ]
                           }
                         }
                       }

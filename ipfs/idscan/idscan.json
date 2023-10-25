@@ -4,7 +4,7 @@
       "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/QmaoyFJjwbkMSTwWurK4tYFxWd3CDnMLu2KustmWL8Ruks"
     },
     "type": "IDScan",
-    "version": "2.4.11-feature/web3-74-there-is-an-id3-verification-bug-in-dev-2-1698264012311"
+    "version": "2.4.11"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDscan schema",
