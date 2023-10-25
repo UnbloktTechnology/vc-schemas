@@ -165,7 +165,8 @@
                                     "@id":"polygon-vocab:GlobalItemCheckResultCode.Code",
                                     "@type":"xsd:string"
                                   }
-                                }
+                                },
+                                "@id":"polygon-vocab:GlobalItemCheckResultCode"
                               }
                             }
                           },
@@ -182,7 +183,8 @@
                                     "@id":"polygon-vocab:GlobalItemCheckResultCode.Code",
                                     "@type":"xsd:string"
                                   }
-                                }
+                                },
+                                "@id":"polygon-vocab:GlobalItemCheckResultCode"
                               }
                             }
                           },
@@ -199,7 +201,8 @@
                                     "@id":"polygon-vocab:GlobalItemCheckResultCode.Code",
                                     "@type":"xsd:string"
                                   }
-                                }
+                                },
+                                "@id":"polygon-vocab:GlobalItemCheckResultCode"
                               }
                             }
                           },
@@ -244,7 +247,8 @@
                                     "@id":"polygon-vocab:GlobalItemCheckResultCode.Code",
                                     "@type":"xsd:string"
                                   }
-                                }
+                                },
+                                "@id":"polygon-vocab:GlobalItemCheckResultCode"
                               }
                             }
                           }
