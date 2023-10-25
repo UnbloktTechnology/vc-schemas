@@ -648,7 +648,8 @@
                                     "@id":"polygon-vocab:GlobalItemCheckResultCode.Code",
                                     "@type":"xsd:string"
                                   }
-                                }
+                                },
+                                "@id":"polygon-vocab:GlobalItemCheckResultCode"
                               }
                             }
                           },
