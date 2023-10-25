@@ -390,7 +390,7 @@
                         "@container":"@list"
                       }
                     },
-                    "@id":"polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
+                    "@id":"polygon-vocab:sanctionsEnforcementsResult.SanctionsBodies"
                   },
                   "Aliases":{
                     "@context":{
@@ -813,7 +813,7 @@
                         "@container":"@list"
                       }
                     },
-                    "@id":"polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
+                    "@id":"polygon-vocab:sanctionsEnforcementsResult.SanctionsBodies"
                   },
                   "Aliases":{
                     "@context":{
