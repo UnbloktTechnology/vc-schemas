@@ -237,18 +237,30 @@
                           "SanctionsMatches":{
                             "@id":"polygon-vocab:GlobalItemCheckResultCodes.SanctionsMatches",
                             "@context":{
-                              "GlobalItemCheckResultCode":{
+                              "GlobalSanctionsMatch":{
                                 "@context":{
-                                  "Description":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Description",
+                                  "SanctionID":{
+                                    "@id":"polygon-vocab:GlobalSanctionsMatch.SanctionID",
                                     "@type":"xsd:string"
                                   },
-                                  "Code":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Code",
+                                  "Url":{
+                                    "@id":"polygon-vocab:GlobalSanctionsMatch.Url",
+                                    "@type":"xsd:string"
+                                  },
+                                  "Rank":{
+                                    "@id":"polygon-vocab:GlobalSanctionsMatch.Rank",
+                                    "@type":"xsd:integer"
+                                  },
+                                  "CaseID":{
+                                    "@id":"polygon-vocab:GlobalSanctionsMatch.CaseID",
+                                    "@type":"xsd:string"
+                                  },
+                                  "SearchID":{
+                                    "@id":"polygon-vocab:GlobalSanctionsMatch.SearchID",
                                     "@type":"xsd:string"
                                   }
                                 },
-                                "@id":"polygon-vocab:GlobalItemCheckResultCode"
+                                "@id":"polygon-vocab:GlobalSanctionsMatch"
                               }
                             }
                           }
@@ -686,18 +698,30 @@
                           "SanctionsMatches":{
                             "@id":"polygon-vocab:GlobalItemCheckResultCodes.SanctionsMatches",
                             "@context":{
-                              "GlobalItemCheckResultCode":{
+                              "GlobalSanctionsMatch":{
                                 "@context":{
-                                  "Description":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Description",
+                                  "SanctionID":{
+                                    "@id":"polygon-vocab:GlobalSanctionsMatch.SanctionID",
                                     "@type":"xsd:string"
                                   },
-                                  "Code":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Code",
+                                  "Url":{
+                                    "@id":"polygon-vocab:GlobalSanctionsMatch.Url",
+                                    "@type":"xsd:string"
+                                  },
+                                  "Rank":{
+                                    "@id":"polygon-vocab:GlobalSanctionsMatch.Rank",
+                                    "@type":"xsd:integer"
+                                  },
+                                  "CaseID":{
+                                    "@id":"polygon-vocab:GlobalSanctionsMatch.CaseID",
+                                    "@type":"xsd:string"
+                                  },
+                                  "SearchID":{
+                                    "@id":"polygon-vocab:GlobalSanctionsMatch.SearchID",
                                     "@type":"xsd:string"
                                   }
                                 },
-                                "@id":"polygon-vocab:GlobalItemCheckResultCode"
+                                "@id":"polygon-vocab:GlobalSanctionsMatch"
                               }
                             }
                           }
