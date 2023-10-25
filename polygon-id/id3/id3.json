@@ -1076,7 +1076,7 @@
                                   "type": "object",
                                   "properties": {
                                     "SanctionID": {
-                                      "type": ["integer", "string"]
+                                      "type": "string"
                                     },
                                     "Url": {
                                       "type": "string"
@@ -2758,13 +2758,80 @@
                             "type": "string"
                           },
                           "Comment": {
-                            "type": "object"
+                            "type": "object",
+                            "properties": {
+                              "GlobalItemCheckResultCode": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "Description": {
+                                      "type": "string"
+                                    },
+                                    "Code": {
+                                      "type": "integer"
+                                    }
+                                  }
+                                }
+                              }
+                            }
                           },
                           "Match": {
-                            "type": "object"
+                            "type": "object",
+                            "properties": {
+                              "GlobalItemCheckResultCode": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "Description": {
+                                      "type": "string"
+                                    },
+                                    "Code": {
+                                      "type": "integer"
+                                    }
+                                  }
+                                }
+                              }
+                            }
                           },
                           "Warning": {
-                            "type": "object"
+                            "type": "object",
+                            "properties": {
+                              "GlobalItemCheckResultCode": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "Description": {
+                                      "type": "string"
+                                    },
+                                    "Code": {
+                                      "type": "integer"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "Mismatch": {
+                            "type": "object",
+                            "properties": {
+                              "GlobalItemCheckResultCode": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "Description": {
+                                      "type": "string"
+                                    },
+                                    "Code": {
+                                      "type": "integer"
+                                    }
+                                  }
+                                }
+                              }
+                            }
                           },
                           "ID": {
                             "type": "integer"
@@ -2788,7 +2855,32 @@
                             "type": "string"
                           },
                           "SanctionsMatches": {
-                            "type": ["object", "string"]
+                            "type": "object",
+                            "properties": {
+                              "GlobalSanctionsMatch": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "SanctionID": {
+                                      "type": "string"
+                                    },
+                                    "Url": {
+                                      "type": "string"
+                                    },
+                                    "Rank": {
+                                      "type": "integer"
+                                    },
+                                    "CaseID": {
+                                      "type": "string"
+                                    },
+                                    "SearchID": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              }
+                            }
                           }
                         }
                       }
