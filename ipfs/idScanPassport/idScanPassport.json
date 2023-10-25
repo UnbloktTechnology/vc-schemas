@@ -4,7 +4,7 @@
       "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/QmRBfV9TboGRz42rT45mnMMK8VTtTc9r1mpLQjGfyXCgaf"
     },
     "type": "IDScanPassport",
-    "version": "2.4.11"
+    "version": "2.4.11-feature/web3-74-there-is-an-id3-verification-bug-in-dev-2-1698264012311"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "IDScanPassport schema",
