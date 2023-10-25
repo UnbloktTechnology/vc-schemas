@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/idScanSelfie/idScanSelfie.jsonld"
     },
     "type": "IDScanSelfie",
-    "version": "2.4.11"
+    "version": "2.4.11-feature/web3-74-there-is-an-id3-verification-bug-in-dev-2-1698264681345"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "IDScanSelfie schema",
