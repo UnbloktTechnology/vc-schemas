@@ -16,7 +16,7 @@
             "@type":"xsd:string"
           },
           "amendmentsData":{
-            "@context":{
+            "@context": {
               "data":{
                 "@context":{
                   "citizenship":{
@@ -154,57 +154,15 @@
                           },
                           "Comment":{
                             "@id":"polygon-vocab:GlobalItemCheckResultCodes.Comment",
-                            "@context":{
-                              "GlobalItemCheckResultCode":{
-                                "@context":{
-                                  "Description":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Description",
-                                    "@type":"xsd:string"
-                                  },
-                                  "Code":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Code",
-                                    "@type":"xsd:string"
-                                  }
-                                },
-                                "@id":"polygon-vocab:GlobalItemCheckResultCode"
-                              }
-                            }
+                            "@type":"@json"
                           },
                           "Match":{
                             "@id":"polygon-vocab:GlobalItemCheckResultCodes.Match",
-                            "@context":{
-                              "GlobalItemCheckResultCode":{
-                                "@context":{
-                                  "Description":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Description",
-                                    "@type":"xsd:string"
-                                  },
-                                  "Code":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Code",
-                                    "@type":"xsd:string"
-                                  }
-                                },
-                                "@id":"polygon-vocab:GlobalItemCheckResultCode"
-                              }
-                            }
+                            "@type":"@json"
                           },
                           "Warning":{
                             "@id":"polygon-vocab:GlobalItemCheckResultCodes.Warning",
-                            "@context":{
-                              "GlobalItemCheckResultCode":{
-                                "@context":{
-                                  "Description":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Description",
-                                    "@type":"xsd:string"
-                                  },
-                                  "Code":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Code",
-                                    "@type":"xsd:string"
-                                  }
-                                },
-                                "@id":"polygon-vocab:GlobalItemCheckResultCode"
-                              }
-                            }
+                            "@type":"@json"
                           },
                           "ID":{
                             "@id":"polygon-vocab:GlobalItemCheckResultCodes.ID",
@@ -236,21 +194,7 @@
                           },
                           "SanctionsMatches":{
                             "@id":"polygon-vocab:GlobalItemCheckResultCodes.SanctionsMatches",
-                            "@context":{
-                              "GlobalItemCheckResultCode":{
-                                "@context":{
-                                  "Description":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Description",
-                                    "@type":"xsd:string"
-                                  },
-                                  "Code":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Code",
-                                    "@type":"xsd:string"
-                                  }
-                                },
-                                "@id":"polygon-vocab:GlobalItemCheckResultCode"
-                              }
-                            }
+                            "@type": "@json"
                           }
                         },
                         "@id":"polygon-vocab:GlobalItemCheckResultCodes"
@@ -259,7 +203,7 @@
                     "@id":"polygon-vocab:ResultCodes"
                   },
                   "ItemCheckDecisionBands":{
-                    "@context":{
+                    "@context": {
                       "GlobalItemCheckDecisionBands":{
                         "@context":{
                           "ID":{
@@ -283,189 +227,189 @@
                 },
                 "@id":"polygon-vocab:authenticateSPResult"
               },
-              "pepIntelligenceResult":{
-                "@context":{
-                  "Fullname":{
-                    "@id":"polygon-vocab:Fullname",
-                    "@type":"xsd:string"
+              "pepIntelligenceResult": {
+                "@context": {
+                  "Fullname": {
+                    "@id": "polygon-vocab:Fullname",
+                    "@type": "xsd:string"
                   },
-                  "Aliases":{
-                    "@context":{
-                      "elements":{
-                        "@id":"polygon-vocab:elements",
-                        "@type":"xsd:string",
-                        "@container":"@list"
+                  "Aliases": {
+                    "@context": {
+                      "elements": {
+                        "@id": "polygon-vocab:elements",
+                        "@type": "xsd:string",
+                        "@container": "@list"
                       }
                     },
-                    "@id":"polygon-vocab:Aliases"
+                    "@id": "polygon-vocab:Aliases"
                   },
-                  "SanctionsAddresses":{
-                    "@context":{
-                      "GlobalSanctionsAddress":{
-                        "@context":{
-                          "AddressLine":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.AddressLine",
-                            "@type":"xsd:string"
+                  "SanctionsAddresses": {
+                    "@context": {
+                      "GlobalSanctionsAddress": {
+                        "@context": {
+                          "AddressLine": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.AddressLine",
+                            "@type": "xsd:string"
                           },
-                          "City":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.City",
-                            "@type":"xsd:string"
+                          "City": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.City",
+                            "@type": "xsd:string"
                           },
-                          "Country":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.Country",
-                            "@type":"xsd:string"
+                          "Country": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Country",
+                            "@type": "xsd:string"
                           },
-                          "Region":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.Region",
-                            "@type":"xsd:string"
+                          "Region": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Region",
+                            "@type": "xsd:string"
                           }
                         },
-                        "@id":"polygon-vocab:GlobalSanctionsAddress"
+                        "@id": "polygon-vocab:GlobalSanctionsAddress"
                       }
                     },
-                    "@id":"polygon-vocab:SanctionsAddresses"
+                    "@id": "polygon-vocab:SanctionsAddresses"
                   },
-                  "SanctionsDates":{
-                    "@context":{
-                      "GlobalSanctionsDate":{
-                        "@context":{
-                          "DateType":{
-                            "@id":"polygon-vocab:DateType",
-                            "@type":"xsd:string"
+                  "SanctionsDates": {
+                    "@context": {
+                      "GlobalSanctionsDate": {
+                        "@context": {
+                          "DateType": {
+                            "@id": "polygon-vocab:DateType",
+                            "@type": "xsd:string"
                           },
-                          "Day":{
-                            "@id":"polygon-vocab:Day",
-                            "@type":"xsd:integer"
+                          "Day": {
+                            "@id": "polygon-vocab:Day",
+                            "@type": "xsd:integer"
                           },
-                          "Month":{
-                            "@id":"polygon-vocab:Month",
-                            "@type":"xsd:integer"
+                          "Month": {
+                            "@id": "polygon-vocab:Month",
+                            "@type": "xsd:integer"
                           },
-                          "Year":{
-                            "@id":"polygon-vocab:Year",
-                            "@type":"xsd:integer"
+                          "Year": {
+                            "@id": "polygon-vocab:Year",
+                            "@type": "xsd:integer"
                           }
                         },
-                        "@id":"polygon-vocab:SanctionsDates.GlobalSanctionsDate"
+                        "@id": "polygon-vocab:SanctionsDates.GlobalSanctionsDate"
                       }
                     },
-                    "@id":"polygon-vocab:SanctionsDates"
+                    "@id": "polygon-vocab:SanctionsDates"
                   },
-                  "IdentityInformation":{
-                    "@id":"polygon-vocab:IdentityInformation",
-                    "@type":"xsd:string"
+                  "IdentityInformation": {
+                    "@id": "polygon-vocab:IdentityInformation",
+                    "@type": "xsd:string"
                   },
-                  "SanctionsPositions":{
-                    "@context":{
-                      "GlobalSanctionsPosition":{
-                        "@context":{
-                          "Position":{
-                            "@id":"polygon-vocab:GlobalSanctionsPosition.Position",
-                            "@type":"xsd:string"
+                  "SanctionsPositions": {
+                    "@context": {
+                      "GlobalSanctionsPosition": {
+                        "@context": {
+                          "Position": {
+                            "@id": "polygon-vocab:GlobalSanctionsPosition.Position",
+                            "@type": "xsd:string"
                           },
-                          "Country":{
-                            "@id":"polygon-vocab:GlobalSanctionsPosition.Country",
-                            "@type":"xsd:string"
+                          "Country": {
+                            "@id": "polygon-vocab:GlobalSanctionsPosition.Country",
+                            "@type": "xsd:string"
                           }
                         },
-                        "@id":"polygon-vocab:GlobalSanctionsPosition"
+                        "@id": "polygon-vocab:GlobalSanctionsPosition"
                       }
                     },
-                    "@id":"polygon-vocab:SanctionsPositions"
+                    "@id": "polygon-vocab:SanctionsPositions"
                   }
                 },
-                "@id":"polygon-vocab:pepIntelligenceResult"
+                "@id": "polygon-vocab:pepIntelligenceResult"
               },
-              "sanctionsEnforcementsResult":{
-                "@context":{
-                  "Fullname":{
-                    "@id":"polygon-vocab:sanctionsEnforcementsResult.Fullname",
-                    "@type":"xsd:string"
+              "sanctionsEnforcementsResult": {
+                "@context": {
+                  "Fullname": {
+                    "@id": "polygon-vocab:sanctionsEnforcementsResult.Fullname",
+                    "@type": "xsd:string"
                   },
-                  "SanctionsBodies":{
-                    "@context":{
-                      "elements":{
-                        "@id":"polygon-vocab:SanctionsBodies.elements",
-                        "@type":"xsd:integer",
-                        "@container":"@list"
+                  "SanctionsBodies": {
+                    "@context": {
+                      "elements": {
+                        "@id": "polygon-vocab:SanctionsBodies.elements",
+                        "@type": "xsd:integer",
+                        "@container": "@list"
                       }
                     },
-                    "@id":"polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
+                    "@id": "polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
                   },
-                  "Aliases":{
-                    "@context":{
-                      "elements":{
-                        "@id":"polygon-vocab:elements",
-                        "@type":"xsd:string",
-                        "@container":"@list"
+                  "Aliases": {
+                    "@context": {
+                      "elements": {
+                        "@id": "polygon-vocab:elements",
+                        "@type": "xsd:string",
+                        "@container": "@list"
                       }
                     },
-                    "@id":"polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
+                    "@id": "polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
                   },
-                  "SanctionsAddresses":{
-                    "@context":{
-                      "GlobalSanctionsAddress":{
-                        "@context":{
-                          "AddressLine":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.AddressLine",
-                            "@type":"xsd:string"
+                  "SanctionsAddresses": {
+                    "@context": {
+                      "GlobalSanctionsAddress": {
+                        "@context": {
+                          "AddressLine": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.AddressLine",
+                            "@type": "xsd:string"
                           },
-                          "City":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.City",
-                            "@type":"xsd:string"
+                          "City": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.City",
+                            "@type": "xsd:string"
                           },
-                          "Country":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.Country",
-                            "@type":"xsd:string"
+                          "Country": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Country",
+                            "@type": "xsd:string"
                           },
-                          "Region":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.Region",
-                            "@type":"xsd:string"
+                          "Region": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Region",
+                            "@type": "xsd:string"
                           }
                         },
-                        "@id":"polygon-vocab:GlobalSanctionsAddress"
+                        "@id": "polygon-vocab:GlobalSanctionsAddress"
                       }
                     },
-                    "@id":"polygon-vocab:SanctionsAddresses"
+                    "@id": "polygon-vocab:SanctionsAddresses"
                   },
-                  "SanctionsDates":{
-                    "@context":{
-                      "GlobalSanctionsDate":{
-                        "@context":{
-                          "DateType":{
-                            "@id":"polygon-vocab:GlobalSanctionsDate.DateType",
-                            "@type":"xsd:string"
+                  "SanctionsDates": {
+                    "@context": {
+                      "GlobalSanctionsDate": {
+                        "@context": {
+                          "DateType": {
+                            "@id": "polygon-vocab:GlobalSanctionsDate.DateType",
+                            "@type": "xsd:string"
                           },
-                          "Day":{
-                            "@id":"polygon-vocab:GlobalSanctionsDate.Day",
-                            "@type":"xsd:integer"
+                          "Day": {
+                            "@id": "polygon-vocab:GlobalSanctionsDate.Day",
+                            "@type": "xsd:integer"
                           },
-                          "Month":{
-                            "@id":"polygon-vocab:GlobalSanctionsDate.Month",
-                            "@type":"xsd:integer"
+                          "Month": {
+                            "@id": "polygon-vocab:GlobalSanctionsDate.Month",
+                            "@type": "xsd:integer"
                           },
-                          "Year":{
-                            "@id":"polygon-vocab:GlobalSanctionsDate.Year",
-                            "@type":"xsd:integer"
+                          "Year": {
+                            "@id": "polygon-vocab:GlobalSanctionsDate.Year",
+                            "@type": "xsd:integer"
                           }
                         },
-                        "@id":"polygon-vocab:GlobalSanctionsDate"
+                        "@id": "polygon-vocab:GlobalSanctionsDate"
                       }
                     },
-                    "@id":"polygon-vocab:SanctionsDates"
+                    "@id": "polygon-vocab:SanctionsDates"
                   },
-                  "IdentityInformation":{
-                    "@id":"polygon-vocab:IdentityInformation",
-                    "@type":"xsd:string"
+                  "IdentityInformation": {
+                    "@id": "polygon-vocab:IdentityInformation",
+                    "@type": "xsd:string"
                   }
                 },
-                "@id":"polygon-vocab:sanctionsEnforcementsResult"
+                "@id": "polygon-vocab:sanctionsEnforcementsResult"
               }
             },
             "@id":"polygon-vocab:amendmentsData"
           },
           "originalData":{
-            "@context":{
+            "@context": {
               "data":{
                 "@context":{
                   "citizenship":{
@@ -603,54 +547,15 @@
                           },
                           "Comment":{
                             "@id":"polygon-vocab:GlobalItemCheckResultCodes.Comment",
-                            "@context":{
-                              "GlobalItemCheckResultCode":{
-                                "@context":{
-                                  "Description":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Description",
-                                    "@type":"xsd:string"
-                                  },
-                                  "Code":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Code",
-                                    "@type":"xsd:string"
-                                  }
-                                }
-                              }
-                            }
+                            "@type":"@json"
                           },
                           "Match":{
                             "@id":"polygon-vocab:GlobalItemCheckResultCodes.Match",
-                            "@context":{
-                              "GlobalItemCheckResultCode":{
-                                "@context":{
-                                  "Description":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Description",
-                                    "@type":"xsd:string"
-                                  },
-                                  "Code":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Code",
-                                    "@type":"xsd:string"
-                                  }
-                                }
-                              }
-                            }
+                            "@type":"@json"
                           },
                           "Warning":{
                             "@id":"polygon-vocab:GlobalItemCheckResultCodes.Warning",
-                            "@context":{
-                              "GlobalItemCheckResultCode":{
-                                "@context":{
-                                  "Description":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Description",
-                                    "@type":"xsd:string"
-                                  },
-                                  "Code":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Code",
-                                    "@type":"xsd:string"
-                                  }
-                                }
-                              }
-                            }
+                            "@type":"@json"
                           },
                           "ID":{
                             "@id":"polygon-vocab:GlobalItemCheckResultCodes.ID",
@@ -682,20 +587,7 @@
                           },
                           "SanctionsMatches":{
                             "@id":"polygon-vocab:GlobalItemCheckResultCodes.SanctionsMatches",
-                            "@context":{
-                              "GlobalItemCheckResultCode":{
-                                "@context":{
-                                  "Description":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Description",
-                                    "@type":"xsd:string"
-                                  },
-                                  "Code":{
-                                    "@id":"polygon-vocab:GlobalItemCheckResultCode.Code",
-                                    "@type":"xsd:string"
-                                  }
-                                }
-                              }
-                            }
+                            "@type": "@json"
                           }
                         },
                         "@id":"polygon-vocab:GlobalItemCheckResultCodes"
@@ -706,183 +598,183 @@
                 },
                 "@id":"polygon-vocab:authenticateSPResult"
               },
-              "pepIntelligenceResult":{
-                "@context":{
-                  "Fullname":{
-                    "@id":"polygon-vocab:Fullname",
-                    "@type":"xsd:string"
+              "pepIntelligenceResult": {
+                "@context": {
+                  "Fullname": {
+                    "@id": "polygon-vocab:Fullname",
+                    "@type": "xsd:string"
                   },
-                  "Aliases":{
-                    "@context":{
-                      "elements":{
-                        "@id":"polygon-vocab:elements",
-                        "@type":"xsd:string",
-                        "@container":"@list"
+                  "Aliases": {
+                    "@context": {
+                      "elements": {
+                        "@id": "polygon-vocab:elements",
+                        "@type": "xsd:string",
+                        "@container": "@list"
                       }
                     },
-                    "@id":"polygon-vocab:Aliases"
+                    "@id": "polygon-vocab:Aliases"
                   },
-                  "SanctionsAddresses":{
-                    "@context":{
-                      "GlobalSanctionsAddress":{
-                        "@context":{
-                          "AddressLine":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.AddressLine",
-                            "@type":"xsd:string"
+                  "SanctionsAddresses": {
+                    "@context": {
+                      "GlobalSanctionsAddress": {
+                        "@context": {
+                          "AddressLine": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.AddressLine",
+                            "@type": "xsd:string"
                           },
-                          "City":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.City",
-                            "@type":"xsd:string"
+                          "City": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.City",
+                            "@type": "xsd:string"
                           },
-                          "Country":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.Country",
-                            "@type":"xsd:string"
+                          "Country": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Country",
+                            "@type": "xsd:string"
                           },
-                          "Region":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.Region",
-                            "@type":"xsd:string"
+                          "Region": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Region",
+                            "@type": "xsd:string"
                           }
                         },
-                        "@id":"polygon-vocab:GlobalSanctionsAddress"
+                        "@id": "polygon-vocab:GlobalSanctionsAddress"
                       }
                     },
-                    "@id":"polygon-vocab:SanctionsAddresses"
+                    "@id": "polygon-vocab:SanctionsAddresses"
                   },
-                  "SanctionsDates":{
-                    "@context":{
-                      "GlobalSanctionsDate":{
-                        "@context":{
-                          "DateType":{
-                            "@id":"polygon-vocab:DateType",
-                            "@type":"xsd:string"
+                  "SanctionsDates": {
+                    "@context": {
+                      "GlobalSanctionsDate": {
+                        "@context": {
+                          "DateType": {
+                            "@id": "polygon-vocab:DateType",
+                            "@type": "xsd:string"
                           },
-                          "Day":{
-                            "@id":"polygon-vocab:Day",
-                            "@type":"xsd:integer"
+                          "Day": {
+                            "@id": "polygon-vocab:Day",
+                            "@type": "xsd:integer"
                           },
-                          "Month":{
-                            "@id":"polygon-vocab:Month",
-                            "@type":"xsd:integer"
+                          "Month": {
+                            "@id": "polygon-vocab:Month",
+                            "@type": "xsd:integer"
                           },
-                          "Year":{
-                            "@id":"polygon-vocab:Year",
-                            "@type":"xsd:integer"
+                          "Year": {
+                            "@id": "polygon-vocab:Year",
+                            "@type": "xsd:integer"
                           }
                         },
-                        "@id":"polygon-vocab:SanctionsDates.GlobalSanctionsDate"
+                        "@id": "polygon-vocab:SanctionsDates.GlobalSanctionsDate"
                       }
                     },
-                    "@id":"polygon-vocab:SanctionsDates"
+                    "@id": "polygon-vocab:SanctionsDates"
                   },
-                  "IdentityInformation":{
-                    "@id":"polygon-vocab:IdentityInformation",
-                    "@type":"xsd:string"
+                  "IdentityInformation": {
+                    "@id": "polygon-vocab:IdentityInformation",
+                    "@type": "xsd:string"
                   },
-                  "SanctionsPositions":{
-                    "@context":{
-                      "GlobalSanctionsPosition":{
-                        "@context":{
-                          "Position":{
-                            "@id":"polygon-vocab:GlobalSanctionsPosition.Position",
-                            "@type":"xsd:string"
+                  "SanctionsPositions": {
+                    "@context": {
+                      "GlobalSanctionsPosition": {
+                        "@context": {
+                          "Position": {
+                            "@id": "polygon-vocab:GlobalSanctionsPosition.Position",
+                            "@type": "xsd:string"
                           },
-                          "Country":{
-                            "@id":"polygon-vocab:GlobalSanctionsPosition.Country",
-                            "@type":"xsd:string"
+                          "Country": {
+                            "@id": "polygon-vocab:GlobalSanctionsPosition.Country",
+                            "@type": "xsd:string"
                           }
                         },
-                        "@id":"polygon-vocab:GlobalSanctionsPosition"
+                        "@id": "polygon-vocab:GlobalSanctionsPosition"
                       }
                     },
-                    "@id":"polygon-vocab:SanctionsPositions"
+                    "@id": "polygon-vocab:SanctionsPositions"
                   }
                 },
-                "@id":"polygon-vocab:pepIntelligenceResult"
+                "@id": "polygon-vocab:pepIntelligenceResult"
               },
-              "sanctionsEnforcementsResult":{
-                "@context":{
-                  "Fullname":{
-                    "@id":"polygon-vocab:sanctionsEnforcementsResult.Fullname",
-                    "@type":"xsd:string"
+              "sanctionsEnforcementsResult": {
+                "@context": {
+                  "Fullname": {
+                    "@id": "polygon-vocab:sanctionsEnforcementsResult.Fullname",
+                    "@type": "xsd:string"
                   },
-                  "SanctionsBodies":{
-                    "@context":{
-                      "elements":{
-                        "@id":"polygon-vocab:SanctionsBodies.elements",
-                        "@type":"xsd:integer",
-                        "@container":"@list"
+                  "SanctionsBodies": {
+                    "@context": {
+                      "elements": {
+                        "@id": "polygon-vocab:SanctionsBodies.elements",
+                        "@type": "xsd:integer",
+                        "@container": "@list"
                       }
                     },
-                    "@id":"polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
+                    "@id": "polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
                   },
-                  "Aliases":{
-                    "@context":{
-                      "elements":{
-                        "@id":"polygon-vocab:elements",
-                        "@type":"xsd:string",
-                        "@container":"@list"
+                  "Aliases": {
+                    "@context": {
+                      "elements": {
+                        "@id": "polygon-vocab:elements",
+                        "@type": "xsd:string",
+                        "@container": "@list"
                       }
                     },
-                    "@id":"polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
+                    "@id": "polygon-vocab:sanctionsEnforcementsResult.SanctionsAliases"
                   },
-                  "SanctionsAddresses":{
-                    "@context":{
-                      "GlobalSanctionsAddress":{
-                        "@context":{
-                          "AddressLine":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.AddressLine",
-                            "@type":"xsd:string"
+                  "SanctionsAddresses": {
+                    "@context": {
+                      "GlobalSanctionsAddress": {
+                        "@context": {
+                          "AddressLine": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.AddressLine",
+                            "@type": "xsd:string"
                           },
-                          "City":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.City",
-                            "@type":"xsd:string"
+                          "City": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.City",
+                            "@type": "xsd:string"
                           },
-                          "Country":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.Country",
-                            "@type":"xsd:string"
+                          "Country": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Country",
+                            "@type": "xsd:string"
                           },
-                          "Region":{
-                            "@id":"polygon-vocab:GlobalSanctionsAddress.Region",
-                            "@type":"xsd:string"
+                          "Region": {
+                            "@id": "polygon-vocab:GlobalSanctionsAddress.Region",
+                            "@type": "xsd:string"
                           }
                         },
-                        "@id":"polygon-vocab:GlobalSanctionsAddress"
+                        "@id": "polygon-vocab:GlobalSanctionsAddress"
                       }
                     },
-                    "@id":"polygon-vocab:SanctionsAddresses"
+                    "@id": "polygon-vocab:SanctionsAddresses"
                   },
-                  "SanctionsDates":{
-                    "@context":{
-                      "GlobalSanctionsDate":{
-                        "@context":{
-                          "DateType":{
-                            "@id":"polygon-vocab:GlobalSanctionsDate.DateType",
-                            "@type":"xsd:string"
+                  "SanctionsDates": {
+                    "@context": {
+                      "GlobalSanctionsDate": {
+                        "@context": {
+                          "DateType": {
+                            "@id": "polygon-vocab:GlobalSanctionsDate.DateType",
+                            "@type": "xsd:string"
                           },
-                          "Day":{
-                            "@id":"polygon-vocab:GlobalSanctionsDate.Day",
-                            "@type":"xsd:integer"
+                          "Day": {
+                            "@id": "polygon-vocab:GlobalSanctionsDate.Day",
+                            "@type": "xsd:integer"
                           },
-                          "Month":{
-                            "@id":"polygon-vocab:GlobalSanctionsDate.Month",
-                            "@type":"xsd:integer"
+                          "Month": {
+                            "@id": "polygon-vocab:GlobalSanctionsDate.Month",
+                            "@type": "xsd:integer"
                           },
-                          "Year":{
-                            "@id":"polygon-vocab:GlobalSanctionsDate.Year",
-                            "@type":"xsd:integer"
+                          "Year": {
+                            "@id": "polygon-vocab:GlobalSanctionsDate.Year",
+                            "@type": "xsd:integer"
                           }
                         },
-                        "@id":"polygon-vocab:GlobalSanctionsDate"
+                        "@id": "polygon-vocab:GlobalSanctionsDate"
                       }
                     },
-                    "@id":"polygon-vocab:SanctionsDates"
+                    "@id": "polygon-vocab:SanctionsDates"
                   },
-                  "IdentityInformation":{
-                    "@id":"polygon-vocab:IdentityInformation",
-                    "@type":"xsd:string"
+                  "IdentityInformation": {
+                    "@id": "polygon-vocab:IdentityInformation",
+                    "@type": "xsd:string"
                   }
                 },
-                "@id":"polygon-vocab:sanctionsEnforcementsResult"
+                "@id": "polygon-vocab:sanctionsEnforcementsResult"
               }
             },
             "@id":"polygon-vocab:originalData"
