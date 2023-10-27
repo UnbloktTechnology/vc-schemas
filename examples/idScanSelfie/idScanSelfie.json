@@ -100,7 +100,7 @@
         },
         "name": {
           "title": "Name",
-          "description": "Name of the docuemnt (e.g. selfie.jpg)",
+          "description": "Name of the document (e.g. selfie.jpg)",
           "type": "string"
         },
         "documentType": {
@@ -109,13 +109,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "id",
-        "journeyId",
-        "base64",
-        "name",
-        "documentType"
-      ]
+      "required": ["id", "journeyId", "base64", "name", "documentType"]
     }
   }
 }

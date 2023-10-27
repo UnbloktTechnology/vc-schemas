@@ -1,0 +1,100 @@
+name: Create pull request
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_branch:
+        type: choice
+        description: Source branch
+        options:
+          - development
+          - staging
+        default: development
+      target_branch:
+        type: choice
+        description: Target branch
+        options:
+          - staging
+          - main
+        default: staging
+
+jobs:
+  create-pull-request:
+    name: Create pull request
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate parameters
+        shell: bash
+        run: |
+          if [ ${{ inputs.source_branch }} == 'staging' ] && [ ${{ inputs.target_branch }} == 'staging' ]; then
+            echo "You cannot merge staging into staging"
+            exit 1
+          elif [ ${{ inputs.source_branch }} == 'development' ] && [ ${{ inputs.target_branch }} == 'main' ]; then
+            echo "You cannot merge development to main"
+            exit 1
+          fi
+
+      - name: Generate token
+        id: generate_token
+        uses: tibdex/github-app-token@v2
+        with:
+          app_id: ${{ secrets.MERGE_BOT_APP_ID }}
+          private_key: ${{ secrets.MERGE_BOT_PRIVATE_KEY }}
+
+      - name: Set release name
+        id: release_name
+        shell: bash
+        run: |
+          version=$(date +%d.%m.%Y-%H-%M-%S)
+
+          echo "version=$version" >> $GITHUB_OUTPUT
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+          token: ${{ steps.generate_token.outputs.token }}
+
+      - name: Create release branch
+        run: git checkout -b ${{ inputs.source_branch }}-to-${{ inputs.target_branch }}-release/${{ steps.release_name.outputs.version }}-rc
+
+      - name: Initialize mandatory git config
+        run: |
+          git config --global user.name "nexera-release[bot]"
+          git config --global user.email "137495321+nexera-release[bot]@users.noreply.github.com"
+
+      - name: Update branch in schema path files
+        run: |
+          # e.g. Replace "/development/" with "/staging/" in all schemas
+          find examples/**/*.json -type f -exec sed -i -e 's/\/${{ inputs.source_branch }}\//\/${{ inputs.target_branch }}\//g' {} +
+          find examples/**/*.jsonld -type f -exec sed -i -e 's/\/${{ inputs.source_branch }}\//\/${{ inputs.target_branch }}\//g' {} +
+          
+          find polygon-id/**/*.json -type f -exec sed -i -e 's/\/${{ inputs.source_branch }}\//\/${{ inputs.target_branch }}\//g' {} +
+          find polygon-id/**/*.jsonld -type f -exec sed -i -e 's/\/${{ inputs.source_branch }}\//\/${{ inputs.target_branch }}\//g' {} +
+
+      - name: Prepare commit
+        run: |
+          git add .
+          git commit -m "Change ${{ inputs.source_branch }} to ${{ inputs.target_branch }} branch in schema path files"
+
+      - name: Push new branch
+        run: git push origin ${{ inputs.source_branch }}-to-${{ inputs.target_branch }}-release/${{ steps.release_name.outputs.version }}-rc
+
+      - name: Create and push a new tag release
+        run: |
+          git tag -a ${{ steps.release_name.outputs.version }}-rc -m "Release ${{ steps.release_name.outputs.version }}-rc"
+          git push origin ${{ steps.release_name.outputs.version }}-rc
+
+      - name: Run the Action
+        uses: devops-infra/action-pull-request@v0.5.5
+        with:
+          github_token: ${{ steps.generate_token.outputs.token }}
+          source_branch: ${{ inputs.source_branch }}-to-${{ inputs.target_branch }}-release/${{ steps.release_name.outputs.version }}-rc
+          target_branch: ${{ inputs.target_branch }}
+          title: ${{ inputs.source_branch }} to ${{ inputs.target_branch }}
+          body: "**Automated pull request**"
+          assignee: markoftw,grmkris
+          label: automerge,${{ inputs.target_branch == 'staging' && 'STAGING' || 'PRODUCTION' }}
+          draft: false
+          ignore_users: "dependabot,renovate"

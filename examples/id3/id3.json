@@ -249,7 +249,7 @@
                                   "type": "object",
                                   "properties": {
                                     "SanctionID": {
-                                      "type": [ "integer", "string" ]
+                                      "type": ["integer", "string"]
                                     },
                                     "Url": { "type": "string" },
                                     "Rank": { "type": "integer" },
