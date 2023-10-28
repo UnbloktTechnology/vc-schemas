@@ -1,0 +1,69 @@
+name: Deploy to issuer
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  setup-job:
+    name: Setup for deployment
+    runs-on: ubuntu-latest
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    outputs:
+      polygon-id: ${{ steps.changes.outputs.polygon-id }}
+      ipfs: ${{ steps.ipfs_changes.outputs.ipfs }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+
+      - name: Check for changes in polygon-id directory
+        uses: dorny/paths-filter@v2
+        id: changes
+        with:
+         filters: |
+           polygon-id:
+             - 'polygon-id/**'
+
+      - name: Check for changes in ipfs directory
+        uses: dorny/paths-filter@v2
+        id: ipfs_changes
+        with:
+          filters: |
+            ipfs:
+              - 'ipfs/**'
+
+  deploy-dev:
+    name: Deploy to Dev
+    needs: setup-job
+    secrets: inherit
+    if: needs.setup-job.outputs.polygon-id == 'true' && github.event.pull_request.merged && github.event.pull_request.base.ref == 'development'
+    uses: ./.github/workflows/deploy-dev.yml
+    with:
+      commit-sha: ${{ github.sha }}
+      pull-request-number: ${{ github.event.pull_request.number }}
+      branch: ${{ github.event.pull_request.base.ref }}
+
+  deploy-staging:
+    name: Deploy to Staging
+    needs: setup-job
+    secrets: inherit
+    if: needs.setup-job.outputs.ipfs == 'true' && github.event.pull_request.merged && github.event.pull_request.base.ref == 'staging'
+    uses: ./.github/workflows/deploy-staging.yml
+    with:
+      commit-sha: ${{ github.sha }}
+      pull-request-number: ${{ github.event.pull_request.number }}
+      branch: ${{ github.event.pull_request.base.ref }}
+
+  deploy-production:
+    name: Deploy to Production
+    needs: setup-job
+    secrets: inherit
+    if: needs.setup-job.outputs.ipfs == 'true' && github.event.pull_request.merged && github.event.pull_request.base.ref == 'main'
+    uses: ./.github/workflows/deploy-prod.yml
+    with:
+      commit-sha: ${{ github.sha }}
+      pull-request-number: ${{ github.event.pull_request.number }}
+      branch: ${{ github.event.pull_request.base.ref }}
