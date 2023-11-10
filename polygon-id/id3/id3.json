@@ -2419,7 +2419,8 @@
                         "type": "array",
                         "items": {
                           "type": "string"
-                        }
+                        },
+                        "maxItems": 200
                       }
                     }
                   },
@@ -2524,7 +2525,8 @@
                         "type": "array",
                         "items": {
                           "type": "string"
-                        }
+                        },
+                        "maxItems": 200
                       }
                     }
                   },
