@@ -49,25 +49,28 @@ jobs:
           chmod +x /usr/local/bin/semver
           semver --version
 
-      - name: Get current version
+      - name: Versions
         id: versions
         shell: bash
         run: |
-          current=$(cat polygon-id/id3/id3.json | jq -r '.["$metadata"].version')
-          target=$(semver bump patch $current)
-          
-          echo "$current"
-          echo "$target"
-          
-          echo "current=$current" >> $GITHUB_OUTPUT
-          echo "target=$target" >> $GITHUB_OUTPUT
-
-      - name: Find and replace Polygon ID versions
-        uses: jacobtomlinson/gha-find-replace@v3
-        with:
-          find: ${{ steps.versions.outputs.current }}
-          replace: ${{ steps.versions.outputs.target }}
-          include: "polygon-id/**"
+          # Go through all files in the polygon-id/ folder
+          for file in $(find polygon-id/ -type f -name "*.json"); do
+            echo "JSON file: $file"
+            
+            current=$(cat $file | jq -r '.["$metadata"].version')
+            target=$(semver bump patch "$current")
+            
+            echo "$current"
+            echo "$target"
+            
+            # Set the json file path
+            replacement=".json"
+            json_file_path="${file/.json/$replacement}"
+            echo "JSON file: $json_file_path"
+            
+            # Perform update
+            jq '.["$metadata"].version = "'"$target"'"' "$json_file_path" > temp.json && mv temp.json "$json_file_path"
+          done
 
       - name: Copy schemas to IPFS directory
         continue-on-error: true
