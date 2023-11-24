@@ -407,43 +407,43 @@
               "description": "Overall validation status of the document",
               "title": "Document Overall Validation",
               "type": "string",
-              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "documentBlockingPolicy": {
               "description": "Blocking policy of the document",
               "title": "Document Blocking Policy",
               "type": "string",
-              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "documentExpiry": {
               "description": "Expiry status of the document",
               "title": "Document Expiry",
               "type": "string",
-              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "documentSupport": {
               "description": "Support status of the document",
               "title": "Document Support",
               "type": "string",
-              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "documentValidation": {
               "description": "Validation status of the document",
               "title": "Document Validation",
               "type": "string",
-              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "faceMatchValidation": {
               "description": "Validation status of face match",
               "title": "Face Match Validation",
               "type": "string",
-              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "accumulativeLivenessResult": {
               "description": "Result of accumulative liveness check",
               "title": "Accumulative Liveness Result",
               "type": "string",
-              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED"]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             }
           }
         },
