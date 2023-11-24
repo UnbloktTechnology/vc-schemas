@@ -417,7 +417,8 @@
                 "FAILED",
                 "NOTNEEDED",
                 "PASSED",
-                "SKIPPED"
+                "SKIPPED",
+                "NEEDED"
               ]
             },
             "documentBlockingPolicy": {
@@ -428,7 +429,8 @@
                 "FAILED",
                 "NOTNEEDED",
                 "PASSED",
-                "SKIPPED"
+                "SKIPPED",
+                "NEEDED"
               ]
             },
             "documentExpiry": {
@@ -439,7 +441,8 @@
                 "FAILED",
                 "NOTNEEDED",
                 "PASSED",
-                "SKIPPED"
+                "SKIPPED",
+                "NEEDED"
               ]
             },
             "documentSupport": {
@@ -450,7 +453,8 @@
                 "FAILED",
                 "NOTNEEDED",
                 "PASSED",
-                "SKIPPED"
+                "SKIPPED",
+                "NEEDED"
               ]
             },
             "documentValidation": {
@@ -461,7 +465,8 @@
                 "FAILED",
                 "NOTNEEDED",
                 "PASSED",
-                "SKIPPED"
+                "SKIPPED",
+                "NEEDED"
               ]
             },
             "faceMatchValidation": {
@@ -472,7 +477,8 @@
                 "FAILED",
                 "NOTNEEDED",
                 "PASSED",
-                "SKIPPED"
+                "SKIPPED",
+                "NEEDED"
               ]
             },
             "accumulativeLivenessResult": {
@@ -483,7 +489,8 @@
                 "FAILED",
                 "NOTNEEDED",
                 "PASSED",
-                "SKIPPED"
+                "SKIPPED",
+                "NEEDED"
               ]
             }
           }
