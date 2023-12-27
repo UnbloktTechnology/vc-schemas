@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/staging/polygon-id/idScanSelfie/idScanSelfie.jsonld"
     },
     "type": "IDScanSelfie",
-    "version": "3.4.16-feature/nex-496-implement-changes-to-vc-schemas-for-new-approach-1703712398325"
+    "version": "3.4.16"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "IDScanSelfie schema",
