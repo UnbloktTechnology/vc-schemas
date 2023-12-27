@@ -42,8 +42,29 @@
         },
         "name": {
           "title": "Name",
-          "description": "Name of the docuemnt (e.g. passport.jpg)",
+          "description": "Name of the document (e.g. passport.jpg)",
           "type": "string"
+        },
+        "documentType": {
+          "title": "Document Type",
+          "description": "Type of the document (e.g. passport)",
+          "type": "string",
+          "enum": [
+            "Agents License",
+            "Driving License",
+            "Electoral Card",
+            "Foreigner Identification Card",
+            "Health Card",
+            "Job License",
+            "Membership Identification Card",
+            "Military Identification Card",
+            "National Identification Card",
+            "Passport",
+            "Proof of Age Card",
+            "Travel Permit",
+            "Visa",
+            "Weapons Licence"
+          ]
         },
         "mediaType": {
           "title": "Media Type",
