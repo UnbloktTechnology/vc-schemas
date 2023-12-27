@@ -296,8 +296,25 @@
         },
         "documentType": {
           "title": "Type",
-          "description": "Type of the document (e.g. image/jpeg, image/png)",
-          "type": "string"
+          "description": "Type of the document (e.g. Gas bill, Internet bill, Electricity bill, Rent agreement, Bank statement)",
+          "type": "string",
+          "enum": [
+            "Gas bill",
+            "Internet bill",
+            "Electricity bill",
+            "Rent agreement",
+            "Bank statement"
+          ]
+        },
+        "mediaType": {
+          "title": "Media Type",
+          "description": "Media type of the document (e.g. image/jpeg, image/png, application/pdf)",
+          "type": "string",
+            "enum": [
+                "image/jpeg",
+                "image/png",
+                "application/pdf"
+            ]
         }
       },
       "required": [

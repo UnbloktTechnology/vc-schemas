@@ -45,10 +45,14 @@
           "description": "Name of the docuemnt (e.g. passport.jpg)",
           "type": "string"
         },
-        "documentType": {
-          "title": "Type",
-          "description": "Type of the document (e.g. image/jpeg, image/png)",
-          "type": "string"
+        "mediaType": {
+          "title": "Media Type",
+          "description": "Media type of the document (e.g. image/jpeg, image/png, application/pdf)",
+          "type": "string",
+          "enum": [
+            "image/jpeg",
+            "image/png"
+          ]
         }
       }
     },

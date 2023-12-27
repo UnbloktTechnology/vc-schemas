@@ -23,7 +23,7 @@
             "@id":"polygon-vocab:name",
             "@type":"xsd:string"
           },
-          "documentType":{
+          "mediaType":{
             "@id":"polygon-vocab:type",
             "@type":"xsd:string"
           }
