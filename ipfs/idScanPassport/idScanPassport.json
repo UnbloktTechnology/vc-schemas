@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/QmeDE1AUyKj9bUgWCmHcsR6pAP1VRp2ftsia1hhCSSFvzQ"
+      "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/QmRBfV9TboGRz42rT45mnMMK8VTtTc9r1mpLQjGfyXCgaf"
     },
     "type": "IDScanPassport",
-    "version": "3.4.16-feature/nex-496-implement-changes-to-vc-schemas-for-new-approach-1703714591054"
+    "version": "2.4.16"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "IDScanPassport schema",
@@ -42,38 +42,13 @@
         },
         "name": {
           "title": "Name",
-          "description": "Name of the document (e.g. passport.jpg)",
+          "description": "Name of the docuemnt (e.g. passport.jpg)",
           "type": "string"
         },
         "documentType": {
-          "title": "Document Type",
-          "description": "Type of the document (e.g. passport)",
-          "type": "string",
-          "enum": [
-            "Agents License",
-            "Driving License",
-            "Electoral Card",
-            "Foreigner Identification Card",
-            "Health Card",
-            "Job License",
-            "Membership Identification Card",
-            "Military Identification Card",
-            "National Identification Card",
-            "Passport",
-            "Proof of Age Card",
-            "Travel Permit",
-            "Visa",
-            "Weapons Licence"
-          ]
-        },
-        "mediaType": {
-          "title": "Media Type",
-          "description": "Media type of the document (e.g. image/jpeg, image/png, application/pdf)",
-          "type": "string",
-          "enum": [
-            "image/jpeg",
-            "image/png"
-          ]
+          "title": "Type",
+          "description": "Type of the document (e.g. image/jpeg, image/png)",
+          "type": "string"
         }
       }
     },
