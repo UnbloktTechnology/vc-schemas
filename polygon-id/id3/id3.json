@@ -39,863 +39,9 @@
           "title": "Amendments Data",
           "description": "Details related to the amendments made to the original data.",
           "properties": {
-            "firstName": {
-              "title": "First Name",
-              "description": "The first name of the credential subject",
-              "type": "string"
-            },
-            "middleName": {
-              "title": "Middle Name",
-              "description": "Middle name of the credential subject",
-              "type": "string"
-            },
-            "lastName": {
-              "title": "Last Name",
-              "description": "The last name of the credential subject",
-              "type": "string"
-            },
-            "gender": {
-              "title": "Gender",
-              "description": "Gender of the credential subject",
-              "type": "string"
-            },
-            "age": {
-              "title": "Age",
-              "description": "Age of the credential subject",
-              "type": "integer",
-              "minimum": 0,
-              "maximum": 125
-            },
-            "citizenship": {
-              "description": "Citizenship status of the credential subject - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
-              "title": "Citizenship",
-              "type": "string",
-              "enum": [
-                "AFG",
-                "ALB",
-                "DZA",
-                "ASM",
-                "AND",
-                "AGO",
-                "AIA",
-                "ATA",
-                "ATG",
-                "ARG",
-                "ARM",
-                "ABW",
-                "AUS",
-                "AUT",
-                "AZE",
-                "BHS",
-                "BHR",
-                "BGD",
-                "BRB",
-                "BLR",
-                "BEL",
-                "BLZ",
-                "BEN",
-                "BMU",
-                "BTN",
-                "BOL",
-                "BES",
-                "BIH",
-                "BWA",
-                "BVT",
-                "BRA",
-                "IOT",
-                "BRN",
-                "BGR",
-                "BFA",
-                "BDI",
-                "CPV",
-                "KHM",
-                "CMR",
-                "CAN",
-                "CYM",
-                "CAF",
-                "TCD",
-                "CHL",
-                "CHN",
-                "CXR",
-                "CCK",
-                "COL",
-                "COM",
-                "COD",
-                "COG",
-                "COK",
-                "CRI",
-                "HRV",
-                "CUB",
-                "CUW",
-                "CYP",
-                "CZE",
-                "CIV",
-                "DNK",
-                "DJI",
-                "DMA",
-                "DOM",
-                "ECU",
-                "EGY",
-                "SLV",
-                "GNQ",
-                "ERI",
-                "EST",
-                "SWZ",
-                "ETH",
-                "FLK",
-                "FRO",
-                "FJI",
-                "FIN",
-                "FRA",
-                "GUF",
-                "PYF",
-                "ATF",
-                "GAB",
-                "GMB",
-                "GEO",
-                "DEU",
-                "GHA",
-                "GIB",
-                "GRC",
-                "GRL",
-                "GRD",
-                "GLP",
-                "GUM",
-                "GTM",
-                "GGY",
-                "GIN",
-                "GNB",
-                "GUY",
-                "HTI",
-                "HMD",
-                "VAT",
-                "HND",
-                "HKG",
-                "HUN",
-                "ISL",
-                "IND",
-                "IDN",
-                "IRN",
-                "IRQ",
-                "IRL",
-                "IMN",
-                "ISR",
-                "ITA",
-                "JAM",
-                "JPN",
-                "JEY",
-                "JOR",
-                "KAZ",
-                "KEN",
-                "KIR",
-                "PRK",
-                "KOR",
-                "KWT",
-                "KGZ",
-                "LAO",
-                "LVA",
-                "LBN",
-                "LSO",
-                "LBR",
-                "LBY",
-                "LIE",
-                "LTU",
-                "LUX",
-                "MAC",
-                "MDG",
-                "MWI",
-                "MYS",
-                "MDV",
-                "MLI",
-                "MLT",
-                "MHL",
-                "MTQ",
-                "MRT",
-                "MUS",
-                "MYT",
-                "MEX",
-                "FSM",
-                "MDA",
-                "MCO",
-                "MNG",
-                "MNE",
-                "MSR",
-                "MAR",
-                "MOZ",
-                "MMR",
-                "NAM",
-                "NRU",
-                "NPL",
-                "NLD",
-                "NCL",
-                "NZL",
-                "NIC",
-                "NER",
-                "NGA",
-                "NIU",
-                "NFK",
-                "MNP",
-                "NOR",
-                "OMN",
-                "PAK",
-                "PLW",
-                "PSE",
-                "PAN",
-                "PNG",
-                "PRY",
-                "PER",
-                "PHL",
-                "PCN",
-                "POL",
-                "PRT",
-                "PRI",
-                "QAT",
-                "MKD",
-                "ROU",
-                "RUS",
-                "RWA",
-                "REU",
-                "BLM",
-                "SHN",
-                "KNA",
-                "LCA",
-                "MAF",
-                "SPM",
-                "VCT",
-                "WSM",
-                "SMR",
-                "STP",
-                "SAU",
-                "SEN",
-                "SRB",
-                "SYC",
-                "SLE",
-                "SGP",
-                "SXM",
-                "SVK",
-                "SVN",
-                "SLB",
-                "SOM",
-                "ZAF",
-                "SGS",
-                "SSD",
-                "ESP",
-                "LKA",
-                "SDN",
-                "SUR",
-                "SJM",
-                "SWE",
-                "CHE",
-                "SYR",
-                "TWN",
-                "TJK",
-                "TZA",
-                "THA",
-                "TLS",
-                "TGO",
-                "TKL",
-                "TON",
-                "TTO",
-                "TUN",
-                "TUR",
-                "TKM",
-                "TCA",
-                "TUV",
-                "UGA",
-                "UKR",
-                "ARE",
-                "GBR",
-                "UMI",
-                "USA",
-                "URY",
-                "UZB",
-                "VUT",
-                "VEN",
-                "VNM",
-                "VGB",
-                "VIR",
-                "WLF",
-                "ESH",
-                "YEM",
-                "ZMB",
-                "ZWE",
-                "ALA"
-              ]
-            },
-            "fullName": {
-              "title": "Full Name",
-              "description": "Full name of the credential subject",
-              "type": "string"
-            },
-            "addressLine1": {
-              "title": "Address Line 1",
-              "description": "Address line 1 of the credential subject",
-              "type": "string"
-            },
-            "addressLine2": {
-              "title": "Address Line 2",
-              "description": "Address line 2 of the credential subject",
-              "type": "string"
-            },
-            "birthDate": {
-              "title": "Birth Date",
-              "description": "Birth Date of the credential subject",
-              "type": "string",
-              "format": "date"
-            },
-            "placeOfBirth": {
-              "title": "Place of Birth",
-              "description": "Place of birth of the credential subject",
-              "type": "string"
-            },
-            "countryOfResidence": {
-              "title": "Country of Residence",
-              "description": "Country of residence of the credential subject - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
-              "type": "string",
-              "enum": [
-                "AFG",
-                "ALB",
-                "DZA",
-                "ASM",
-                "AND",
-                "AGO",
-                "AIA",
-                "ATA",
-                "ATG",
-                "ARG",
-                "ARM",
-                "ABW",
-                "AUS",
-                "AUT",
-                "AZE",
-                "BHS",
-                "BHR",
-                "BGD",
-                "BRB",
-                "BLR",
-                "BEL",
-                "BLZ",
-                "BEN",
-                "BMU",
-                "BTN",
-                "BOL",
-                "BES",
-                "BIH",
-                "BWA",
-                "BVT",
-                "BRA",
-                "IOT",
-                "BRN",
-                "BGR",
-                "BFA",
-                "BDI",
-                "CPV",
-                "KHM",
-                "CMR",
-                "CAN",
-                "CYM",
-                "CAF",
-                "TCD",
-                "CHL",
-                "CHN",
-                "CXR",
-                "CCK",
-                "COL",
-                "COM",
-                "COD",
-                "COG",
-                "COK",
-                "CRI",
-                "HRV",
-                "CUB",
-                "CUW",
-                "CYP",
-                "CZE",
-                "CIV",
-                "DNK",
-                "DJI",
-                "DMA",
-                "DOM",
-                "ECU",
-                "EGY",
-                "SLV",
-                "GNQ",
-                "ERI",
-                "EST",
-                "SWZ",
-                "ETH",
-                "FLK",
-                "FRO",
-                "FJI",
-                "FIN",
-                "FRA",
-                "GUF",
-                "PYF",
-                "ATF",
-                "GAB",
-                "GMB",
-                "GEO",
-                "DEU",
-                "GHA",
-                "GIB",
-                "GRC",
-                "GRL",
-                "GRD",
-                "GLP",
-                "GUM",
-                "GTM",
-                "GGY",
-                "GIN",
-                "GNB",
-                "GUY",
-                "HTI",
-                "HMD",
-                "VAT",
-                "HND",
-                "HKG",
-                "HUN",
-                "ISL",
-                "IND",
-                "IDN",
-                "IRN",
-                "IRQ",
-                "IRL",
-                "IMN",
-                "ISR",
-                "ITA",
-                "JAM",
-                "JPN",
-                "JEY",
-                "JOR",
-                "KAZ",
-                "KEN",
-                "KIR",
-                "PRK",
-                "KOR",
-                "KWT",
-                "KGZ",
-                "LAO",
-                "LVA",
-                "LBN",
-                "LSO",
-                "LBR",
-                "LBY",
-                "LIE",
-                "LTU",
-                "LUX",
-                "MAC",
-                "MDG",
-                "MWI",
-                "MYS",
-                "MDV",
-                "MLI",
-                "MLT",
-                "MHL",
-                "MTQ",
-                "MRT",
-                "MUS",
-                "MYT",
-                "MEX",
-                "FSM",
-                "MDA",
-                "MCO",
-                "MNG",
-                "MNE",
-                "MSR",
-                "MAR",
-                "MOZ",
-                "MMR",
-                "NAM",
-                "NRU",
-                "NPL",
-                "NLD",
-                "NCL",
-                "NZL",
-                "NIC",
-                "NER",
-                "NGA",
-                "NIU",
-                "NFK",
-                "MNP",
-                "NOR",
-                "OMN",
-                "PAK",
-                "PLW",
-                "PSE",
-                "PAN",
-                "PNG",
-                "PRY",
-                "PER",
-                "PHL",
-                "PCN",
-                "POL",
-                "PRT",
-                "PRI",
-                "QAT",
-                "MKD",
-                "ROU",
-                "RUS",
-                "RWA",
-                "REU",
-                "BLM",
-                "SHN",
-                "KNA",
-                "LCA",
-                "MAF",
-                "SPM",
-                "VCT",
-                "WSM",
-                "SMR",
-                "STP",
-                "SAU",
-                "SEN",
-                "SRB",
-                "SYC",
-                "SLE",
-                "SGP",
-                "SXM",
-                "SVK",
-                "SVN",
-                "SLB",
-                "SOM",
-                "ZAF",
-                "SGS",
-                "SSD",
-                "ESP",
-                "LKA",
-                "SDN",
-                "SUR",
-                "SJM",
-                "SWE",
-                "CHE",
-                "SYR",
-                "TWN",
-                "TJK",
-                "TZA",
-                "THA",
-                "TLS",
-                "TGO",
-                "TKL",
-                "TON",
-                "TTO",
-                "TUN",
-                "TUR",
-                "TKM",
-                "TCA",
-                "TUV",
-                "UGA",
-                "UKR",
-                "ARE",
-                "GBR",
-                "UMI",
-                "USA",
-                "URY",
-                "UZB",
-                "VUT",
-                "VEN",
-                "VNM",
-                "VGB",
-                "VIR",
-                "WLF",
-                "ESH",
-                "YEM",
-                "ZMB",
-                "ZWE",
-                "ALA"
-              ]
-            },
-            "city": {
-              "title": "City",
-              "description": "City of the credential subject",
-              "type": "string"
-            },
-            "province": {
-              "title": "Province",
-              "description": "Province of the credential subject",
-              "type": "string"
-            },
-            "postalCode": {
-              "title": "Postal Code",
-              "description": "Postal code of the credential subject",
-              "type": "string"
-            },
-            "emailAddress": {
-              "title": "Email Address",
-              "description": "Email address of the credential subject",
-              "type": "string",
-              "format": "email"
-            },
-            "phoneNumber": {
-              "title": "Phone Number",
-              "description": "Phone number of the credential subject",
-              "type": "string"
-            },
-            "countryOfBirth": {
-              "title": "Country of Birth",
-              "description": "Country of birth of the credential subject - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
-              "type": "string",
-              "enum": [
-                "AFG",
-                "ALB",
-                "DZA",
-                "ASM",
-                "AND",
-                "AGO",
-                "AIA",
-                "ATA",
-                "ATG",
-                "ARG",
-                "ARM",
-                "ABW",
-                "AUS",
-                "AUT",
-                "AZE",
-                "BHS",
-                "BHR",
-                "BGD",
-                "BRB",
-                "BLR",
-                "BEL",
-                "BLZ",
-                "BEN",
-                "BMU",
-                "BTN",
-                "BOL",
-                "BES",
-                "BIH",
-                "BWA",
-                "BVT",
-                "BRA",
-                "IOT",
-                "BRN",
-                "BGR",
-                "BFA",
-                "BDI",
-                "CPV",
-                "KHM",
-                "CMR",
-                "CAN",
-                "CYM",
-                "CAF",
-                "TCD",
-                "CHL",
-                "CHN",
-                "CXR",
-                "CCK",
-                "COL",
-                "COM",
-                "COD",
-                "COG",
-                "COK",
-                "CRI",
-                "HRV",
-                "CUB",
-                "CUW",
-                "CYP",
-                "CZE",
-                "CIV",
-                "DNK",
-                "DJI",
-                "DMA",
-                "DOM",
-                "ECU",
-                "EGY",
-                "SLV",
-                "GNQ",
-                "ERI",
-                "EST",
-                "SWZ",
-                "ETH",
-                "FLK",
-                "FRO",
-                "FJI",
-                "FIN",
-                "FRA",
-                "GUF",
-                "PYF",
-                "ATF",
-                "GAB",
-                "GMB",
-                "GEO",
-                "DEU",
-                "GHA",
-                "GIB",
-                "GRC",
-                "GRL",
-                "GRD",
-                "GLP",
-                "GUM",
-                "GTM",
-                "GGY",
-                "GIN",
-                "GNB",
-                "GUY",
-                "HTI",
-                "HMD",
-                "VAT",
-                "HND",
-                "HKG",
-                "HUN",
-                "ISL",
-                "IND",
-                "IDN",
-                "IRN",
-                "IRQ",
-                "IRL",
-                "IMN",
-                "ISR",
-                "ITA",
-                "JAM",
-                "JPN",
-                "JEY",
-                "JOR",
-                "KAZ",
-                "KEN",
-                "KIR",
-                "PRK",
-                "KOR",
-                "KWT",
-                "KGZ",
-                "LAO",
-                "LVA",
-                "LBN",
-                "LSO",
-                "LBR",
-                "LBY",
-                "LIE",
-                "LTU",
-                "LUX",
-                "MAC",
-                "MDG",
-                "MWI",
-                "MYS",
-                "MDV",
-                "MLI",
-                "MLT",
-                "MHL",
-                "MTQ",
-                "MRT",
-                "MUS",
-                "MYT",
-                "MEX",
-                "FSM",
-                "MDA",
-                "MCO",
-                "MNG",
-                "MNE",
-                "MSR",
-                "MAR",
-                "MOZ",
-                "MMR",
-                "NAM",
-                "NRU",
-                "NPL",
-                "NLD",
-                "NCL",
-                "NZL",
-                "NIC",
-                "NER",
-                "NGA",
-                "NIU",
-                "NFK",
-                "MNP",
-                "NOR",
-                "OMN",
-                "PAK",
-                "PLW",
-                "PSE",
-                "PAN",
-                "PNG",
-                "PRY",
-                "PER",
-                "PHL",
-                "PCN",
-                "POL",
-                "PRT",
-                "PRI",
-                "QAT",
-                "MKD",
-                "ROU",
-                "RUS",
-                "RWA",
-                "REU",
-                "BLM",
-                "SHN",
-                "KNA",
-                "LCA",
-                "MAF",
-                "SPM",
-                "VCT",
-                "WSM",
-                "SMR",
-                "STP",
-                "SAU",
-                "SEN",
-                "SRB",
-                "SYC",
-                "SLE",
-                "SGP",
-                "SXM",
-                "SVK",
-                "SVN",
-                "SLB",
-                "SOM",
-                "ZAF",
-                "SGS",
-                "SSD",
-                "ESP",
-                "LKA",
-                "SDN",
-                "SUR",
-                "SJM",
-                "SWE",
-                "CHE",
-                "SYR",
-                "TWN",
-                "TJK",
-                "TZA",
-                "THA",
-                "TLS",
-                "TGO",
-                "TKL",
-                "TON",
-                "TTO",
-                "TUN",
-                "TUR",
-                "TKM",
-                "TCA",
-                "TUV",
-                "UGA",
-                "UKR",
-                "ARE",
-                "GBR",
-                "UMI",
-                "USA",
-                "URY",
-                "UZB",
-                "VUT",
-                "VEN",
-                "VNM",
-                "VGB",
-                "VIR",
-                "WLF",
-                "ESH",
-                "YEM",
-                "ZMB",
-                "ZWE",
-                "ALA"
-              ]
-            }
-          }
-        },
-        "originalData": {
-          "title": "Original Data",
-          "description": "Details related to the original data before any amendments",
-          "type": "object",
-          "properties": {
             "data": {
-              "title": "Original Data - Personal Details",
-              "description": "Unmodified personal details imported directly from document during authentication process.",
+              "title": "Amendments Data - Personal Details",
+              "description": "Personal details manually amended by the holder/user during authentication process.",
               "type": "object",
               "properties": {
                 "firstName": {
@@ -1744,6 +890,737 @@
                     "ZWE",
                     "ALA"
                   ]
+                }
+              }
+            },
+            "authenticateSPResult": {
+              "title": "Authenticate SP Result",
+              "description": "Result of the authentication request",
+              "type": "object",
+              "properties": {
+                "AuthenticationID": {
+                  "type": "string",
+                  "title": "Authentication ID",
+                  "description": "The ID of the authentication request"
+                },
+                "Timestamp": {
+                  "type": "string",
+                  "format": "date-time",
+                  "title": "Timestamp",
+                  "description": "The timestamp of the authentication request"
+                },
+                "CustomerRef": {
+                  "title": "Customer Reference",
+                  "description": "The customer reference of the authentication request",
+                  "type": "string"
+                },
+                "ProfileID": {
+                  "title": "Profile ID",
+                  "description": "The ID of the profile used for the authentication request",
+                  "type": "string"
+                },
+                "ProfileName": {
+                  "title": "Profile Name",
+                  "description": "The name of the profile used for the authentication request",
+                  "type": "string"
+                },
+                "ProfileVersion": {
+                  "title": "Profile Version",
+                  "description": "The version of the profile used for the authentication request",
+                  "type": "integer"
+                },
+                "ProfileRevision": {
+                  "title": "Profile Revision",
+                  "description": "The revision of the profile used for the authentication request",
+                  "type": "integer"
+                },
+                "ProfileState": {
+                  "title": "Profile State",
+                  "description": "The state of the profile used for the authentication request",
+                  "type": "string"
+                },
+                "ResultCodes": {
+                  "title": "Result Codes",
+                  "description": "The result codes of the authentication request",
+                  "type": "object",
+                  "properties": {
+                    "GlobalItemCheckResultCodes": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Name": {
+                            "type": "string"
+                          },
+                          "Description": {
+                            "type": "string"
+                          },
+                          "Comment": {
+                            "type": "object",
+                            "properties": {
+                              "GlobalItemCheckResultCode": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "Description": {
+                                      "type": "string"
+                                    },
+                                    "Code": {
+                                      "type": "integer"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "Match": {
+                            "type": "object",
+                            "properties": {
+                              "GlobalItemCheckResultCode": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "Description": {
+                                      "type": "string"
+                                    },
+                                    "Code": {
+                                      "type": "integer"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "Warning": {
+                            "type": "object",
+                            "properties": {
+                              "GlobalItemCheckResultCode": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "Description": {
+                                      "type": "string"
+                                    },
+                                    "Code": {
+                                      "type": "integer"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "Mismatch": {
+                            "type": "object",
+                            "properties": {
+                              "GlobalItemCheckResultCode": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "Description": {
+                                      "type": "string"
+                                    },
+                                    "Code": {
+                                      "type": "integer"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ID": {
+                            "type": "integer"
+                          },
+                          "Pass": {
+                            "type": "string"
+                          },
+                          "Address": {
+                            "type": "string"
+                          },
+                          "Forename": {
+                            "type": "string"
+                          },
+                          "Surname": {
+                            "type": "string"
+                          },
+                          "DOB": {
+                            "type": "string"
+                          },
+                          "Alert": {
+                            "type": "string"
+                          },
+                          "SanctionsMatches": {
+                            "type": "object",
+                            "properties": {
+                              "GlobalSanctionsMatch": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "SanctionID": {
+                                      "type": "string"
+                                    },
+                                    "Url": {
+                                      "type": "string"
+                                    },
+                                    "Rank": {
+                                      "type": "integer"
+                                    },
+                                    "CaseID": {
+                                      "type": "string"
+                                    },
+                                    "SearchID": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "Score": {
+                  "title": "Score",
+                  "description": "The score of the authentication request",
+                  "type": "integer"
+                },
+                "BandText": {
+                  "title": "Band Text",
+                  "description": "The band text of the authentication request",
+                  "type": "string"
+                },
+                "Country": {
+                  "title": "Country",
+                  "description": "Country type of the authentication request",
+                  "type": "string"
+                },
+                "ItemCheckDecisionBands": {
+                  "title": "Item Check Decision Bands",
+                  "description": "The item check decision bands of the authentication request",
+                  "type": "object",
+                  "properties": {
+                    "GlobalItemCheckDecisionBands": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "ID": {
+                            "type": "integer"
+                          },
+                          "BandScore": {
+                            "type": "integer"
+                          },
+                          "BandText": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "pepIntelligenceResult": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "Fullname": {
+                    "type": "string"
+                  },
+                  "Aliases": {
+                    "type": "object",
+                    "properties": {
+                      "elements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "SanctionsAddresses": {
+                    "type": "object",
+                    "properties": {
+                      "GlobalSanctionsAddress": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "AddressLine": {
+                              "type": "string"
+                            },
+                            "City": {
+                              "type": "string"
+                            },
+                            "Country": {
+                              "description": "Full name of country",
+                              "type": "string"
+                            },
+                            "Region": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "SanctionsDates": {
+                    "type": "object",
+                    "properties": {
+                      "GlobalSanctionsDate": {
+                        "type": "object",
+                        "properties": {
+                          "DateType": {
+                            "type": "string"
+                          },
+                          "Day": {
+                            "type": "integer"
+                          },
+                          "Month": {
+                            "type": "integer"
+                          },
+                          "Year": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "IdentityInformation": {
+                    "type": "string"
+                  },
+                  "SanctionsPositions": {
+                    "type": "object",
+                    "properties": {
+                      "GlobalSanctionsPosition": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "Position": {
+                              "type": "string"
+                            },
+                            "Country": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "sanctionsEnforcementsResult": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "Fullname": {
+                    "type": "string"
+                  },
+                  "SanctionsBodies": {
+                    "type": "object",
+                    "properties": {
+                      "elements": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  },
+                  "Aliases": {
+                    "type": "object",
+                    "properties": {
+                      "elements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "SanctionsAddresses": {
+                    "type": "object",
+                    "properties": {
+                      "GlobalSanctionsAddress": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "AddressLine": {
+                              "type": "string"
+                            },
+                            "City": {
+                              "type": "string"
+                            },
+                            "Country": {
+                              "description": "Full name of country",
+                              "type": "string"
+                            },
+                            "Region": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "SanctionsDates": {
+                    "type": "object",
+                    "properties": {
+                      "GlobalSanctionsDate": {
+                        "type": "object",
+                        "properties": {
+                          "DateType": {
+                            "type": "string"
+                          },
+                          "Day": {
+                            "type": "integer"
+                          },
+                          "Month": {
+                            "type": "integer"
+                          },
+                          "Year": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "IdentityInformation": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "originalData": {
+          "title": "Original Data",
+          "description": "Details related to the original data before any amendments",
+          "type": "object",
+          "properties": {
+            "data": {
+              "title": "Original Data - Personal Details",
+              "description": "Unmodified personal details imported directly from document during authentication process.",
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "description": "First name of the credential subject",
+                  "title": "First Name",
+                  "type": "string"
+                },
+                "middleName": {
+                  "description": "Middle name of the credential subject",
+                  "title": "Middle Name",
+                  "type": "string"
+                },
+                "lastName": {
+                  "description": "Last name of the credential subject",
+                  "title": "Last Name",
+                  "type": "string"
+                },
+                "gender": {
+                  "description": "Gender of the credential subject",
+                  "title": "Gender",
+                  "type": "string"
+                },
+                "age": {
+                  "description": "Age of the credential subject",
+                  "title": "Age",
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 125
+                },
+                "citizenship": {
+                  "description": "Citizenship status of the credential subject - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
+                  "title": "Citizenship",
+                  "type": "string",
+                  "enum": [
+                    "AFG",
+                    "ALB",
+                    "DZA",
+                    "ASM",
+                    "AND",
+                    "AGO",
+                    "AIA",
+                    "ATA",
+                    "ATG",
+                    "ARG",
+                    "ARM",
+                    "ABW",
+                    "AUS",
+                    "AUT",
+                    "AZE",
+                    "BHS",
+                    "BHR",
+                    "BGD",
+                    "BRB",
+                    "BLR",
+                    "BEL",
+                    "BLZ",
+                    "BEN",
+                    "BMU",
+                    "BTN",
+                    "BOL",
+                    "BES",
+                    "BIH",
+                    "BWA",
+                    "BVT",
+                    "BRA",
+                    "IOT",
+                    "BRN",
+                    "BGR",
+                    "BFA",
+                    "BDI",
+                    "CPV",
+                    "KHM",
+                    "CMR",
+                    "CAN",
+                    "CYM",
+                    "CAF",
+                    "TCD",
+                    "CHL",
+                    "CHN",
+                    "CXR",
+                    "CCK",
+                    "COL",
+                    "COM",
+                    "COD",
+                    "COG",
+                    "COK",
+                    "CRI",
+                    "HRV",
+                    "CUB",
+                    "CUW",
+                    "CYP",
+                    "CZE",
+                    "CIV",
+                    "DNK",
+                    "DJI",
+                    "DMA",
+                    "DOM",
+                    "ECU",
+                    "EGY",
+                    "SLV",
+                    "GNQ",
+                    "ERI",
+                    "EST",
+                    "SWZ",
+                    "ETH",
+                    "FLK",
+                    "FRO",
+                    "FJI",
+                    "FIN",
+                    "FRA",
+                    "GUF",
+                    "PYF",
+                    "ATF",
+                    "GAB",
+                    "GMB",
+                    "GEO",
+                    "DEU",
+                    "GHA",
+                    "GIB",
+                    "GRC",
+                    "GRL",
+                    "GRD",
+                    "GLP",
+                    "GUM",
+                    "GTM",
+                    "GGY",
+                    "GIN",
+                    "GNB",
+                    "GUY",
+                    "HTI",
+                    "HMD",
+                    "VAT",
+                    "HND",
+                    "HKG",
+                    "HUN",
+                    "ISL",
+                    "IND",
+                    "IDN",
+                    "IRN",
+                    "IRQ",
+                    "IRL",
+                    "IMN",
+                    "ISR",
+                    "ITA",
+                    "JAM",
+                    "JPN",
+                    "JEY",
+                    "JOR",
+                    "KAZ",
+                    "KEN",
+                    "KIR",
+                    "PRK",
+                    "KOR",
+                    "KWT",
+                    "KGZ",
+                    "LAO",
+                    "LVA",
+                    "LBN",
+                    "LSO",
+                    "LBR",
+                    "LBY",
+                    "LIE",
+                    "LTU",
+                    "LUX",
+                    "MAC",
+                    "MDG",
+                    "MWI",
+                    "MYS",
+                    "MDV",
+                    "MLI",
+                    "MLT",
+                    "MHL",
+                    "MTQ",
+                    "MRT",
+                    "MUS",
+                    "MYT",
+                    "MEX",
+                    "FSM",
+                    "MDA",
+                    "MCO",
+                    "MNG",
+                    "MNE",
+                    "MSR",
+                    "MAR",
+                    "MOZ",
+                    "MMR",
+                    "NAM",
+                    "NRU",
+                    "NPL",
+                    "NLD",
+                    "NCL",
+                    "NZL",
+                    "NIC",
+                    "NER",
+                    "NGA",
+                    "NIU",
+                    "NFK",
+                    "MNP",
+                    "NOR",
+                    "OMN",
+                    "PAK",
+                    "PLW",
+                    "PSE",
+                    "PAN",
+                    "PNG",
+                    "PRY",
+                    "PER",
+                    "PHL",
+                    "PCN",
+                    "POL",
+                    "PRT",
+                    "PRI",
+                    "QAT",
+                    "MKD",
+                    "ROU",
+                    "RUS",
+                    "RWA",
+                    "REU",
+                    "BLM",
+                    "SHN",
+                    "KNA",
+                    "LCA",
+                    "MAF",
+                    "SPM",
+                    "VCT",
+                    "WSM",
+                    "SMR",
+                    "STP",
+                    "SAU",
+                    "SEN",
+                    "SRB",
+                    "SYC",
+                    "SLE",
+                    "SGP",
+                    "SXM",
+                    "SVK",
+                    "SVN",
+                    "SLB",
+                    "SOM",
+                    "ZAF",
+                    "SGS",
+                    "SSD",
+                    "ESP",
+                    "LKA",
+                    "SDN",
+                    "SUR",
+                    "SJM",
+                    "SWE",
+                    "CHE",
+                    "SYR",
+                    "TWN",
+                    "TJK",
+                    "TZA",
+                    "THA",
+                    "TLS",
+                    "TGO",
+                    "TKL",
+                    "TON",
+                    "TTO",
+                    "TUN",
+                    "TUR",
+                    "TKM",
+                    "TCA",
+                    "TUV",
+                    "UGA",
+                    "UKR",
+                    "ARE",
+                    "GBR",
+                    "UMI",
+                    "USA",
+                    "URY",
+                    "UZB",
+                    "VUT",
+                    "VEN",
+                    "VNM",
+                    "VGB",
+                    "VIR",
+                    "WLF",
+                    "ESH",
+                    "YEM",
+                    "ZMB",
+                    "ZWE",
+                    "ALA"
+                  ]
+                },
+                "fullName": {
+                  "description": "Full name of the credential subject",
+                  "title": "Full Name",
+                  "type": "string"
+                },
+                "addressLine1": {
+                  "description": "First line of the address of the credential subject",
+                  "title": "Address Line 1",
+                  "type": "string"
+                },
+                "addressLine2": {
+                  "description": "Second line of the address of the credential subject",
+                  "title": "Address Line 2",
+                  "type": "string"
+                },
+                "birthDate": {
+                  "description": "Date of birth of the credential subject",
+                  "title": "Birth Date",
+                  "type": "string",
+                  "format": "date"
+                },
+                "placeOfBirth": {
+                  "type": "string",
+                  "nullable": true
                 }
               }
             },
