@@ -57,7 +57,7 @@
                   },
                   "birthDate":{
                     "@id":"polygon-vocab:birthDate",
-                    "@type":"xsd:dateTime"
+                    "@type":"xsd:integer"
                   },
                   "placeOfBirth":{
                     "@id":"polygon-vocab:placeOfBirth",
@@ -536,7 +536,7 @@
                   },
                   "birthDate":{
                     "@id":"polygon-vocab:birthDate",
-                    "@type":"xsd:dateTime"
+                    "@type":"xsd:integer"
                   },
                   "placeOfBirth":{
                     "@id":"polygon-vocab:placeOfBirth",

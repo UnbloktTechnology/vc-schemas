@@ -344,9 +344,8 @@
                 },
                 "birthDate": {
                   "title": "Birth Date",
-                  "description": "Birth Date of the credential subject",
-                  "type": "string",
-                  "format": "date"
+                  "description": "Birth Date of the credential subject in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day",
+                  "type": "integer"
                 },
                 "placeOfBirth": {
                   "title": "Place of Birth",
@@ -1613,10 +1612,9 @@
                   "type": "string"
                 },
                 "birthDate": {
-                  "description": "Date of birth of the credential subject",
                   "title": "Birth Date",
-                  "type": "string",
-                  "format": "date"
+                  "description": "Birth Date of the credential subject in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day",
+                  "type": "integer"
                 },
                 "placeOfBirth": {
                   "type": "string",

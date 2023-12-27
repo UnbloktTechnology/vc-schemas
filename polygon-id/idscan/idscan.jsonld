@@ -117,11 +117,11 @@
           "originalData": {
             "@id": "polygon-vocab:originalData",
             "@context": {
-              "firstName":{
-                "@id":"polygon-vocab:firstName",
+              "firstName": {
+                "@id": "polygon-vocab:firstName",
                 "@type": "xsd:string"
               },
-              "middleName":{
+              "middleName": {
                 "@id": "polygon-vocab:middleName",
                 "@type": "xsd:string"
               },
@@ -129,7 +129,7 @@
                 "@id": "polygon-vocab:lastName",
                 "@type": "xsd:string"
               },
-              "gender":{
+              "gender": {
                 "@id": "polygon-vocab:gender",
                 "@type": "xsd:string"
               },
@@ -137,7 +137,7 @@
                 "@id": "polygon-vocab:age",
                 "@type": "xsd:integer"
               },
-              "citizenship":{
+              "citizenship": {
                 "@id": "polygon-vocab:citizenship",
                 "@type": "xsd:string"
               },
@@ -145,7 +145,7 @@
                 "@id": "polygon-vocab:fullName",
                 "@type": "xsd:string"
               },
-              "addressLine1":{
+              "addressLine1": {
                 "@id": "polygon-vocab:addressLine1",
                 "@type": "xsd:string"
               },
@@ -153,9 +153,9 @@
                 "@id": "polygon-vocab:addressLine2",
                 "@type": "xsd:string"
               },
-              "birthDate":{
+              "birthDate": {
                 "@id": "polygon-vocab:birthDate",
-                "@type": "xsd:string"
+                "@type": "xsd:integer"
               },
               "placeOfBirth": {
                 "@id": "polygon-vocab:placeOfBirth",
@@ -166,11 +166,11 @@
           "amendmentsData": {
             "@id": "polygon-vocab:originalData",
             "@context": {
-              "firstName":{
-                "@id":"polygon-vocab:firstName",
+              "firstName": {
+                "@id": "polygon-vocab:firstName",
                 "@type": "xsd:string"
               },
-              "middleName":{
+              "middleName": {
                 "@id": "polygon-vocab:middleName",
                 "@type": "xsd:string"
               },
@@ -178,7 +178,7 @@
                 "@id": "polygon-vocab:lastName",
                 "@type": "xsd:string"
               },
-              "gender":{
+              "gender": {
                 "@id": "polygon-vocab:gender",
                 "@type": "xsd:string"
               },
@@ -186,7 +186,7 @@
                 "@id": "polygon-vocab:age",
                 "@type": "xsd:integer"
               },
-              "citizenship":{
+              "citizenship": {
                 "@id": "polygon-vocab:citizenship",
                 "@type": "xsd:string"
               },
@@ -194,7 +194,7 @@
                 "@id": "polygon-vocab:fullName",
                 "@type": "xsd:string"
               },
-              "addressLine1":{
+              "addressLine1": {
                 "@id": "polygon-vocab:addressLine1",
                 "@type": "xsd:string"
               },
@@ -202,9 +202,9 @@
                 "@id": "polygon-vocab:addressLine2",
                 "@type": "xsd:string"
               },
-              "birthDate":{
+              "birthDate": {
                 "@id": "polygon-vocab:birthDate",
-                "@type": "xsd:string"
+                "@type": "xsd:integer"
               },
               "placeOfBirth": {
                 "@id": "polygon-vocab:placeOfBirth",
@@ -218,7 +218,7 @@
                 "@id": "polygon-vocab:city",
                 "@type": "xsd:string"
               },
-              "province":  {
+              "province": {
                 "@id": "polygon-vocab:province",
                 "@type": "xsd:string"
               },
@@ -226,7 +226,7 @@
                 "@id": "polygon-vocab:postalCode",
                 "@type": "xsd:string"
               },
-              "emailAddress":  {
+              "emailAddress": {
                 "@id": "polygon-vocab:emailAddress",
                 "@type": "xsd:string"
               },
@@ -234,7 +234,7 @@
                 "@id": "polygon-vocab:phoneNumber",
                 "@type": "xsd:string"
               },
-              "countryOfBirth":  {
+              "countryOfBirth": {
                 "@id": "polygon-vocab:countryOfBirth",
                 "@type": "xsd:string"
               }
