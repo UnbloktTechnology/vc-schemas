@@ -552,6 +552,7 @@
             },
             "placeOfBirth": {
               "type": "string",
+              "description": "Place of birth of the credential subject",
               "nullable": true
             }
           }
