@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/QmSgzzZwZ8Ws6j7gYeE7Rn3k14K3Ak6qWXQonpjfLAwVAX"
+      "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/QmZhKKtCkxqiRsZYwWRRvRrg63YQKXQESe8LJXrGQEhT9y"
     },
     "type": "ProofOfResidence",
-    "version": "2.4.16"
+    "version": "3.4.16-feature/nex-496-implement-changes-to-vc-schemas-for-new-approach-1703785486359"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A proof of residence credential",
@@ -296,7 +296,45 @@
         },
         "documentType": {
           "title": "Type",
-          "description": "Type of the document (e.g. image/jpeg, image/png)",
+          "description": "Type of the document (e.g. Gas bill, Internet bill, Electricity bill, Rent agreement, Bank statement)",
+          "type": "string",
+          "enum": [
+            "Gas bill",
+            "Internet bill",
+            "Electricity bill",
+            "Rent agreement",
+            "Bank statement"
+          ]
+        },
+        "mediaType": {
+          "title": "Media Type",
+          "description": "Media type of the document (e.g. image/jpeg, image/png, application/pdf)",
+          "type": "string",
+          "enum": [
+            "image/jpeg",
+            "image/jpg",
+            "image/png",
+            "application/pdf"
+          ]
+        },
+        "county": {
+          "title": "County",
+          "description": "The county of residence",
+          "type": "string"
+        },
+        "city": {
+          "title": "City",
+          "description": "The city of residence",
+          "type": "string"
+        },
+        "streetName": {
+          "title": "Street name",
+          "description": "The street name of residence",
+          "type": "string"
+        },
+        "postalCode": {
+          "title": "Postal Code",
+          "description": "The postal code of residence",
           "type": "string"
         }
       },
@@ -306,7 +344,12 @@
         "country",
         "base64",
         "name",
-        "documentType"
+        "documentType",
+        "mediaType",
+        "county",
+        "city",
+        "streetName",
+        "postalCode"
       ]
     },
     "@context": {
