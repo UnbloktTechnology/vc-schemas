@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/staging/polygon-id/proofOfResidence/proofOfResidence.jsonld"
     },
     "type": "ProofOfResidence",
-    "version": "3.4.16-feature/nex-496-implement-changes-to-vc-schemas-for-new-approach-1703776591707"
+    "version": "3.4.16"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A proof of residence credential",
@@ -310,12 +310,11 @@
           "title": "Media Type",
           "description": "Media type of the document (e.g. image/jpeg, image/png, application/pdf)",
           "type": "string",
-          "enum": [
-            "image/jpeg",
-            "image/jpg",
-            "image/png",
-            "application/pdf"
-          ]
+            "enum": [
+                "image/jpeg", "image/jpg",
+                "image/png",
+                "application/pdf"
+            ]
         }
       },
       "required": [
