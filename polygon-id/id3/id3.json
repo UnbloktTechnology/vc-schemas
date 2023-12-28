@@ -18,7 +18,6 @@
         "journeyId",
         "amendmentsData",
         "originalData",
-        "personalDetails",
         "id"
       ],
       "properties": {
