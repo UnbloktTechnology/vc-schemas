@@ -323,7 +323,8 @@
         "country",
         "base64",
         "name",
-        "documentType"
+        "documentType",
+        "mediaType"
       ]
     },
     "@context": {

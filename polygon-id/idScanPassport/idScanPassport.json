@@ -19,7 +19,8 @@
         "journeyId",
         "base64",
         "name",
-        "documentType"
+        "documentType",
+        "mediaType"
       ],
       "properties": {
         "id": {
