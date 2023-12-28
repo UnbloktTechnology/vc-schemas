@@ -315,6 +315,26 @@
                 "image/png",
                 "application/pdf"
             ]
+        },
+        "county": {
+          "title": "County",
+          "description": "The county of residence",
+          "type": "string"
+        },
+        "city": {
+          "title": "City",
+          "description": "The city of residence",
+          "type": "string"
+        },
+        "streetName": {
+          "title": "Street name",
+          "description": "The street name of residence",
+          "type": "string"
+        },
+        "postalCode": {
+          "title": "Postal Code",
+          "description": "The postal code of residence",
+          "type": "string"
         }
       },
       "required": [
@@ -324,7 +344,11 @@
         "base64",
         "name",
         "documentType",
-        "mediaType"
+        "mediaType",
+        "county",
+        "city",
+        "streetName",
+        "postalCode"
       ]
     },
     "@context": {

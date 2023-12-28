@@ -34,6 +34,22 @@
           "mediaType": {
             "@id": "polygon-vocab:type",
             "@type": "xsd:string"
+          },
+          "county": {
+            "@id": "polygon-vocab:county",
+            "@type": "xsd:string"
+          },
+          "city": {
+            "@id": "polygon-vocab:city",
+            "@type": "xsd:string"
+          },
+          "streetName": {
+            "@id": "polygon-vocab:streetName",
+            "@type": "xsd:string"
+          },
+          "postalCode": {
+            "@id": "polygon-vocab:postalCode",
+            "@type": "xsd:string"
           }
         },
         "@id": "urn:uuid:362d5804-a195-4549-b15b-edb5ef50d203"
