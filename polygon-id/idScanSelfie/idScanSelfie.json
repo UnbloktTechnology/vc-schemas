@@ -43,7 +43,7 @@
           "description": "Media type of the document (e.g. image/jpeg, image/png)",
           "type": "string",
           "enum": [
-            "image/jpeg",
+            "image/jpeg", "image/jpg",
             "image/png"
           ]
         }
