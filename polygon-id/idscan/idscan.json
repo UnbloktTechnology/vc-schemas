@@ -14,10 +14,7 @@
       "description": "Stores the data of the credential",
       "title": "Credential subject",
       "type": "object",
-      "required": [
-        "journeyId",
-        "id"
-      ],
+      "required": ["journeyId", "id"],
       "properties": {
         "id": {
           "description": "Stores the DID of the subject that owns the credential",
@@ -70,6 +67,262 @@
           "type": "integer",
           "minimum": 0,
           "maximum": 125
+        },
+        "documentOriginCountry": {
+          "description": "Origin country from the subject document - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
+          "title": "Document Origin Country",
+          "type": "string",
+          "enum": [
+            "AFG",
+            "ALB",
+            "DZA",
+            "ASM",
+            "AND",
+            "AGO",
+            "AIA",
+            "ATA",
+            "ATG",
+            "ARG",
+            "ARM",
+            "ABW",
+            "AUS",
+            "AUT",
+            "AZE",
+            "BHS",
+            "BHR",
+            "BGD",
+            "BRB",
+            "BLR",
+            "BEL",
+            "BLZ",
+            "BEN",
+            "BMU",
+            "BTN",
+            "BOL",
+            "BES",
+            "BIH",
+            "BWA",
+            "BVT",
+            "BRA",
+            "IOT",
+            "BRN",
+            "BGR",
+            "BFA",
+            "BDI",
+            "CPV",
+            "KHM",
+            "CMR",
+            "CAN",
+            "CYM",
+            "CAF",
+            "TCD",
+            "CHL",
+            "CHN",
+            "CXR",
+            "CCK",
+            "COL",
+            "COM",
+            "COD",
+            "COG",
+            "COK",
+            "CRI",
+            "HRV",
+            "CUB",
+            "CUW",
+            "CYP",
+            "CZE",
+            "CIV",
+            "DNK",
+            "DJI",
+            "DMA",
+            "DOM",
+            "ECU",
+            "EGY",
+            "SLV",
+            "GNQ",
+            "ERI",
+            "EST",
+            "SWZ",
+            "ETH",
+            "FLK",
+            "FRO",
+            "FJI",
+            "FIN",
+            "FRA",
+            "GUF",
+            "PYF",
+            "ATF",
+            "GAB",
+            "GMB",
+            "GEO",
+            "DEU",
+            "GHA",
+            "GIB",
+            "GRC",
+            "GRL",
+            "GRD",
+            "GLP",
+            "GUM",
+            "GTM",
+            "GGY",
+            "GIN",
+            "GNB",
+            "GUY",
+            "HTI",
+            "HMD",
+            "VAT",
+            "HND",
+            "HKG",
+            "HUN",
+            "ISL",
+            "IND",
+            "IDN",
+            "IRN",
+            "IRQ",
+            "IRL",
+            "IMN",
+            "ISR",
+            "ITA",
+            "JAM",
+            "JPN",
+            "JEY",
+            "JOR",
+            "KAZ",
+            "KEN",
+            "KIR",
+            "PRK",
+            "KOR",
+            "KWT",
+            "KGZ",
+            "LAO",
+            "LVA",
+            "LBN",
+            "LSO",
+            "LBR",
+            "LBY",
+            "LIE",
+            "LTU",
+            "LUX",
+            "MAC",
+            "MDG",
+            "MWI",
+            "MYS",
+            "MDV",
+            "MLI",
+            "MLT",
+            "MHL",
+            "MTQ",
+            "MRT",
+            "MUS",
+            "MYT",
+            "MEX",
+            "FSM",
+            "MDA",
+            "MCO",
+            "MNG",
+            "MNE",
+            "MSR",
+            "MAR",
+            "MOZ",
+            "MMR",
+            "NAM",
+            "NRU",
+            "NPL",
+            "NLD",
+            "NCL",
+            "NZL",
+            "NIC",
+            "NER",
+            "NGA",
+            "NIU",
+            "NFK",
+            "MNP",
+            "NOR",
+            "OMN",
+            "PAK",
+            "PLW",
+            "PSE",
+            "PAN",
+            "PNG",
+            "PRY",
+            "PER",
+            "PHL",
+            "PCN",
+            "POL",
+            "PRT",
+            "PRI",
+            "QAT",
+            "MKD",
+            "ROU",
+            "RUS",
+            "RWA",
+            "REU",
+            "BLM",
+            "SHN",
+            "KNA",
+            "LCA",
+            "MAF",
+            "SPM",
+            "VCT",
+            "WSM",
+            "SMR",
+            "STP",
+            "SAU",
+            "SEN",
+            "SRB",
+            "SYC",
+            "SLE",
+            "SGP",
+            "SXM",
+            "SVK",
+            "SVN",
+            "SLB",
+            "SOM",
+            "ZAF",
+            "SGS",
+            "SSD",
+            "ESP",
+            "LKA",
+            "SDN",
+            "SUR",
+            "SJM",
+            "SWE",
+            "CHE",
+            "SYR",
+            "TWN",
+            "TJK",
+            "TZA",
+            "THA",
+            "TLS",
+            "TGO",
+            "TKL",
+            "TON",
+            "TTO",
+            "TUN",
+            "TUR",
+            "TKM",
+            "TCA",
+            "TUV",
+            "UGA",
+            "UKR",
+            "ARE",
+            "GBR",
+            "UMI",
+            "USA",
+            "URY",
+            "UZB",
+            "VUT",
+            "VEN",
+            "VNM",
+            "VGB",
+            "VIR",
+            "WLF",
+            "ESH",
+            "YEM",
+            "ZMB",
+            "ZWE",
+            "ALA"
+          ]
         },
         "citizenship": {
           "description": "Citizenship status of the credential subject - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
@@ -341,10 +594,7 @@
           "description": "Side of the document provided by the credential subject",
           "title": "Document Side",
           "type": "string",
-          "enum": [
-            "Front",
-            "Back"
-          ]
+          "enum": ["Front", "Back"]
         },
         "documentType": {
           "description": "Type of the document provided by the credential subject",
@@ -413,85 +663,43 @@
               "description": "Overall validation status of the document",
               "title": "Document Overall Validation",
               "type": "string",
-              "enum": [
-                "FAILED",
-                "NOTNEEDED",
-                "PASSED",
-                "SKIPPED",
-                "NEEDED"
-              ]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "documentBlockingPolicy": {
               "description": "Blocking policy of the document",
               "title": "Document Blocking Policy",
               "type": "string",
-              "enum": [
-                "FAILED",
-                "NOTNEEDED",
-                "PASSED",
-                "SKIPPED",
-                "NEEDED"
-              ]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "documentExpiry": {
               "description": "Expiry status of the document",
               "title": "Document Expiry",
               "type": "string",
-              "enum": [
-                "FAILED",
-                "NOTNEEDED",
-                "PASSED",
-                "SKIPPED",
-                "NEEDED"
-              ]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "documentSupport": {
               "description": "Support status of the document",
               "title": "Document Support",
               "type": "string",
-              "enum": [
-                "FAILED",
-                "NOTNEEDED",
-                "PASSED",
-                "SKIPPED",
-                "NEEDED"
-              ]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "documentValidation": {
               "description": "Validation status of the document",
               "title": "Document Validation",
               "type": "string",
-              "enum": [
-                "FAILED",
-                "NOTNEEDED",
-                "PASSED",
-                "SKIPPED",
-                "NEEDED"
-              ]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "faceMatchValidation": {
               "description": "Validation status of face match",
               "title": "Face Match Validation",
               "type": "string",
-              "enum": [
-                "FAILED",
-                "NOTNEEDED",
-                "PASSED",
-                "SKIPPED",
-                "NEEDED"
-              ]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "accumulativeLivenessResult": {
               "description": "Result of accumulative liveness check",
               "title": "Accumulative Liveness Result",
               "type": "string",
-              "enum": [
-                "FAILED",
-                "NOTNEEDED",
-                "PASSED",
-                "SKIPPED",
-                "NEEDED"
-              ]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             }
           }
         },
@@ -562,11 +770,7 @@
       }
     },
     "@context": {
-      "type": [
-        "string",
-        "array",
-        "object"
-      ]
+      "type": ["string", "array", "object"]
     },
     "expirationDate": {
       "format": "date-time",
@@ -580,10 +784,7 @@
       "type": "string"
     },
     "issuer": {
-      "type": [
-        "string",
-        "object"
-      ],
+      "type": ["string", "object"],
       "format": "uri",
       "properties": {
         "id": {
@@ -591,15 +792,10 @@
           "type": "string"
         }
       },
-      "required": [
-        "id"
-      ]
+      "required": ["id"]
     },
     "type": {
-      "type": [
-        "string",
-        "array"
-      ],
+      "type": ["string", "array"],
       "items": {
         "type": "string"
       }
@@ -614,10 +810,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "id",
-        "type"
-      ],
+      "required": ["id", "type"],
       "type": "object"
     }
   },
