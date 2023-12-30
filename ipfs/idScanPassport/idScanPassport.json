@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/QmRBfV9TboGRz42rT45mnMMK8VTtTc9r1mpLQjGfyXCgaf"
+      "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/QmZqTk6jA9fXc2nAu4MPPRh3bv3XLcdXfFiYrbfaGhKDDB"
     },
     "type": "IDScanPassport",
-    "version": "2.4.16"
+    "version": "3.4.16-feature/nex-496-implement-changes-to-vc-schemas-for-new-approach-1703952787533"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "IDScanPassport schema",
@@ -19,7 +19,8 @@
         "journeyId",
         "base64",
         "name",
-        "documentType"
+        "documentType",
+        "mediaType"
       ],
       "properties": {
         "id": {
@@ -42,13 +43,39 @@
         },
         "name": {
           "title": "Name",
-          "description": "Name of the docuemnt (e.g. passport.jpg)",
+          "description": "Name of the document (e.g. passport.jpg)",
           "type": "string"
         },
         "documentType": {
-          "title": "Type",
-          "description": "Type of the document (e.g. image/jpeg, image/png)",
-          "type": "string"
+          "title": "Document Type",
+          "description": "Type of the document (e.g. passport)",
+          "type": "string",
+          "enum": [
+            "Agents License",
+            "Driving License",
+            "Electoral Card",
+            "Foreigner Identification Card",
+            "Health Card",
+            "Job License",
+            "Membership Identification Card",
+            "Military Identification Card",
+            "National Identification Card",
+            "Passport",
+            "Proof of Age Card",
+            "Travel Permit",
+            "Visa",
+            "Weapons Licence"
+          ]
+        },
+        "mediaType": {
+          "title": "Media Type",
+          "description": "Media type of the document (e.g. image/jpeg, image/png, application/pdf)",
+          "type": "string",
+          "enum": [
+            "image/jpeg",
+            "image/jpg",
+            "image/png"
+          ]
         }
       }
     },
