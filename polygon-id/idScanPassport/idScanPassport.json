@@ -51,20 +51,20 @@
           "description": "Type of the document (e.g. passport)",
           "type": "string",
           "enum": [
-            "Agents License",
-            "Driving License",
-            "Electoral Card",
-            "Foreigner Identification Card",
-            "Health Card",
-            "Job License",
-            "Membership Identification Card",
-            "Military Identification Card",
-            "National Identification Card",
+            "Agents_License",
+            "Driving_License",
+            "Electoral_Card",
+            "Foreigner_Identification_Card",
+            "Health_Card",
+            "Job_License",
+            "Membership_Identification_Card",
+            "Military_Identification_Card",
+            "National_Identification_Card",
             "Passport",
-            "Proof of Age Card",
-            "Travel Permit",
+            "Proof_of_Age_Card",
+            "Travel_Permit",
             "Visa",
-            "Weapons Licence"
+            "Weapons_Licence"
           ]
         },
         "mediaType": {

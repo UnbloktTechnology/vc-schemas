@@ -299,11 +299,11 @@
           "description": "Type of the document (e.g. Gas bill, Internet bill, Electricity bill, Rent agreement, Bank statement)",
           "type": "string",
           "enum": [
-            "Gas bill",
-            "Internet bill",
-            "Electricity bill",
-            "Rent agreement",
-            "Bank statement"
+            "Gas_bill",
+            "Internet_bill",
+            "Electricity_bill",
+            "Rent_agreement",
+            "Bank_statement"
           ]
         },
         "mediaType": {
