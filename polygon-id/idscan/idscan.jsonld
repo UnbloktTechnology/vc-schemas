@@ -209,6 +209,10 @@
               "placeOfBirth": {
                 "@id": "polygon-vocab:placeOfBirth",
                 "@type": "xsd:string"
+              },
+              "countryOfBirth": {
+                "@id": "polygon-vocab:countryOfBirth",
+                "@type": "xsd:string"
               }
             }
           }
