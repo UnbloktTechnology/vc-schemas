@@ -164,7 +164,7 @@
             }
           },
           "amendmentsData": {
-            "@id": "polygon-vocab:originalData",
+            "@id": "polygon-vocab:amendmentsData",
             "@context": {
               "firstName": {
                 "@id": "polygon-vocab:firstName",
@@ -208,10 +208,6 @@
               },
               "placeOfBirth": {
                 "@id": "polygon-vocab:placeOfBirth",
-                "@type": "xsd:string"
-              },
-              "countryOfBirth": {
-                "@id": "polygon-vocab:countryOfBirth",
                 "@type": "xsd:string"
               }
             }
