@@ -291,7 +291,7 @@
         },
         "name": {
           "title": "Name",
-          "description": "Name of the docuemnt (e.g. proofOfResidence.jpg)",
+          "description": "Name of the document (e.g. proofOfResidence.jpg)",
           "type": "string"
         },
         "documentType": {
