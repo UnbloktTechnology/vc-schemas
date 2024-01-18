@@ -232,9 +232,8 @@
         },
         "entryDate": {
           "description": "Entry date associated with the credential",
-          "title": "Entry Date",
-          "type": "string",
-          "format": "date"
+          "title": "Entry Date in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day",
+          "type": "integer"
         },
         "entryTime": {
           "description": "Entry time associated with the credential",

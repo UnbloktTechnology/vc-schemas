@@ -108,7 +108,7 @@
           },
           "entryDate": {
             "@id": "polygon-vocab:entryDate",
-            "@type": "xsd:string"
+            "@type": "xsd:integer"
           },
           "entryTime": {
             "@id": "polygon-vocab:entryTime",
