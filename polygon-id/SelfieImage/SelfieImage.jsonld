@@ -5,7 +5,7 @@
       "@version": 1.1,
       "id": "@id",
       "type": "@type",
-      "IDScanSelfie": {
+      "SelfieImage": {
         "@context": {
           "@propagate": true,
           "@protected": true,

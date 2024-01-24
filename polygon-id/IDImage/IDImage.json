@@ -1,19 +1,27 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/staging/polygon-id/idScanSelfie/idScanSelfie.jsonld"
+      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/staging/polygon-id/IDImage/IDImage.jsonld"
     },
-    "type": "IDScanSelfie",
+    "type": "IDImage",
     "version": "3.4.16"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "IDScanSelfie schema",
-  "title": "IDScanSelfie",
+  "description": "IDImage schema",
+  "title": "IDImage",
   "properties": {
     "credentialSubject": {
       "description": "Stores the data of the credential",
       "title": "Credential subject",
       "type": "object",
+      "required": [
+        "id",
+        "journeyId",
+        "base64",
+        "name",
+        "documentType",
+        "mediaType"
+      ],
       "properties": {
         "id": {
           "description": "Stores the DID of the subject that owns the credential",
@@ -29,32 +37,46 @@
         },
         "base64": {
           "title": "Base64",
-          "description": "Base64 encoded image of the selfie image",
+          "description": "Base64 encoded image of the passport image",
           "type": "string",
           "format": "base64"
         },
         "name": {
           "title": "Name",
-          "description": "Name of the docuemnt (e.g. selfie.jpg)",
+          "description": "Name of the document (e.g. passport.jpg)",
           "type": "string"
+        },
+        "documentType": {
+          "title": "Document Type",
+          "description": "Type of the document (e.g. passport)",
+          "type": "string",
+          "enum": [
+            "Agents_License",
+            "Driving_License",
+            "Electoral_Card",
+            "Foreigner_Identification_Card",
+            "Health_Card",
+            "Job_License",
+            "Membership_Identification_Card",
+            "Military_Identification_Card",
+            "National_Identification_Card",
+            "Passport",
+            "Proof_of_Age_Card",
+            "Travel_Permit",
+            "Visa",
+            "Weapons_Licence"
+          ]
         },
         "mediaType": {
           "title": "Media Type",
-          "description": "Media type of the document (e.g. image/jpeg, image/png)",
+          "description": "Media type of the document (e.g. image/jpeg, image/png, application/pdf)",
           "type": "string",
           "enum": [
-            "image/jpeg", "image/jpg", "application/pdf",
+            "image/jpeg", "image/jpg",
             "image/png"
           ]
         }
-      },
-      "required": [
-        "id",
-        "journeyId",
-        "base64",
-        "name",
-        "mediaType"
-      ]
+      }
     },
     "@context": {
       "type": [
@@ -117,14 +139,13 @@
     }
   },
   "required": [
+    "credentialSubject",
     "@context",
     "id",
-    "type",
     "issuanceDate",
-    "credentialSubject",
-    "credentialSchema",
-    "credentialStatus",
-    "issuer"
+    "issuer",
+    "type",
+    "credentialSchema"
   ],
   "type": "object"
 }

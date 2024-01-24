@@ -1,14 +1,14 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/id3/id3.jsonld"
+      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/AMLScreeningsResults/AMLScreeningsResults.jsonld"
     },
-    "type": "ID3",
+    "type": "AMLScreeningsResults",
     "version": "3.4.16"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "ID3 Schema",
-  "title": "ID3",
+  "description": "AMLScreeningsResults Schema",
+  "title": "AMLScreeningsResults",
   "properties": {
     "credentialSubject": {
       "description": "Stores the data of the credential",

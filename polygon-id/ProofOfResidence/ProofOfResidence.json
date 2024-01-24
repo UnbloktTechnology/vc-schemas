@@ -1,7 +1,7 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/staging/polygon-id/proofOfResidence/proofOfResidence.jsonld"
+      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/staging/polygon-id/ProofOfResidence/ProofOfResidence.jsonld"
     },
     "type": "ProofOfResidence",
     "version": "3.4.16"
@@ -291,7 +291,7 @@
         },
         "name": {
           "title": "Name",
-          "description": "Name of the document (e.g. proofOfResidence.jpg)",
+          "description": "Name of the document (e.g. ProofOfResidence.jpg)",
           "type": "string"
         },
         "documentType": {
