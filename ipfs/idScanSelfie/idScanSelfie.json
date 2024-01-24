@@ -1,14 +1,14 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/QmTCi5P33J7pGmEQ9o7tu498Ckj9BSUy7Y1AgJAKFPy1pv"
+      "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/QmYoDQKUHSMEZk2ZwaXWvdHbYoLXShVWxRdsu1jsXxhN6F"
     },
-    "type": "SelfieImage",
-    "version": "3.4.16-feature/nex-496-implement-changes-to-vc-schemas-for-new-approach-1706090295661"
+    "type": "IDScanSelfie",
+    "version": "2.4.16"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "Selfie Image schema",
-  "title": "SelfieImage",
+  "description": "IDScanSelfie schema",
+  "title": "IDScanSelfie",
   "properties": {
     "credentialSubject": {
       "description": "Stores the data of the credential",
@@ -38,16 +38,10 @@
           "description": "Name of the docuemnt (e.g. selfie.jpg)",
           "type": "string"
         },
-        "mediaType": {
-          "title": "Media Type",
-          "description": "Media type of the document (e.g. image/jpeg, image/png)",
-          "type": "string",
-          "enum": [
-            "image/jpeg",
-            "image/jpg",
-            "application/pdf",
-            "image/png"
-          ]
+        "documentType": {
+          "title": "Type",
+          "description": "Type of the document (e.g. image/jpeg, image/png)",
+          "type": "string"
         }
       },
       "required": [
@@ -55,7 +49,7 @@
         "journeyId",
         "base64",
         "name",
-        "mediaType"
+        "documentType"
       ]
     },
     "@context": {
