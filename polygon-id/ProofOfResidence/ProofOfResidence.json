@@ -338,16 +338,7 @@
         }
       },
       "required": [
-        "id",
-        "journeyId",
-        "country",
-        "base64",
-        "name",
-        "documentType",
-        "mediaType",
-        "city",
-        "streetName",
-        "postalCode"
+        "id"
       ]
     },
     "@context": {
