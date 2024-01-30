@@ -1,26 +1,19 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/staging/polygon-id/idScanPassport/idScanPassport.jsonld"
+      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/staging/polygon-id/SelfieImage/SelfieImage.jsonld"
     },
-    "type": "IDScanPassport",
-    "version": "2.4.16"
+    "type": "SelfieImage",
+    "version": "3.5.0"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "IDScanPassport schema",
-  "title": "IDScanPassport",
+  "description": "Selfie Image schema",
+  "title": "SelfieImage",
   "properties": {
     "credentialSubject": {
       "description": "Stores the data of the credential",
       "title": "Credential subject",
       "type": "object",
-      "required": [
-        "id",
-        "journeyId",
-        "base64",
-        "name",
-        "documentType"
-      ],
       "properties": {
         "id": {
           "description": "Stores the DID of the subject that owns the credential",
@@ -36,21 +29,32 @@
         },
         "base64": {
           "title": "Base64",
-          "description": "Base64 encoded image of the passport image",
+          "description": "Base64 encoded image of the selfie image",
           "type": "string",
           "format": "base64"
         },
         "name": {
           "title": "Name",
-          "description": "Name of the docuemnt (e.g. passport.jpg)",
+          "description": "Name of the docuemnt (e.g. selfie.jpg)",
           "type": "string"
         },
-        "documentType": {
-          "title": "Type",
-          "description": "Type of the document (e.g. image/jpeg, image/png)",
-          "type": "string"
+        "mediaType": {
+          "title": "Media Type",
+          "description": "Media type of the document (e.g. image/jpeg, image/png)",
+          "type": "string",
+          "enum": [
+            "image/jpeg", "image/jpg", "application/pdf",
+            "image/png"
+          ]
         }
-      }
+      },
+      "required": [
+        "id",
+        "journeyId",
+        "base64",
+        "name",
+        "mediaType"
+      ]
     },
     "@context": {
       "type": [
@@ -113,13 +117,14 @@
     }
   },
   "required": [
-    "credentialSubject",
     "@context",
     "id",
-    "issuanceDate",
-    "issuer",
     "type",
-    "credentialSchema"
+    "issuanceDate",
+    "credentialSubject",
+    "credentialSchema",
+    "credentialStatus",
+    "issuer"
   ],
   "type": "object"
 }
