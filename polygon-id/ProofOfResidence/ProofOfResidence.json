@@ -345,7 +345,6 @@
         "name",
         "documentType",
         "mediaType",
-        "county",
         "city",
         "streetName",
         "postalCode"
