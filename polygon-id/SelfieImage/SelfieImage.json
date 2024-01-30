@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/staging/polygon-id/SelfieImage/SelfieImage.jsonld"
     },
     "type": "SelfieImage",
-    "version": "3.5.0"
+    "version": "3.5.1"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "Selfie Image schema",
@@ -43,7 +43,9 @@
           "description": "Media type of the document (e.g. image/jpeg, image/png)",
           "type": "string",
           "enum": [
-            "image/jpeg", "image/jpg", "application/pdf",
+            "image/jpeg",
+            "image/jpg",
+            "application/pdf",
             "image/png"
           ]
         }
