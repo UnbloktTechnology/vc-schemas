@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/ProofOfResidence/ProofOfResidence.jsonld"
     },
     "type": "ProofOfResidence",
-    "version": "3.5.2"
+    "version": "3.5.3"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A proof of residence credential",
@@ -413,4 +413,3 @@
   ],
   "type": "object"
 }
-
