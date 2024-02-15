@@ -94,7 +94,7 @@ jobs:
             echo "$response"
 
             # Parse HASH from uploaded file
-            ipfs_hash=$(echo "$response" | jq -r '.Hash')
+            ipfs_hash=$(echo "$response" | jq -r '.pin.cid')
             echo "$ipfs_hash"
 
             # Set the json file path
@@ -144,7 +144,7 @@ jobs:
             echo "$response"
           
             # Parse HASH from uploaded file
-            ipfs_hash=$(echo "$response" | jq -r '.Hash')
+            ipfs_hash=$(echo "$response" | jq -r '.pin.cid')
             echo "$ipfs_hash"
 
             curl -X POST "$issuer" \
@@ -170,7 +170,7 @@ jobs:
             echo "$response"
           
             # Parse HASH from uploaded file
-            ipfs_hash=$(echo "$response" | jq -r '.Hash')
+            ipfs_hash=$(echo "$response" | jq -r '.pin.cid')
             echo "$ipfs_hash"
 
             curl -X POST "https://issuer-node.nexera.id/v1/schemas" \
