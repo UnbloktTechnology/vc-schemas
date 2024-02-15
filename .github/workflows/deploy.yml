@@ -20,7 +20,7 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
 
       - name: Check for changes in polygon-id directory
-        uses: dorny/paths-filter@v2
+        uses: dorny/paths-filter@v3
         id: changes
         with:
          filters: |
@@ -28,7 +28,7 @@ jobs:
              - 'polygon-id/**'
 
       - name: Check for changes in ipfs directory
-        uses: dorny/paths-filter@v2
+        uses: dorny/paths-filter@v3
         id: ipfs_changes
         with:
           filters: |
