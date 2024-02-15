@@ -49,5 +49,5 @@ jobs:
               -H "accept: application/json" \
               -H "content-type: application/json" \
               -u "${{ secrets.ISSUER_NODE_USERNAME_STAGING }}:${{ secrets.ISSUER_NODE_PASSWORD_STAGING }}" \
-              -d "{\"url\":\"https://nexera.infura-ipfs.io/ipfs/${ipfs_hash}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
+              -d "{\"url\":\"https://quicknode.quicknode-ipfs.com/ipfs/${ipfs_hash}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
           done
