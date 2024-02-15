@@ -38,7 +38,7 @@ jobs:
             schema=$(cat "$file" | jq -r '.["$metadata"].type')
             echo "$schema"
           
-            response=$(curl "https://ipfs.infura.io:5001/api/v0/add" -X POST -F file=@"$file" -u "${{ secrets.INFURA_IPFS_API_KEY }}:${{ secrets.INFURA_IPFS_API_KEY_SECRET }}")
+            response=$(curl --location "https://api.quicknode.com/ipfs/rest/v1/s3/put-object" -X POST -F Body=@"$file" -F Key="$file" -F ContentType="application/json" -H "x-api-key: ${{ secrets.QUICKNODE_API_KEY }}")
             echo "$response"
           
             # Parse HASH from uploaded file
