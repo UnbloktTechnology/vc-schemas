@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://nexera.infura-ipfs.io/ipfs/Qma96fMaDmpdJMnVsRdAeVokyU7KBqRSuY8eZJkoLFdsvJ"
+      "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/Qma96fMaDmpdJMnVsRdAeVokyU7KBqRSuY8eZJkoLFdsvJ"
     },
     "type": "AMLScreeningsResults",
-    "version": "3.5.1"
+    "version": "3.5.2"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "AMLScreeningsResults Schema",
