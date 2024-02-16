@@ -1,7 +1,7 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/staging/polygon-id/SelfieImage/SelfieImage.jsonld"
+      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/polygon-id/SelfieImage/SelfieImage.jsonld"
     },
     "type": "SelfieImage",
     "version": "3.5.3"
