@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/AMLScreeningsResults/AMLScreeningsResults.jsonld"
     },
     "type": "AMLScreeningsResults",
-    "version": "3.5.3"
+    "version": "3.5.3-feat/new-id-information-schema-1709665278757"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "AMLScreeningsResults Schema",
