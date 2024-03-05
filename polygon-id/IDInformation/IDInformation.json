@@ -715,63 +715,6 @@
               "title": "Full Name",
               "type": "string"
             },
-            "addresses": {
-              "title": "Addresses",
-              "description": "List of addresses",
-              "type": "array",
-              "items": {
-                "description": "Quality check item details",
-                "title": "Quality Check Item",
-                "type": "object",
-                "properties": {
-                  "country": {
-                    "title": "Country",
-                    "description": "Alpha-3 country code",
-                    "type": "string"
-                  },
-                  "posCode": {
-                    "title": "Postal Code",
-                    "description": "Postal Code",
-                    "type": "string"
-                  },
-                  "town": {
-                    "title": "Town",
-                    "description": "Town or city name",
-                    "type": "string"
-                  },
-                  "street": {
-                    "title": "Street",
-                    "description": "Street name",
-                    "type": "string"
-                  },
-                  "subStreet": {
-                    "title": "Sub Street",
-                    "description": "Additional street information",
-                    "type": "string"
-                  },
-                  "state": {
-                    "title": "State",
-                    "description": "State name if applicable",
-                    "type": "string"
-                  },
-                  "buildingName": {
-                    "title": "Building Name",
-                    "description": "Building name if applicable",
-                    "type": "string"
-                  },
-                  "flatNumber": {
-                    "title": "Flat Number",
-                    "description": "Flat or apartment number",
-                    "type": "string"
-                  },
-                  "buildingNumber": {
-                    "title": "Building Number",
-                    "description": "Building number",
-                    "type": "string"
-                  }
-                }
-              }
-            },
             "birthDate": {
               "title": "Birth Date",
               "description": "Birth Date of the credential subject in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day",

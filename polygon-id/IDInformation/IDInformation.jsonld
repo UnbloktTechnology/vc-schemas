@@ -24,8 +24,9 @@
             "@type": "xsd:string"
           },
           "reviewRejectLabels": {
-              "@id": "polygon-vocab:reviewRejectLabels",
-              "@type": "xsd:string"
+            "@id": "polygon-vocab:reviewRejectLabels",
+            "@type": "xsd:string",
+            "@container": "@list"
           },
           "documentType": {
             "@id": "polygon-vocab:documentType",
@@ -74,47 +75,6 @@
                 "@id": "polygon-vocab:fullName",
                 "@type": "xsd:string"
               },
-              "personalData": {
-                "@id": "polygon-vocab:personalData",
-                "@context": {
-                  "country": {
-                    "@id": "polygon-vocab:country",
-                    "@type": "xsd:string"
-                  },
-                  "posCode": {
-                    "@id": "polygon-vocab:posCode",
-                    "@type": "xsd:string"
-                  },
-                  "town": {
-                    "@id": "polygon-vocab:town",
-                    "@type": "xsd:string"
-                  },
-                  "street": {
-                    "@id": "polygon-vocab:street",
-                    "@type": "xsd:string"
-                  },
-                  "subStreet": {
-                    "@id": "polygon-vocab:subStreet",
-                    "@type": "xsd:string"
-                  },
-                  "state": {
-                    "@id": "polygon-vocab:state",
-                    "@type": "xsd:string"
-                  },
-                  "buildingName": {
-                    "@id": "polygon-vocab:buildingName",
-                    "@type": "xsd:string"
-                  },
-                  "flatNumber": {
-                    "@id": "polygon-vocab:flatNumber",
-                    "@type": "xsd:string"
-                  },
-                  "buildingNumber": {
-                    "@id": "polygon-vocab:buildingNumber",
-                    "@type": "xsd:string"
-                  }
-                }
-              },
               "birthDate": {
                 "@id": "polygon-vocab:birthDate",
                 "@type": "xsd:integer"
@@ -128,7 +88,7 @@
                 "@type": "xsd:string"
               }
             }
-          },
+          }
         },
         "@id": "urn:uuid:362d5804-a195-4549-b15b-edb5ef50d203"
       }
