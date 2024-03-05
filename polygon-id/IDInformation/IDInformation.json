@@ -780,12 +780,12 @@
             "countryOfBirth": {
               "title": "Country of Birth",
               "type": "string",
-              "description": "Country of birth of the credential subject",
+              "description": "Country of birth of the credential subject"
             },
             "stateOfBirth": {
               "title": "State of Birth",
               "type": "string",
-              "description": "State of birth of the credential subject",
+              "description": "State of birth of the credential subject"
             }
           }
         }
