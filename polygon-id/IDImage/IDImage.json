@@ -20,7 +20,10 @@
         "base64",
         "name",
         "documentType",
-        "mediaType"
+        "mediaType",
+        "reviewResult",
+        "reviewRejectType",
+        "reviewRejectLabels"
       ],
       "properties": {
         "id": {
@@ -79,7 +82,8 @@
           "enum": [
             "image/jpeg",
             "image/jpg",
-            "image/png"
+            "image/png",
+            "application/pdf"
           ]
         },
         "reviewResult": {

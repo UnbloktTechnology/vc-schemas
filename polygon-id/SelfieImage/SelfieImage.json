@@ -14,6 +14,13 @@
       "description": "Stores the data of the credential",
       "title": "Credential subject",
       "type": "object",
+      "required": [
+        "id",
+        "journeyId",
+        "base64",
+        "name",
+        "mediaType"
+      ],
       "properties": {
         "id": {
           "description": "Stores the DID of the subject that owns the credential",
@@ -142,14 +149,7 @@
             ]
           }
         }
-      },
-      "required": [
-        "id",
-        "journeyId",
-        "base64",
-        "name",
-        "mediaType"
-      ]
+      }
     },
     "@context": {
       "type": [

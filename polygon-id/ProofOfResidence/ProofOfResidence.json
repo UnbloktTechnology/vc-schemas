@@ -14,6 +14,19 @@
       "description": "Stores the data of the credential",
       "title": "Credential subject",
       "type": "object",
+      "required": [
+        "id",
+        "journeyId",
+        "country",
+        "base64",
+        "name",
+        "documentType",
+        "mediaType",
+        "county",
+        "city",
+        "streetName",
+        "postalCode"
+      ],
       "properties": {
         "id": {
           "description": "Stores the DID of the subject that owns the credential",
@@ -337,10 +350,7 @@
           "description": "The postal code of residence",
           "type": "string"
         }
-      },
-      "required": [
-        "id"
-      ]
+      }
     },
     "@context": {
       "type": [

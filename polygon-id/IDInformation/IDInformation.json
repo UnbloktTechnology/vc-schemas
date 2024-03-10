@@ -15,13 +15,14 @@
       "title": "Credential subject",
       "type": "object",
       "required": [
+        "id",
+        "journeyId",
+        "reviewResult",
+        "reviewRejectType",
+        "reviewRejectLabels",
         "documentType",
         "entryDate",
-        "entryTime",
-        "personalData",
-        "journeyId",
-        "id",
-        "reviewResult"
+        "personalData"
       ],
       "properties": {
         "id": {
