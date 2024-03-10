@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmW5J1fcqeLbFGBaPyUHxLazMmBLzE44CnddhjkJmY6wE8"
+      "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmNRffaPRtGwTd3f55VGpXWYAC8Y9xjNHxxPghLM1hT8eP"
     },
     "type": "IDImage",
-    "version": "4.0.0-feat/new-id-information-schema-1710081262019"
+    "version": "3.5.3"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "IDImage schema",
@@ -20,10 +20,7 @@
         "base64",
         "name",
         "documentType",
-        "mediaType",
-        "reviewResult",
-        "reviewRejectType",
-        "reviewRejectLabels"
+        "mediaType"
       ],
       "properties": {
         "id": {
@@ -54,25 +51,20 @@
           "description": "Type of the document (e.g. passport)",
           "type": "string",
           "enum": [
-            "ID_CARD",
-            "PASSPORT",
-            "DRIVERS",
-            "RESIDENCE_PERMIT",
-            "UTILITY_BILL",
-            "SELFIE",
-            "VIDEO_SELFIE",
-            "PROFILE_IMAGE",
-            "ID_DOC_PHOTO",
-            "AGREEMENT",
-            "CONTRACT",
-            "DRIVERS_TRANSLATION",
-            "INVESTOR_DOC",
-            "VEHICLE_REGISTRATION_CERTIFICATE",
-            "INCOME_SOURCE",
-            "PAYMENT_METHOD",
-            "BANK_CARD",
-            "COVID_VACCINATION_FORM",
-            "OTHER"
+            "Agents_License",
+            "Driving_License",
+            "Electoral_Card",
+            "Foreigner_Identification_Card",
+            "Health_Card",
+            "Job_License",
+            "Membership_Identification_Card",
+            "Military_Identification_Card",
+            "National_Identification_Card",
+            "Passport",
+            "Proof_of_Age_Card",
+            "Travel_Permit",
+            "Visa",
+            "Weapons_Licence"
           ]
         },
         "mediaType": {
@@ -82,102 +74,8 @@
           "enum": [
             "image/jpeg",
             "image/jpg",
-            "image/png",
-            "application/pdf"
+            "image/png"
           ]
-        },
-        "reviewResult": {
-          "description": "Review result from kyc provider",
-          "title": "Review Result",
-          "type": "string",
-          "enum": [
-            "RED",
-            "YELLOW",
-            "GREEN"
-          ]
-        },
-        "reviewRejectType": {
-          "description": "Review reject type",
-          "title": "Review Reject Type",
-          "type": "string",
-          "enum": [
-            "FINAL",
-            "RETRY"
-          ]
-        },
-        "reviewRejectLabels": {
-          "description": "Reject labels",
-          "title": "Reject Labels",
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "FORGERY",
-              "DOCUMENT_TEMPLATE",
-              "LOW_QUALITY",
-              "SPAM",
-              "NOT_DOCUMENT",
-              "SELFIE_MISMATCH",
-              "ID_INVALID",
-              "FOREIGNER",
-              "DUPLICATE",
-              "BAD_AVATAR",
-              "WRONG_USER_REGION",
-              "INCOMPLETE_DOCUMENT",
-              "BLACKLIST",
-              "BLOCKLIST",
-              "UNSATISFACTORY_PHOTOS",
-              "DOCUMENT_PAGE_MISSING",
-              "DOCUMENT_DAMAGED",
-              "REGULATIONS_VIOLATIONS",
-              "INCONSISTENT_PROFILE",
-              "PROBLEMATIC_APPLICANT_DATA",
-              "ADDITIONAL_DOCUMENT_REQUIRED",
-              "AGE_REQUIREMENT_MISMATCH",
-              "EXPERIENCE_REQUIREMENT_MISMATCH",
-              "CRIMINAL",
-              "WRONG_ADDRESS",
-              "GRAPHIC_EDITOR",
-              "DOCUMENT_DEPRIVED",
-              "COMPROMISED_PERSONS",
-              "PEP",
-              "ADVERSE_MEDIA",
-              "FRAUDULENT_PATTERNS",
-              "SANCTIONS",
-              "NOT_ALL_CHECKS_COMPLETED",
-              "FRONT_SIDE_MISSING",
-              "BACK_SIDE_MISSING",
-              "SCREENSHOTS",
-              "BLACK_AND_WHITE",
-              "INCOMPATIBLE_LANGUAGE",
-              "EXPIRATION_DATE",
-              "UNFILLED_ID",
-              "BAD_SELFIE",
-              "BAD_VIDEO_SELFIE",
-              "BAD_FACE_MATCHING",
-              "BAD_PROOF_OF_IDENTITY",
-              "BAD_PROOF_OF_ADDRESS",
-              "BAD_PROOF_OF_PAYMENT",
-              "SELFIE_WITH_PAPER",
-              "FRAUDULENT_LIVENESS",
-              "OTHER",
-              "REQUESTED_DATA_MISMATCH",
-              "OK",
-              "COMPANY_NOT_DEFINED_STRUCTURE",
-              "COMPANY_NOT_DEFINED_BENEFICIARIES",
-              "COMPANY_NOT_VALIDATED_BENEFICIARIES",
-              "COMPANY_NOT_DEFINED_REPRESENTATIVES",
-              "COMPANY_NOT_VALIDATED_REPRESENTATIVES",
-              "APPLICANT_INTERRUPTED_INTERVIEW",
-              "DOCUMENT_MISSING",
-              "UNSUITABLE_ENV",
-              "CONNECTION_INTERRUPTED",
-              "UNSUPPORTED_LANGUAGE",
-              "THIRD_PARTY_INVOLVED",
-              "CHECK_UNAVAILABLE",
-              "INCORRECT_SOCIAL_NUMBER"
-            ]
-          }
         }
       }
     },
