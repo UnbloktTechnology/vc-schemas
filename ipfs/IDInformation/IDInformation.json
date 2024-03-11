@@ -59,85 +59,43 @@
               "description": "Overall validation status of the document",
               "title": "Document Overall Validation",
               "type": "string",
-              "enum": [
-                "FAILED",
-                "NOTNEEDED",
-                "PASSED",
-                "SKIPPED",
-                "NEEDED"
-              ]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "documentBlockingPolicy": {
               "description": "Blocking policy of the document",
               "title": "Document Blocking Policy",
               "type": "string",
-              "enum": [
-                "FAILED",
-                "NOTNEEDED",
-                "PASSED",
-                "SKIPPED",
-                "NEEDED"
-              ]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "documentExpiry": {
               "description": "Expiry status of the document",
               "title": "Document Expiry",
               "type": "string",
-              "enum": [
-                "FAILED",
-                "NOTNEEDED",
-                "PASSED",
-                "SKIPPED",
-                "NEEDED"
-              ]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "documentSupport": {
               "description": "Support status of the document",
               "title": "Document Support",
               "type": "string",
-              "enum": [
-                "FAILED",
-                "NOTNEEDED",
-                "PASSED",
-                "SKIPPED",
-                "NEEDED"
-              ]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "documentValidation": {
               "description": "Validation status of the document",
               "title": "Document Validation",
               "type": "string",
-              "enum": [
-                "FAILED",
-                "NOTNEEDED",
-                "PASSED",
-                "SKIPPED",
-                "NEEDED"
-              ]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "faceMatchValidation": {
               "description": "Validation status of face match",
               "title": "Face Match Validation",
               "type": "string",
-              "enum": [
-                "FAILED",
-                "NOTNEEDED",
-                "PASSED",
-                "SKIPPED",
-                "NEEDED"
-              ]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             },
             "accumulativeLivenessResult": {
               "description": "Result of accumulative liveness check",
               "title": "Accumulative Liveness Result",
               "type": "string",
-              "enum": [
-                "FAILED",
-                "NOTNEEDED",
-                "PASSED",
-                "SKIPPED",
-                "NEEDED"
-              ]
+              "enum": ["FAILED", "NOTNEEDED", "PASSED", "SKIPPED", "NEEDED"]
             }
           }
         },
@@ -532,7 +490,9 @@
                 "YEM",
                 "ZMB",
                 "ZWE",
-                "ALA"
+                "ALA",
+                "ANT",
+                "XKX"
               ]
             },
             "fullName": {
@@ -847,7 +807,9 @@
                 "YEM",
                 "ZMB",
                 "ZWE",
-                "ALA"
+                "ALA",
+                "ANT",
+                "XKX"
               ]
             },
             "fullName": {
@@ -1128,7 +1090,9 @@
                 "YEM",
                 "ZMB",
                 "ZWE",
-                "ALA"
+                "ALA",
+                "ANT",
+                "XKX"
               ]
             }
           }
@@ -1136,11 +1100,7 @@
       }
     },
     "@context": {
-      "type": [
-        "string",
-        "array",
-        "object"
-      ]
+      "type": ["string", "array", "object"]
     },
     "expirationDate": {
       "format": "date-time",
@@ -1154,10 +1114,7 @@
       "type": "string"
     },
     "issuer": {
-      "type": [
-        "string",
-        "object"
-      ],
+      "type": ["string", "object"],
       "format": "uri",
       "properties": {
         "id": {
@@ -1165,15 +1122,10 @@
           "type": "string"
         }
       },
-      "required": [
-        "id"
-      ]
+      "required": ["id"]
     },
     "type": {
-      "type": [
-        "string",
-        "array"
-      ],
+      "type": ["string", "array"],
       "items": {
         "type": "string"
       }
@@ -1188,10 +1140,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "id",
-        "type"
-      ],
+      "required": ["id", "type"],
       "type": "object"
     }
   },

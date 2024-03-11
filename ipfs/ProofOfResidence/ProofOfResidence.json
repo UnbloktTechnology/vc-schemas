@@ -280,7 +280,9 @@
             "YEM",
             "ZMB",
             "ZWE",
-            "ALA"
+            "ALA",
+            "ANT",
+            "XKX"
           ]
         },
         "base64": {
@@ -310,12 +312,7 @@
           "title": "Media Type",
           "description": "Media type of the document (e.g. image/jpeg, image/png, application/pdf)",
           "type": "string",
-          "enum": [
-            "image/jpeg",
-            "image/jpg",
-            "image/png",
-            "application/pdf"
-          ]
+          "enum": ["image/jpeg", "image/jpg", "image/png", "application/pdf"]
         },
         "county": {
           "title": "County",
@@ -338,16 +335,10 @@
           "type": "string"
         }
       },
-      "required": [
-        "id"
-      ]
+      "required": ["id"]
     },
     "@context": {
-      "type": [
-        "string",
-        "array",
-        "object"
-      ]
+      "type": ["string", "array", "object"]
     },
     "expirationDate": {
       "format": "date-time",
@@ -361,10 +352,7 @@
       "type": "string"
     },
     "issuer": {
-      "type": [
-        "string",
-        "object"
-      ],
+      "type": ["string", "object"],
       "format": "uri",
       "properties": {
         "id": {
@@ -372,15 +360,10 @@
           "type": "string"
         }
       },
-      "required": [
-        "id"
-      ]
+      "required": ["id"]
     },
     "type": {
-      "type": [
-        "string",
-        "array"
-      ],
+      "type": ["string", "array"],
       "items": {
         "type": "string"
       }
@@ -395,10 +378,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "id",
-        "type"
-      ],
+      "required": ["id", "type"],
       "type": "object"
     }
   },
