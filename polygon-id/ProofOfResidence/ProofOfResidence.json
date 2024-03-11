@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/ProofOfResidence/ProofOfResidence.jsonld"
     },
     "type": "ProofOfResidence",
-    "version": "3.5.3"
+    "version": "4.0.0"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A proof of residence credential",
@@ -14,6 +14,19 @@
       "description": "Stores the data of the credential",
       "title": "Credential subject",
       "type": "object",
+      "required": [
+        "id",
+        "journeyId",
+        "country",
+        "base64",
+        "name",
+        "documentType",
+        "mediaType",
+        "county",
+        "city",
+        "streetName",
+        "postalCode"
+      ],
       "properties": {
         "id": {
           "description": "Stores the DID of the subject that owns the credential",
@@ -339,10 +352,7 @@
           "description": "The postal code of residence",
           "type": "string"
         }
-      },
-      "required": [
-        "id"
-      ]
+      }
     },
     "@context": {
       "type": [

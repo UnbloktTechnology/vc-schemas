@@ -26,6 +26,18 @@
           "mediaType": {
             "@id": "polygon-vocab:type",
             "@type": "xsd:string"
+          },
+          "reviewResult": {
+            "@id": "polygon-vocab:reviewResult",
+            "@type": "xsd:string"
+          },
+          "reviewRejectType": {
+            "@id": "polygon-vocab:reviewRejectType",
+            "@type": "xsd:string"
+          },
+          "reviewRejectLabels": {
+            "@id": "polygon-vocab:reviewRejectLabels",
+            "@type": "xsd:string"
           }
         },
         "@id": "urn:uuid:362d5804-a195-4549-b15b-edb5ef50d203"
