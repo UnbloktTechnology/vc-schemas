@@ -17,7 +17,7 @@
       "required": [
         "id",
         "journeyId",
-        "base64",
+        "base64_front",
         "name",
         "documentType",
         "mediaType",

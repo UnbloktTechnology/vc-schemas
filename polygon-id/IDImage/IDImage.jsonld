@@ -15,8 +15,12 @@
             "@id": "polygon-vocab:journeyId",
             "@type": "xsd:string"
           },
-          "base64": {
-            "@id": "polygon-vocab:base64",
+          "base64_front": {
+            "@id": "polygon-vocab:base64_front",
+            "@type": "xsd:string"
+          },
+          "base64_back": {
+            "@id": "polygon-vocab:base64_back",
             "@type": "xsd:string"
           },
           "name": {
