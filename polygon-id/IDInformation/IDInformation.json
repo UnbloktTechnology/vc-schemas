@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/IDInformation/IDInformation.jsonld"
     },
     "type": "IDInformation",
-    "version": "4.0.0"
+    "version": "4.0.0-feat/new-id-information-schema-1710244721344"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDInformation schema",
@@ -41,13 +41,20 @@
           "description": "Review result from kyc provider",
           "title": "Review Result",
           "type": "string",
-          "enum": ["RED", "YELLOW", "GREEN"]
+          "enum": [
+            "RED",
+            "YELLOW",
+            "GREEN"
+          ]
         },
         "reviewRejectType": {
           "description": "Review reject type",
           "title": "Review Reject Type",
           "type": "string",
-          "enum": ["FINAL", "RETRY"]
+          "enum": [
+            "FINAL",
+            "RETRY"
+          ]
         },
         "reviewRejectLabels": {
           "description": "Reject labels",
@@ -991,7 +998,11 @@
       }
     },
     "@context": {
-      "type": ["string", "array", "object"]
+      "type": [
+        "string",
+        "array",
+        "object"
+      ]
     },
     "expirationDate": {
       "format": "date-time",
@@ -1005,7 +1016,10 @@
       "type": "string"
     },
     "issuer": {
-      "type": ["string", "object"],
+      "type": [
+        "string",
+        "object"
+      ],
       "format": "uri",
       "properties": {
         "id": {
@@ -1013,10 +1027,15 @@
           "type": "string"
         }
       },
-      "required": ["id"]
+      "required": [
+        "id"
+      ]
     },
     "type": {
-      "type": ["string", "array"],
+      "type": [
+        "string",
+        "array"
+      ],
       "items": {
         "type": "string"
       }
@@ -1031,7 +1050,10 @@
           "type": "string"
         }
       },
-      "required": ["id", "type"],
+      "required": [
+        "id",
+        "type"
+      ],
       "type": "object"
     }
   },
