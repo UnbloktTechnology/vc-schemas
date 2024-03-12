@@ -4,7 +4,7 @@
       "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmZhKKtCkxqiRsZYwWRRvRrg63YQKXQESe8LJXrGQEhT9y"
     },
     "type": "ProofOfResidence",
-    "version": "4.0.0-feat/new-id-information-schema-1710254330832"
+    "version": "3.5.3"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A proof of residence credential",
@@ -14,19 +14,6 @@
       "description": "Stores the data of the credential",
       "title": "Credential subject",
       "type": "object",
-      "required": [
-        "id",
-        "journeyId",
-        "country",
-        "base64",
-        "name",
-        "documentType",
-        "mediaType",
-        "county",
-        "city",
-        "streetName",
-        "postalCode"
-      ],
       "properties": {
         "id": {
           "description": "Stores the DID of the subject that owns the credential",
@@ -293,9 +280,7 @@
             "YEM",
             "ZMB",
             "ZWE",
-            "ALA",
-            "ANT",
-            "XKX"
+            "ALA"
           ]
         },
         "base64": {
@@ -352,7 +337,10 @@
           "description": "The postal code of residence",
           "type": "string"
         }
-      }
+      },
+      "required": [
+        "id"
+      ]
     },
     "@context": {
       "type": [

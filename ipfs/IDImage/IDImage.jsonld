@@ -15,12 +15,8 @@
             "@id": "polygon-vocab:journeyId",
             "@type": "xsd:string"
           },
-          "base64_front": {
-            "@id": "polygon-vocab:base64_front",
-            "@type": "xsd:string"
-          },
-          "base64_back": {
-            "@id": "polygon-vocab:base64_back",
+          "base64": {
+            "@id": "polygon-vocab:base64",
             "@type": "xsd:string"
           },
           "name": {
@@ -33,18 +29,6 @@
           },
           "mediaType": {
             "@id": "polygon-vocab:type",
-            "@type": "xsd:string"
-          },
-          "reviewAnswer": {
-            "@id": "polygon-vocab:reviewAnswer",
-            "@type": "xsd:string"
-          },
-          "reviewRejectType": {
-            "@id": "polygon-vocab:reviewRejectType",
-            "@type": "xsd:string"
-          },
-          "reviewRejectLabels": {
-            "@id": "polygon-vocab:reviewRejectLabels",
             "@type": "xsd:string"
           }
         },
