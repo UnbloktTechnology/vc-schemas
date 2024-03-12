@@ -21,9 +21,7 @@
         "name",
         "documentType",
         "mediaType",
-        "reviewAnswer",
-        "reviewRejectType",
-        "reviewRejectLabels"
+        "reviewAnswer"
       ],
       "properties": {
         "id": {
