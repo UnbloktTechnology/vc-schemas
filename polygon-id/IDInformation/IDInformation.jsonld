@@ -15,8 +15,8 @@
             "@id": "polygon-vocab:journeyId",
             "@type": "xsd:string"
           },
-          "reviewResult": {
-            "@id": "polygon-vocab:reviewResult",
+          "reviewAnswer": {
+            "@id": "polygon-vocab:reviewAnswer",
             "@type": "xsd:string"
           },
           "reviewRejectType": {

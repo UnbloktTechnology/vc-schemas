@@ -17,7 +17,7 @@
       "required": [
         "id",
         "journeyId",
-        "reviewResult",
+        "reviewAnswer",
         "reviewRejectType",
         "reviewRejectLabels",
         "documentType",
@@ -37,7 +37,7 @@
           "type": "string",
           "format": "uuid"
         },
-        "reviewResult": {
+        "reviewAnswer": {
           "description": "Review result from kyc provider",
           "title": "Review Result",
           "type": "string",

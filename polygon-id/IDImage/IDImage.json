@@ -21,7 +21,7 @@
         "name",
         "documentType",
         "mediaType",
-        "reviewResult",
+        "reviewAnswer",
         "reviewRejectType",
         "reviewRejectLabels"
       ],
@@ -38,9 +38,15 @@
           "type": "string",
           "format": "uuid"
         },
-        "base64": {
+        "base64_front": {
           "title": "Base64",
-          "description": "Base64 encoded image of the passport image",
+          "description": "Base64 encoded image of the front of the document",
+          "type": "string",
+          "format": "base64"
+        },
+        "base64_back": {
+          "title": "Base64",
+          "description": "Base64 encoded image of the back of the document",
           "type": "string",
           "format": "base64"
         },
@@ -86,9 +92,9 @@
             "application/pdf"
           ]
         },
-        "reviewResult": {
-          "description": "Review result from kyc provider",
-          "title": "Review Result",
+        "reviewAnswer": {
+          "description": "Review answer from kyc provider",
+          "title": "Review Answer",
           "type": "string",
           "enum": [
             "RED",
