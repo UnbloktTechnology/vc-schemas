@@ -20,7 +20,7 @@
         "base64_front",
         "name",
         "documentType",
-        "mediaType",
+        "mediaType_front",
         "reviewAnswer"
       ],
       "properties": {
@@ -79,9 +79,20 @@
             "OTHER"
           ]
         },
-        "mediaType": {
+        "mediaType_front": {
           "title": "Media Type",
-          "description": "Media type of the document (e.g. image/jpeg, image/png, application/pdf)",
+          "description": "Media type of the front of the document (e.g. image/jpeg, image/png, application/pdf)",
+          "type": "string",
+          "enum": [
+            "image/jpeg",
+            "image/jpg",
+            "image/png",
+            "application/pdf"
+          ]
+        },
+        "mediaType_back": {
+          "title": "Media Type",
+          "description": "Media type of the back of the document (e.g. image/jpeg, image/png, application/pdf)",
           "type": "string",
           "enum": [
             "image/jpeg",

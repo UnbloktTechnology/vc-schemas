@@ -16,16 +16,7 @@
       "type": "object",
       "required": [
         "id",
-        "journeyId",
-        "country",
-        "base64",
-        "name",
-        "documentType",
-        "mediaType",
-        "county",
-        "city",
-        "streetName",
-        "postalCode"
+        "journeyId"
       ],
       "properties": {
         "id": {
