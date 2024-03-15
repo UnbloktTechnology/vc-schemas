@@ -16,7 +16,8 @@
       "type": "object",
       "required": [
         "id",
-        "journeyId"
+        "journeyId",
+        "documentType"
       ],
       "properties": {
         "id": {
