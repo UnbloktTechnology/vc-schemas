@@ -27,6 +27,14 @@
             "@id": "polygon-vocab:type",
             "@type": "xsd:string"
           },
+          "entryDate": {
+            "@id": "polygon-vocab:entryDate",
+            "@type": "xsd:integer"
+          },
+          "entryTime": {
+            "@id": "polygon-vocab:entryTime",
+            "@type": "xsd:string"
+          },
           "reviewAnswer": {
             "@id": "polygon-vocab:reviewAnswer",
             "@type": "xsd:string"

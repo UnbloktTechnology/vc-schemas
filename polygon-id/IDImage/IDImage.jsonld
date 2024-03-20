@@ -31,6 +31,14 @@
             "@id": "polygon-vocab:type",
             "@type": "xsd:string"
           },
+          "entryDate": {
+            "@id": "polygon-vocab:entryDate",
+            "@type": "xsd:integer"
+          },
+          "entryTime": {
+            "@id": "polygon-vocab:entryTime",
+            "@type": "xsd:string"
+          },
           "mediaType_front": {
             "@id": "polygon-vocab:type",
             "@type": "xsd:string"

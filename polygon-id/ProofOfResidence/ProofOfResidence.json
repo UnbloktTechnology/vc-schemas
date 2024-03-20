@@ -17,7 +17,9 @@
       "required": [
         "id",
         "journeyId",
-        "documentType"
+        "documentType",
+        "entryDate",
+        "entryTime"
       ],
       "properties": {
         "id": {
@@ -312,6 +314,17 @@
             "Rent_agreement",
             "Bank_statement"
           ]
+        },
+        "entryDate": {
+          "description": "Entry date associated with the credential",
+          "title": "Entry Date in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day",
+          "type": "integer"
+        },
+        "entryTime": {
+          "description": "Entry time associated with the credential",
+          "title": "Entry Time",
+          "type": "string",
+          "format": "time"
         },
         "mediaType": {
           "title": "Media Type",

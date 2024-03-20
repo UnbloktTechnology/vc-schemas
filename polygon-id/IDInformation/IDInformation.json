@@ -20,6 +20,7 @@
         "reviewAnswer",
         "documentType",
         "entryDate",
+        "entryTime",
         "personalData"
       ],
       "properties": {
