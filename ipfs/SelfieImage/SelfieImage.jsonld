@@ -26,6 +26,26 @@
           "mediaType": {
             "@id": "polygon-vocab:type",
             "@type": "xsd:string"
+          },
+          "entryDate": {
+            "@id": "polygon-vocab:entryDate",
+            "@type": "xsd:integer"
+          },
+          "entryTime": {
+            "@id": "polygon-vocab:entryTime",
+            "@type": "xsd:string"
+          },
+          "reviewAnswer": {
+            "@id": "polygon-vocab:reviewAnswer",
+            "@type": "xsd:string"
+          },
+          "reviewRejectType": {
+            "@id": "polygon-vocab:reviewRejectType",
+            "@type": "xsd:string"
+          },
+          "reviewRejectLabels": {
+            "@id": "polygon-vocab:reviewRejectLabels",
+            "@type": "xsd:string"
           }
         },
         "@id": "urn:uuid:362d5804-a195-4549-b15b-edb5ef50d203"

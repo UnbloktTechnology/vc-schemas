@@ -15,8 +15,12 @@
             "@id": "polygon-vocab:journeyId",
             "@type": "xsd:string"
           },
-          "base64": {
-            "@id": "polygon-vocab:base64",
+          "base64_front": {
+            "@id": "polygon-vocab:base64_front",
+            "@type": "xsd:string"
+          },
+          "base64_back": {
+            "@id": "polygon-vocab:base64_back",
             "@type": "xsd:string"
           },
           "name": {
@@ -27,8 +31,32 @@
             "@id": "polygon-vocab:type",
             "@type": "xsd:string"
           },
-          "mediaType": {
+          "entryDate": {
+            "@id": "polygon-vocab:entryDate",
+            "@type": "xsd:integer"
+          },
+          "entryTime": {
+            "@id": "polygon-vocab:entryTime",
+            "@type": "xsd:string"
+          },
+          "mediaType_front": {
             "@id": "polygon-vocab:type",
+            "@type": "xsd:string"
+          },
+          "mediaType_back": {
+            "@id": "polygon-vocab:type",
+            "@type": "xsd:string"
+          },
+          "reviewAnswer": {
+            "@id": "polygon-vocab:reviewAnswer",
+            "@type": "xsd:string"
+          },
+          "reviewRejectType": {
+            "@id": "polygon-vocab:reviewRejectType",
+            "@type": "xsd:string"
+          },
+          "reviewRejectLabels": {
+            "@id": "polygon-vocab:reviewRejectLabels",
             "@type": "xsd:string"
           }
         },
