@@ -356,6 +356,11 @@
           "title": "Postal Code",
           "description": "The postal code of residence",
           "type": "string"
+        },
+        "isSandbox": {
+          "description": "Indicates if the credential was generated in a sandbox environment",
+          "title": "Is Sandbox",
+          "type": "boolean"
         }
       }
     },

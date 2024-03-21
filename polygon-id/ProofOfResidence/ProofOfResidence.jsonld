@@ -58,6 +58,10 @@
           "postalCode": {
             "@id": "polygon-vocab:postalCode",
             "@type": "xsd:string"
+          },
+          "isSandbox": {
+            "@id": "polygon-vocab:isSandbox",
+            "@type": "xsd:boolean"
           }
         },
         "@id": "urn:uuid:362d5804-a195-4549-b15b-edb5ef50d203"

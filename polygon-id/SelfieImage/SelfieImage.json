@@ -162,6 +162,11 @@
               "INCORRECT_SOCIAL_NUMBER"
             ]
           }
+        },
+        "isSandbox": {
+          "description": "Indicates if the credential was generated in a sandbox environment",
+          "title": "Is Sandbox",
+          "type": "boolean"
         }
       }
     },
