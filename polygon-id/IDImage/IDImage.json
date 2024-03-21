@@ -39,16 +39,14 @@
           "format": "uuid"
         },
         "base64_front": {
-          "title": "Base64",
+          "title": "Front image",
           "description": "Base64 encoded image of the front of the document",
-          "type": "string",
-          "format": "base64"
+          "type": "string"
         },
         "base64_back": {
-          "title": "Base64",
+          "title": "Back image",
           "description": "Base64 encoded image of the back of the document",
-          "type": "string",
-          "format": "base64"
+          "type": "string"
         },
         "name": {
           "title": "Name",
