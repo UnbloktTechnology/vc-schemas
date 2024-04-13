@@ -31,6 +31,14 @@
             "@id": "polygon-vocab:type",
             "@type": "xsd:string"
           },
+          "entryDate": {
+            "@id": "polygon-vocab:entryDate",
+            "@type": "xsd:integer"
+          },
+          "entryTime": {
+            "@id": "polygon-vocab:entryTime",
+            "@type": "xsd:string"
+          },
           "mediaType": {
             "@id": "polygon-vocab:type",
             "@type": "xsd:string"
@@ -50,6 +58,10 @@
           "postalCode": {
             "@id": "polygon-vocab:postalCode",
             "@type": "xsd:string"
+          },
+          "isSandbox": {
+            "@id": "polygon-vocab:isSandbox",
+            "@type": "xsd:boolean"
           }
         },
         "@id": "urn:uuid:362d5804-a195-4549-b15b-edb5ef50d203"

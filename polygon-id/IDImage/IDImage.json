@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/polygon-id/IDImage/IDImage.jsonld"
+      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/staging/polygon-id/IDImage/IDImage.jsonld"
     },
     "type": "IDImage",
-    "version": "3.5.3"
+    "version": "4.0.1"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "IDImage schema",
@@ -17,10 +17,13 @@
       "required": [
         "id",
         "journeyId",
-        "base64",
+        "base64_front",
         "name",
         "documentType",
-        "mediaType"
+        "mediaType_front",
+        "reviewAnswer",
+        "entryDate",
+        "entryTime"
       ],
       "properties": {
         "id": {
@@ -35,11 +38,15 @@
           "type": "string",
           "format": "uuid"
         },
-        "base64": {
-          "title": "Base64",
-          "description": "Base64 encoded image of the passport image",
-          "type": "string",
-          "format": "base64"
+        "base64_front": {
+          "title": "Front image",
+          "description": "Base64 encoded image of the front of the document",
+          "type": "string"
+        },
+        "base64_back": {
+          "title": "Back image",
+          "description": "Base64 encoded image of the back of the document",
+          "type": "string"
         },
         "name": {
           "title": "Name",
@@ -51,31 +58,157 @@
           "description": "Type of the document (e.g. passport)",
           "type": "string",
           "enum": [
-            "Agents_License",
-            "Driving_License",
-            "Electoral_Card",
-            "Foreigner_Identification_Card",
-            "Health_Card",
-            "Job_License",
-            "Membership_Identification_Card",
-            "Military_Identification_Card",
-            "National_Identification_Card",
-            "Passport",
-            "Proof_of_Age_Card",
-            "Travel_Permit",
-            "Visa",
-            "Weapons_Licence"
+            "ID_CARD",
+            "PASSPORT",
+            "DRIVERS",
+            "RESIDENCE_PERMIT",
+            "UTILITY_BILL",
+            "SELFIE",
+            "VIDEO_SELFIE",
+            "PROFILE_IMAGE",
+            "ID_DOC_PHOTO",
+            "AGREEMENT",
+            "CONTRACT",
+            "DRIVERS_TRANSLATION",
+            "INVESTOR_DOC",
+            "VEHICLE_REGISTRATION_CERTIFICATE",
+            "INCOME_SOURCE",
+            "PAYMENT_METHOD",
+            "BANK_CARD",
+            "COVID_VACCINATION_FORM",
+            "OTHER"
           ]
         },
-        "mediaType": {
+        "entryDate": {
+          "description": "Entry date associated with the credential",
+          "title": "Entry Date in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day",
+          "type": "integer"
+        },
+        "entryTime": {
+          "description": "Entry time associated with the credential",
+          "title": "Entry Time",
+          "type": "string",
+          "format": "time"
+        },
+        "mediaType_front": {
           "title": "Media Type",
-          "description": "Media type of the document (e.g. image/jpeg, image/png, application/pdf)",
+          "description": "Media type of the front of the document (e.g. image/jpeg, image/png, application/pdf)",
           "type": "string",
           "enum": [
             "image/jpeg",
             "image/jpg",
-            "image/png"
+            "image/png",
+            "application/pdf"
           ]
+        },
+        "mediaType_back": {
+          "title": "Media Type",
+          "description": "Media type of the back of the document (e.g. image/jpeg, image/png, application/pdf)",
+          "type": "string",
+          "enum": [
+            "image/jpeg",
+            "image/jpg",
+            "image/png",
+            "application/pdf"
+          ]
+        },
+        "reviewAnswer": {
+          "description": "Review answer from kyc provider",
+          "title": "Review Answer",
+          "type": "string",
+          "enum": [
+            "RED",
+            "YELLOW",
+            "GREEN"
+          ]
+        },
+        "reviewRejectType": {
+          "description": "Review reject type",
+          "title": "Review Reject Type",
+          "type": "string",
+          "enum": [
+            "FINAL",
+            "RETRY"
+          ]
+        },
+        "reviewRejectLabels": {
+          "description": "Reject labels",
+          "title": "Reject Labels",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "FORGERY",
+              "DOCUMENT_TEMPLATE",
+              "LOW_QUALITY",
+              "SPAM",
+              "NOT_DOCUMENT",
+              "SELFIE_MISMATCH",
+              "ID_INVALID",
+              "FOREIGNER",
+              "DUPLICATE",
+              "BAD_AVATAR",
+              "WRONG_USER_REGION",
+              "INCOMPLETE_DOCUMENT",
+              "BLACKLIST",
+              "BLOCKLIST",
+              "UNSATISFACTORY_PHOTOS",
+              "DOCUMENT_PAGE_MISSING",
+              "DOCUMENT_DAMAGED",
+              "REGULATIONS_VIOLATIONS",
+              "INCONSISTENT_PROFILE",
+              "PROBLEMATIC_APPLICANT_DATA",
+              "ADDITIONAL_DOCUMENT_REQUIRED",
+              "AGE_REQUIREMENT_MISMATCH",
+              "EXPERIENCE_REQUIREMENT_MISMATCH",
+              "CRIMINAL",
+              "WRONG_ADDRESS",
+              "GRAPHIC_EDITOR",
+              "DOCUMENT_DEPRIVED",
+              "COMPROMISED_PERSONS",
+              "PEP",
+              "ADVERSE_MEDIA",
+              "FRAUDULENT_PATTERNS",
+              "SANCTIONS",
+              "NOT_ALL_CHECKS_COMPLETED",
+              "FRONT_SIDE_MISSING",
+              "BACK_SIDE_MISSING",
+              "SCREENSHOTS",
+              "BLACK_AND_WHITE",
+              "INCOMPATIBLE_LANGUAGE",
+              "EXPIRATION_DATE",
+              "UNFILLED_ID",
+              "BAD_SELFIE",
+              "BAD_VIDEO_SELFIE",
+              "BAD_FACE_MATCHING",
+              "BAD_PROOF_OF_IDENTITY",
+              "BAD_PROOF_OF_ADDRESS",
+              "BAD_PROOF_OF_PAYMENT",
+              "SELFIE_WITH_PAPER",
+              "FRAUDULENT_LIVENESS",
+              "OTHER",
+              "REQUESTED_DATA_MISMATCH",
+              "OK",
+              "COMPANY_NOT_DEFINED_STRUCTURE",
+              "COMPANY_NOT_DEFINED_BENEFICIARIES",
+              "COMPANY_NOT_VALIDATED_BENEFICIARIES",
+              "COMPANY_NOT_DEFINED_REPRESENTATIVES",
+              "COMPANY_NOT_VALIDATED_REPRESENTATIVES",
+              "APPLICANT_INTERRUPTED_INTERVIEW",
+              "DOCUMENT_MISSING",
+              "UNSUITABLE_ENV",
+              "CONNECTION_INTERRUPTED",
+              "UNSUPPORTED_LANGUAGE",
+              "THIRD_PARTY_INVOLVED",
+              "CHECK_UNAVAILABLE",
+              "INCORRECT_SOCIAL_NUMBER"
+            ]
+          }
+        },
+        "isSandbox": {
+          "description": "Indicates if the credential was generated in a sandbox environment",
+          "title": "Is Sandbox",
+          "type": "boolean"
         }
       }
     },
