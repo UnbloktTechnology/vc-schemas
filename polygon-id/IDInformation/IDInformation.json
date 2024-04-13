@@ -1,7 +1,7 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/main/polygon-id/IDInformation/IDInformation.jsonld"
+      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/IDInformation/IDInformation.jsonld"
     },
     "type": "IDInformation",
     "version": "4.0.1"
