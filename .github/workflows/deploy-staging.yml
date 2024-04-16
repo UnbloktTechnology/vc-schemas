@@ -49,5 +49,11 @@ jobs:
               -H "accept: application/json" \
               -H "content-type: application/json" \
               -u "${{ secrets.ISSUER_NODE_USERNAME_STAGING }}:${{ secrets.ISSUER_NODE_PASSWORD_STAGING }}" \
+              -d "{\
+
+            curl -X POST "https://amoy-issuer-node-staging.nexera.id/v1/schemas" \
+              -H "accept: application/json" \
+              -H "content-type: application/json" \
+              -u "${{ secrets.ISSUER_NODE_USERNAME_STAGING }}:${{ secrets.ISSUER_NODE_PASSWORD_STAGING }}" \
               -d "{\"url\":\"https://quicknode.quicknode-ipfs.com/ipfs/${ipfs_hash}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
           done

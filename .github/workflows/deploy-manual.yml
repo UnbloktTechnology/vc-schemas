@@ -154,6 +154,38 @@ jobs:
               -d "{\"url\":\"https://quicknode.quicknode-ipfs.com/ipfs/${ipfs_hash}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
           done
 
+      - name: Upload schemas to issuer (amoy)
+        shell: bash
+        run: |
+          issuer="https://amoy-issuer-node-dev.nexera.id/v1/schemas"
+          if [ ${{ inputs.issuer }} == 'staging' ]; then
+            issuer="https://amoy-issuer-node-staging.nexera.id/v1/schemas"
+          elif [ ${{ inputs.issuer }} == 'prod' ]; then
+            issuer="https://amoy-issuer-node-prod.nexera.id/v1/schemas"
+          fi
+          
+          for file in $(find ipfs/ -type f -name "*.json"); do
+            echo "JSON file: $file"
+            version=$(cat "$file" | jq -r '.["$metadata"].version')
+            echo "$version"
+
+            schema=$(cat "$file" | jq -r '.["$metadata"].type')
+            echo "$schema"
+
+            response=$(curl --location "https://api.quicknode.com/ipfs/rest/v1/s3/put-object" -X POST -F Body=@"$file" -F Key="$file" -F ContentType="application/json" -H "x-api-key: ${{ secrets.QUICKNODE_API_KEY }}")
+            echo "$response"
+          
+            # Parse HASH from uploaded file
+            ipfs_hash=$(echo "$response" | jq -r '.pin.cid')
+            echo "$ipfs_hash"
+
+            curl -X POST "$issuer" \
+              -H "accept: application/json" \
+              -H "content-type: application/json" \
+              -u "${{ secrets.ISSUER_NODE_USERNAME_PROD }}:${{ secrets.ISSUER_NODE_PASSWORD_PROD }}" \
+              -d "{\"url\":\"https://quicknode.quicknode-ipfs.com/ipfs/${ipfs_hash}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
+          done
+
       - name: Upload schemas to issuer (mainnet)
         if: ${{ inputs.issuer == 'prod' }}
         shell: bash

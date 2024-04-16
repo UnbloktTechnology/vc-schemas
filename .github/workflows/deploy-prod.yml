@@ -51,6 +51,12 @@ jobs:
               -u "${{ secrets.ISSUER_NODE_USERNAME_PROD }}:${{ secrets.ISSUER_NODE_PASSWORD_PROD }}" \
               -d "{\"url\":\"https://quicknode.quicknode-ipfs.com/ipfs/${ipfs_hash}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
 
+            curl -X POST "https://amoy-issuer-node-prod.nexera.id/v1/schemas" \
+              -H "accept: application/json" \
+              -H "content-type: application/json" \
+              -u "${{ secrets.ISSUER_NODE_USERNAME_PROD }}:${{ secrets.ISSUER_NODE_PASSWORD_PROD }}" \
+              -d "{\"url\":\"https://quicknode.quicknode-ipfs.com/ipfs/${ipfs_hash}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
+
             curl -X POST "https://issuer-node.nexera.id/v1/schemas" \
               -H "accept: application/json" \
               -H "content-type: application/json" \
