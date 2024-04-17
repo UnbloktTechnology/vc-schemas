@@ -19,4 +19,4 @@ The following should not be necessary at this time, but good maybe to remember h
 
 1. In json, modify the jsonld url to point to the branch url (ex: "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/new-branch/polygon-id/id3/id3.jsonld"
    )
-2. Import credential at https://mumbai-issuer-node-ui-dev.nexera.id/schemas.
+2. Import credential at https://amoy-issuer-node-ui-dev.nexera.id/schemas.

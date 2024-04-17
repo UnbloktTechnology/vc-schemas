@@ -193,11 +193,6 @@ jobs:
             ipfs_hash=$(echo "$response" | jq -r '.pin.cid')
             echo "$ipfs_hash"
 
-            curl -X POST "https://mumbai-issuer-node-dev.nexera.id/v1/schemas" \
-              -H "accept: application/json" \
-              -H "content-type: application/json" \
-              -u "${{ secrets.ISSUER_NODE_USERNAME_DEV }}:${{ secrets.ISSUER_NODE_PASSWORD_DEV }}" \
-
             curl -X POST "https://amoy-issuer-node-dev.nexera.id/v1/schemas" \
               -H "accept: application/json" \
               -H "content-type: application/json" \
