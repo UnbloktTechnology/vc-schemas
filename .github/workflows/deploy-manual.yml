@@ -122,14 +122,14 @@ jobs:
           hash=$(git rev-parse --verify HEAD)
           echo "hash=$hash" >> $GITHUB_OUTPUT
 
-      - name: Upload schemas to issuer (mumbai)
+      - name: Upload schemas to issuer (amoy)
         shell: bash
         run: |
-          issuer="https://mumbai-issuer-node-dev.nexera.id/v1/schemas"
+          issuer="https://amoy-issuer-node-dev.nexera.id/v1/schemas"
           if [ ${{ inputs.issuer }} == 'staging' ]; then
-            issuer="https://mumbai-issuer-node-staging.nexera.id/v1/schemas"
+            issuer="https://amoy-issuer-node-staging.nexera.id/v1/schemas"
           elif [ ${{ inputs.issuer }} == 'prod' ]; then
-            issuer="https://mumbai-issuer-node-prod.nexera.id/v1/schemas"
+            issuer="https://amoy-issuer-node-prod.nexera.id/v1/schemas"
           fi
           
           for file in $(find ipfs/ -type f -name "*.json"); do

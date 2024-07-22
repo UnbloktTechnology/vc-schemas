@@ -10,7 +10,7 @@
 #  schema=$(cat "$file" | jq -r '.["$metadata"].type')
 #  echo "$schema"
 #
-#  response=$(curl "https://ipfs.infura.io:5001/api/v0/add" -X POST -F file=@"$file" -u "xxx:xxx")
+#  response=$(curl "https://ipfs.infura.io:5001/api/v0/add" -X POST -F file=@"$file" -u "2WWFTgvHB5VjVy5A4fjrmZkC8Ps:47b4b9c35ac7e9090c945f2afa21a020")
 #  echo "$response"
 #
 #  # Parse HASH from uploaded file
@@ -20,7 +20,7 @@
 ##  curl -X POST "https://amoy-issuer-node-dev.nexera.id/v1/schemas" \
 ##    -H "accept: application/json" \
 ##    -H "content-type: application/json" \
-##    -u "xxx:xxx" \
+##    -u "admin:FPSllsker" \
 ##    -d "{\"url\":\"https://quicknode.quicknode-ipfs.com/ipfs/${ipfs_hash}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
 #done
 
@@ -33,18 +33,21 @@ for file in $(find ipfs/ -type f -name "*.json"); do
   schema=$(cat "$file" | jq -r '.["$metadata"].type')
   echo "$schema"
 
-  response=$(curl --location "https://api.quicknode.com/ipfs/rest/v1/s3/put-object" -X POST -F Body=@"$file" -F Key="$file" -F ContentType="application/json" -H "x-api-key: xxx")
+  response=$(curl --location "https://api.quicknode.com/ipfs/rest/v1/s3/put-object" -X POST -F Body=@"$file" -F Key="$file" -F ContentType="application/json" -H "x-api-key: QN_9110d9d445ef4168a428772f645d25a6")
   echo "$response"
 
   # Parse HASH from uploaded file
   ipfs_hash=$(echo "$response" | jq -r '.pin.cid')
   echo "$ipfs_hash"
 
-  curl -X POST "https://amoy-issuer-node-prod.nexera.id/v1/schemas" \
-    -H "accept: application/json" \
-    -H "content-type: application/json" \
-    -u "xxx:xxxx" \
-    -d "{\"url\":\"https://quicknode.quicknode-ipfs.com/ipfs/${ipfs_hash}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
+#  curl -X POST "https://issuer-node.nexera.id/v1/schemas" \
+
+#
+#  curl -X POST "https://amoy-issuer-node-staging.nexera.id/v1/schemas" \
+#    -H "accept: application/json" \
+#    -H "content-type: application/json" \
+#    -u "admin:FPSllsker" \
+#    -d "{\"url\":\"https://quicknode.quicknode-ipfs.com/ipfs/${ipfs_hash}\",\"schemaType\":\"${schema}\",\"version\":\"${version}\"}"
 done
 
 # Upload to IPFS
@@ -53,7 +56,7 @@ done
 #  echo "JsonLD file: $file"
 #
 #  # Upload json
-#  response=$(curl --location "https://api.quicknode.com/ipfs/rest/v1/s3/put-object" -X POST -F Body=@"$file" -F Key="$file" -F ContentType="application/json" -H "x-api-key: xxx")
+#  response=$(curl --location "https://api.quicknode.com/ipfs/rest/v1/s3/put-object" -X POST -F Body=@"$file" -F Key="$file" -F ContentType="application/json" -H "x-api-key: QN_9110d9d445ef4168a428772f645d25a6")
 #  echo "$response"
 #
 #  # Parse HASH from uploaded file
