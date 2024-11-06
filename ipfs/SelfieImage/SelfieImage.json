@@ -4,7 +4,7 @@
       "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmUV9bVQ433m5ejjgqodQ4kfWqMMzFCwJqcqRhzSfENEMX"
     },
     "type": "SelfieImage",
-    "version": "4.0.1"
+    "version": "4.0.1-feat/add-document-number-and-valid-until-1730923592456"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "Selfie Image schema",

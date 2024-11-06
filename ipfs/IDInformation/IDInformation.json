@@ -4,7 +4,7 @@
       "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmUFBpPnPanYZPcRKRnGFZeyYSpXx1L3XNngowjRtQFzrD"
     },
     "type": "IDInformation",
-    "version": "4.0.1"
+    "version": "4.0.1-feat/add-document-number-and-valid-until-1730923592456"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDInformation schema",
@@ -154,6 +154,16 @@
             "COVID_VACCINATION_FORM",
             "OTHER"
           ]
+        },
+        "number": {
+          "title": "Document Number",
+          "type": "string",
+          "description": "Document Number (Document Identifier)"
+        },
+        "validUntil": {
+          "title": "Document Valid Until",
+          "type": "integer",
+          "description": "Document Valid Until in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day"
         },
         "entryDate": {
           "description": "Entry date associated with the credential",
