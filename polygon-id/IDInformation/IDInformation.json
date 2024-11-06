@@ -155,6 +155,16 @@
             "OTHER"
           ]
         },
+        "number": {
+          "title": "Document Number",
+          "type": "string",
+          "description": "Document Number (Document Identifier)"
+        },
+        "validUntil": {
+          "title": "Document Valid Until",
+          "type": "integer",
+          "description": "Document Valid Until in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day"
+        },
         "entryDate": {
           "description": "Entry date associated with the credential",
           "title": "Entry Date in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day",
