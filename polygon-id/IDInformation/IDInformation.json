@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/IDInformation/IDInformation.jsonld"
     },
     "type": "IDInformation",
-    "version": "4.0.1-feat/add-document-number-and-valid-until-1730892665170"
+    "version": "4.0.1"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDInformation schema",
