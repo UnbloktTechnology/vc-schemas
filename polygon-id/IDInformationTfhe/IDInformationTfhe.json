@@ -167,34 +167,40 @@
             "firstName": {
               "description": "First name of the credential subject",
               "title": "First Name",
-              "type": "string"
+              "type": "string",
+              "bytesSize": 2048
             },
             "middleName": {
               "description": "Middle name of the credential subject",
               "title": "Middle Name",
-              "type": "string"
+              "type": "string",
+              "bytesSize": 2048
             },
             "lastName": {
               "description": "Last name of the credential subject",
               "title": "Last Name",
-              "type": "string"
+              "type": "string",
+              "bytesSize": 2048
             },
             "gender": {
               "description": "Gender of the credential subject",
               "title": "Gender",
-              "type": "string"
+              "type": "string",
+              "bytesSize": 8
             },
             "age": {
               "description": "Age of the credential subject",
               "title": "Age",
               "type": "integer",
               "minimum": 0,
-              "maximum": 125
+              "maximum": 125,
+              "bytesSize": 8
             },
             "citizenship": {
               "title": "Citizenship",
               "description": "Citizenship status of the credential subject - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
               "type": "string",
+              "bytesSize": 32,
               "enum": [
                 "AFG",
                 "ALB",
@@ -453,6 +459,7 @@
               "description": "Country of the credential subject - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
               "title": "Country",
               "type": "string",
+              "bytesSize": 32,
               "enum": [
                 "AFG",
                 "ALB",
@@ -710,17 +717,20 @@
             "fullName": {
               "description": "Full name of the credential subject",
               "title": "Full Name",
-              "type": "string"
+              "type": "string",
+              "bytesSize": 2048
             },
             "birthDate": {
               "title": "Birth Date",
               "description": "Birth Date of the credential subject in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day",
-              "type": "integer"
+              "type": "integer",
+              "bytesSize": 32
             },
             "countryOfBirth": {
               "title": "Country of Birth",
               "description": "Country of birth of the credential subject - - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
               "type": "string",
+              "bytesSize": 32,
               "enum": [
                 "AFG",
                 "ALB",
@@ -978,6 +988,7 @@
             "stateOfBirth": {
               "title": "State of Birth",
               "type": "string",
+              "bytesSize": 2048,
               "description": "State of birth of the credential subject"
             }
           }
