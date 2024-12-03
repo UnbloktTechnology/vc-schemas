@@ -4,7 +4,7 @@
       "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmTYHuqTLNRyfUjncDNwd1KKw9sc7DiewTm1FJ4RPHYqcW"
     },
     "type": "IDImage",
-    "version": "4.0.1"
+    "version": "4.0.1-feature/web3-587-create-schema-for-stored-data-in-tfhe-storage-1733214963719"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "IDImage schema",
