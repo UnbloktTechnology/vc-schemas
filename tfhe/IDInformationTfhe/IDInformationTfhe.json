@@ -25,13 +25,15 @@
           "description": "Stores the DID of the subject that owns the credential",
           "title": "Credential subject ID",
           "format": "uri",
-          "type": "string"
+          "type": "string",
+          "bytesSize": 0
         },
         "journeyId": {
           "description": "Journey ID of when credential was generated",
           "title": "Journey ID",
           "type": "string",
-          "format": "uuid"
+          "format": "uuid",
+          "bytesSize": 0
         },
         "reviewAnswer": {
           "description": "Review result from kyc provider",
@@ -195,7 +197,7 @@
               "INCORRECT_SOCIAL_NUMBER": 64
             }
           },
-          "bytesSize": 8
+          "bytesSize": 0
         },
         "documentType": {
           "description": "Type of the document provided by the credential subject",
@@ -256,7 +258,7 @@
           "title": "Entry Time",
           "type": "string",
           "format": "time",
-          "bytesSize": 32
+          "bytesSize": 512
         },
         "personalData": {
           "description": "Original data extracted by the provider",
@@ -267,25 +269,25 @@
               "description": "First name of the credential subject",
               "title": "First Name",
               "type": "string",
-              "bytesSize": 2048
+              "bytesSize": 512
             },
             "middleName": {
               "description": "Middle name of the credential subject",
               "title": "Middle Name",
               "type": "string",
-              "bytesSize": 2048
+              "bytesSize": 512
             },
             "lastName": {
               "description": "Last name of the credential subject",
               "title": "Last Name",
               "type": "string",
-              "bytesSize": 2048
+              "bytesSize": 512
             },
             "gender": {
               "description": "Gender of the credential subject",
               "title": "Gender",
               "type": "string",
-              "bytesSize": 8
+              "bytesSize": 512
             },
             "age": {
               "description": "Age of the credential subject",
@@ -1087,7 +1089,7 @@
             "stateOfBirth": {
               "title": "State of Birth",
               "type": "string",
-              "bytesSize": 2048,
+              "bytesSize": 512,
               "description": "State of birth of the credential subject"
             }
           }
@@ -1095,21 +1097,25 @@
         "isSandbox": {
           "description": "Indicates if the credential was generated in a sandbox environment",
           "title": "Is Sandbox",
-          "type": "boolean"
+          "type": "boolean",
+          "bytesSize": 0
         }
       }
     },
 
     "expirationDate": {
       "format": "date-time",
-      "type": "string"
+      "type": "string",
+      "bytesSize": 0
     },
     "id": {
-      "type": "string"
+      "type": "string",
+      "bytesSize": 0
     },
     "issuanceDate": {
       "format": "date-time",
-      "type": "string"
+      "type": "string",
+      "bytesSize": 0
     }
   },
   "required": ["credentialSubject", "id", "issuanceDate"],
