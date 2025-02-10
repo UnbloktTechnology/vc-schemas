@@ -4,7 +4,7 @@
       "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmUFBpPnPanYZPcRKRnGFZeyYSpXx1L3XNngowjRtQFzrD"
     },
     "type": "IDInformation",
-    "version": "4.0.1"
+    "version": "4.0.1-feature/web3-587-create-schema-for-stored-data-in-tfhe-storage-1739179695046"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDInformation schema",
