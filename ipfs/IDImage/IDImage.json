@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/IDImage/IDImage.jsonld"
+      "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmTYHuqTLNRyfUjncDNwd1KKw9sc7DiewTm1FJ4RPHYqcW"
     },
     "type": "IDImage",
-    "version": "4.1.2"
+    "version": "4.1.4"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "IDImage schema",
