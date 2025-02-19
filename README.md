@@ -17,6 +17,6 @@ In order to test new vc-schemas on branch new-branch:
 
 The following should not be necessary at this time, but good maybe to remember how we used to do this without the github action.
 
-1. In json, modify the jsonld url to point to the branch url (ex: "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/new-branch/polygon-id/id3/id3.jsonld"
+1. In json, modify the jsonld url to point to the branch url (ex: "jsonLdContext": "<https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/new-branch/polygon-id/id3/id3.jsonld>"
    )
-2. Import credential at https://amoy-issuer-node-ui-dev.nexera.id/schemas.
+2. Import credential at <https://amoy-issuer-node-ui-dev.nexera.id/schemas>.
