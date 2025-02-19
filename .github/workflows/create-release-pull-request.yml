@@ -87,7 +87,7 @@ jobs:
 #          git push origin ${{ steps.release_name.outputs.version }}-rc
 
       - name: Run the Action
-        uses: devops-infra/action-pull-request@v0.5.5
+        uses: devops-infra/action-pull-request@v0.6.0
         with:
           github_token: ${{ steps.generate_token.outputs.token }}
 #          source_branch: ${{ inputs.source_branch }}-to-${{ inputs.target_branch }}-release/${{ steps.release_name.outputs.version }}-rc
