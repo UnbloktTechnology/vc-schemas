@@ -226,7 +226,17 @@ jobs:
             schema=$(cat "$file" | jq -r '.["$metadata"].type')
             echo "$schema"
 
-            response=$(curl --location "https://api.quicknode.com/ipfs/rest/v1/s3/put-object" -X POST -F Body=@"$file" -F Key="$file" -F ContentType="application/json" -H "x-api-key: ${{ secrets.QUICKNODE_API_KEY }}")
+            base="${file%.json}"
+            # Get the current timestamp (e.g., YYYYMMDD_HHMMSS format)
+            timestamp=$(date +"%Y%m%d_%H%M%S")
+            # Rename the file with timestamp before .json
+            new_file="${base}_${timestamp}.json"
+            # Rename the file
+            mv "$file" "$new_file"
+            # Output the renamed file
+            echo "Renamed: $file -> $new_file"
+
+            response=$(curl --location "https://api.quicknode.com/ipfs/rest/v1/s3/put-object" -X POST -F Body=@"$new_file" -F Key="$new_file" -F ContentType="application/json" -H "x-api-key: ${{ secrets.QUICKNODE_API_KEY }}")
             echo "$response"
           
             # Parse HASH from uploaded file
