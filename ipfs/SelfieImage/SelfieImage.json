@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/SelfieImage/SelfieImage.jsonld"
+      "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmUV9bVQ433m5ejjgqodQ4kfWqMMzFCwJqcqRhzSfENEMX"
     },
     "type": "SelfieImage",
-    "version": "4.1.2"
+    "version": "4.1.3-new-version-schemas-19-02-2025-1739981028740"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "Selfie Image schema",
