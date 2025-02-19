@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmUV9bVQ433m5ejjgqodQ4kfWqMMzFCwJqcqRhzSfENEMX"
+      "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/null"
     },
     "type": "SelfieImage",
-    "version": "4.0.1"
+    "version": "4.0.2"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "Selfie Image schema",
