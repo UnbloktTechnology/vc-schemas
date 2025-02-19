@@ -1,10 +1,10 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmUFBpPnPanYZPcRKRnGFZeyYSpXx1L3XNngowjRtQFzrD"
+      "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/null"
     },
     "type": "IDInformation",
-    "version": "4.0.2-grmkris-patch-1-1739964049550"
+    "version": "4.0.2"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDInformation schema",
