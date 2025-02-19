@@ -13,89 +13,33 @@ jobs:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     outputs:
       polygon-id: ${{ steps.changes.outputs.polygon-id }}
-      tfhe: ${{ steps.changes.outputs.tfhe }}
+      ipfs: ${{ steps.ipfs_changes.outputs.ipfs }}
     steps:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.NPM_TOKEN }}
 
-      - name: Check for changes in polygon-id and tfhe directories
+      - name: Check for changes in polygon-id directory
         uses: dorny/paths-filter@v3
         id: changes
         with:
          filters: |
            polygon-id:
              - 'polygon-id/**'
-           tfhe:
-             - 'tfhe/**'
 
-  version-bump:
-    name: Bump Version
-    needs: setup-job
-    if: |
-      github.event.pull_request.merged && 
-      github.event.pull_request.base.ref == 'development' && 
-      (needs.setup-job.outputs.polygon-id == 'true' || needs.setup-job.outputs.tfhe == 'true')
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+      - name: Check for changes in ipfs directory
+        uses: dorny/paths-filter@v3
+        id: ipfs_changes
         with:
-          token: ${{ secrets.NPM_TOKEN }}
-          
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22'
-
-      - name: Install dependencies
-        run: npm install semver
-
-      - name: Bump version in affected directories
-        run: |
-          if [[ "${{ needs.setup-job.outputs.polygon-id }}" == "true" ]]; then
-            echo "Bumping version in polygon-id schemas"
-            find polygon-id -name "*.json" -type f | while read -r file; do
-              if [[ "$file" != *".jsonld" ]]; then
-                version=$(jq -r '.$metadata.version' "$file")
-                new_version=$(node -e "console.log(require('semver').inc('$version', 'patch'))")
-                tmp=$(mktemp)
-                jq --arg v "$new_version" '.$metadata.version = $v' "$file" > "$tmp"
-                mv "$tmp" "$file"
-                echo "Updated $file to version $new_version"
-              fi
-            done
-          fi
-
-          if [[ "${{ needs.setup-job.outputs.tfhe }}" == "true" ]]; then
-            echo "Bumping version in tfhe schemas"
-            find tfhe -name "*.json" -type f | while read -r file; do
-              if [[ "$file" != *".jsonld" ]]; then
-                version=$(jq -r '.$metadata.version' "$file")
-                new_version=$(node -e "console.log(require('semver').inc('$version', 'patch'))")
-                tmp=$(mktemp)
-                jq --arg v "$new_version" '.$metadata.version = $v' "$file" > "$tmp"
-                mv "$tmp" "$file"
-                echo "Updated $file to version $new_version"
-              fi
-            done
-          fi
-
-      - name: Commit version changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "chore: bump version [skip ci]" || echo "No changes to commit"
-          git push
+          filters: |
+            ipfs:
+              - 'ipfs/**'
 
   deploy-dev:
     name: Deploy to Dev
-    needs: [setup-job, version-bump]
+    needs: setup-job
     secrets: inherit
-    if: |
-      github.event.pull_request.merged && 
-      github.event.pull_request.base.ref == 'development' && 
-      (needs.setup-job.outputs.polygon-id == 'true' || needs.setup-job.outputs.tfhe == 'true')
+    if: needs.setup-job.outputs.polygon-id == 'true' && github.event.pull_request.merged && github.event.pull_request.base.ref == 'development'
     uses: ./.github/workflows/deploy-dev.yml
     with:
       commit-sha: ${{ github.sha }}
@@ -106,7 +50,7 @@ jobs:
     name: Deploy to Staging
     needs: setup-job
     secrets: inherit
-    if: needs.setup-job.outputs.polygon-id == 'true' && github.event.pull_request.merged && github.event.pull_request.base.ref == 'staging'
+    if: needs.setup-job.outputs.ipfs == 'true' && github.event.pull_request.merged && github.event.pull_request.base.ref == 'staging'
     uses: ./.github/workflows/deploy-staging.yml
     with:
       commit-sha: ${{ github.sha }}
@@ -117,7 +61,7 @@ jobs:
     name: Deploy to Production
     needs: setup-job
     secrets: inherit
-    if: needs.setup-job.outputs.polygon-id == 'true' && github.event.pull_request.merged && github.event.pull_request.base.ref == 'main'
+    if: needs.setup-job.outputs.ipfs == 'true' && github.event.pull_request.merged && github.event.pull_request.base.ref == 'main'
     uses: ./.github/workflows/deploy-prod.yml
     with:
       commit-sha: ${{ github.sha }}
