@@ -161,7 +161,7 @@ jobs:
             "lock_branch":false,
             "allow_fork_syncing":true
             }' \
-            https://api.github.com/repos/NexeraProtocol/vc-schemas/branches/development/protection
+            https://api.github.com/repos/UnbloktTechnology/vc-schemas/branches/development/protection
 
       - name: Commit & Push changes
         uses: actions-js/push@master
@@ -199,7 +199,7 @@ jobs:
             "lock_branch":false,
             "allow_fork_syncing":true
             }' \
-            https://api.github.com/repos/NexeraProtocol/vc-schemas/branches/development/protection
+            https://api.github.com/repos/UnbloktTechnology/vc-schemas/branches/development/protection
 
 
       - name: Upload schemas to Polygon issuer
