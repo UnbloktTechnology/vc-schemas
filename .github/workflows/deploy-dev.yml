@@ -111,9 +111,22 @@ jobs:
           for file in $(find ipfs/ -type f -name "*.jsonld"); do
             echo "JsonLD file: $file"
 
+            base="${file%.json}"
+            # Get the current timestamp (e.g., YYYYMMDD_HHMMSS format)
+            timestamp=$(date +"%Y%m%d_%H%M%S")
+            # Rename the file with timestamp before .json
+            new_file="${base}_${timestamp}.json"
+            # Rename the file
+            mv "$file" "$new_file"
+            # Output the renamed file
+            echo "Renamed: $file -> $new_file"
+
             # Upload json
-            response=$(curl --location "https://api.quicknode.com/ipfs/rest/v1/s3/put-object" -X POST -F Body=@"$file" -F Key="$file" -F ContentType="application/json" -H "x-api-key: ${{ secrets.QUICKNODE_API_KEY }}")
+            response=$(curl --location "https://api.quicknode.com/ipfs/rest/v1/s3/put-object" -X POST -F Body=@"$new_file" -F Key="$new_file" -F ContentType="application/json" -H "x-api-key: ${{ secrets.QUICKNODE_API_KEY }}")
             echo "$response"
+          
+            # Rename it back
+            mv "$new_file" "$file"
           
             # Parse HASH from uploaded file
             ipfs_hash=$(echo "$response" | jq -r '.pin.cid')
