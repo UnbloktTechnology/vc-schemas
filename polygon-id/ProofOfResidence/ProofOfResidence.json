@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/ProofOfResidence/ProofOfResidence.jsonld"
     },
     "type": "ProofOfResidence",
-    "version": "4.0.1"
+    "version": "4.0.2"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A proof of residence credential",
@@ -311,7 +311,8 @@
             "Internet_bill",
             "Electricity_bill",
             "Rent_agreement",
-            "Bank_statement"
+            "Bank_statement",
+            "Not_specified"
           ]
         },
         "entryDate": {
