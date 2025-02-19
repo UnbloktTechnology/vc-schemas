@@ -311,7 +311,8 @@
             "Internet_bill",
             "Electricity_bill",
             "Rent_agreement",
-            "Bank_statement"
+            "Bank_statement",
+            "Not_specified"
           ]
         },
         "entryDate": {
