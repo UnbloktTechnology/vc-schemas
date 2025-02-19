@@ -4,7 +4,7 @@
       "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmWEa2nNHLP3bsFYDGZbpLuM42J8krpEhjsuDkT4Q19VWf"
     },
     "type": "ProofOfResidence",
-    "version": "4.1.4"
+    "version": "4.1.6"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A proof of residence credential",

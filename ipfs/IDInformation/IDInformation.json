@@ -4,7 +4,7 @@
       "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmUFBpPnPanYZPcRKRnGFZeyYSpXx1L3XNngowjRtQFzrD"
     },
     "type": "IDInformation",
-    "version": "4.1.4"
+    "version": "4.1.6"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDInformation schema",
