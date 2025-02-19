@@ -1,14 +1,11 @@
 {
   "$metadata": {
-    "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/IDInformation/IDInformation.jsonld"
-    },
-    "type": "IDInformation",
+    "type": "IDInformationTfhe",
     "version": "4.1.2"
   },
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "IDInformation schema",
-  "title": "IDInformation",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "IDInformationTfhe schema",
+  "title": "IDInformationTfhe",
   "properties": {
     "credentialSubject": {
       "description": "Stores the data of the credential",
@@ -28,13 +25,15 @@
           "description": "Stores the DID of the subject that owns the credential",
           "title": "Credential subject ID",
           "format": "uri",
-          "type": "string"
+          "type": "string",
+          "bytesSize": 0
         },
         "journeyId": {
           "description": "Journey ID of when credential was generated",
           "title": "Journey ID",
           "type": "string",
-          "format": "uuid"
+          "format": "uuid",
+          "bytesSize": 0
         },
         "reviewAnswer": {
           "description": "Review result from kyc provider",
@@ -44,7 +43,13 @@
             "RED",
             "YELLOW",
             "GREEN"
-          ]
+          ],
+          "valueMap": {
+            "RED": 1,
+            "YELLOW": 2,
+            "GREEN": 3
+          },
+          "bytesSize": 8
         },
         "reviewRejectType": {
           "description": "Review reject type",
@@ -53,7 +58,12 @@
           "enum": [
             "FINAL",
             "RETRY"
-          ]
+          ],
+          "valueMap": {
+            "FINAL": 1,
+            "RETRY": 2
+          },
+          "bytesSize": 8
         },
         "reviewRejectLabels": {
           "description": "Reject labels",
@@ -126,8 +136,75 @@
               "THIRD_PARTY_INVOLVED",
               "CHECK_UNAVAILABLE",
               "INCORRECT_SOCIAL_NUMBER"
-            ]
-          }
+            ],
+            "valueMap": {
+              "FORGERY": 1,
+              "DOCUMENT_TEMPLATE": 2,
+              "LOW_QUALITY": 3,
+              "SPAM": 4,
+              "NOT_DOCUMENT": 5,
+              "SELFIE_MISMATCH": 6,
+              "ID_INVALID": 7,
+              "FOREIGNER": 8,
+              "DUPLICATE": 9,
+              "BAD_AVATAR": 10,
+              "WRONG_USER_REGION": 11,
+              "INCOMPLETE_DOCUMENT": 12,
+              "BLACKLIST": 13,
+              "BLOCKLIST": 14,
+              "UNSATISFACTORY_PHOTOS": 15,
+              "DOCUMENT_PAGE_MISSING": 16,
+              "DOCUMENT_DAMAGED": 17,
+              "REGULATIONS_VIOLATIONS": 18,
+              "INCONSISTENT_PROFILE": 19,
+              "PROBLEMATIC_APPLICANT_DATA": 20,
+              "ADDITIONAL_DOCUMENT_REQUIRED": 21,
+              "AGE_REQUIREMENT_MISMATCH": 22,
+              "EXPERIENCE_REQUIREMENT_MISMATCH": 23,
+              "CRIMINAL": 24,
+              "WRONG_ADDRESS": 25,
+              "GRAPHIC_EDITOR": 26,
+              "DOCUMENT_DEPRIVED": 27,
+              "COMPROMISED_PERSONS": 28,
+              "PEP": 29,
+              "ADVERSE_MEDIA": 30,
+              "FRAUDULENT_PATTERNS": 31,
+              "SANCTIONS": 32,
+              "NOT_ALL_CHECKS_COMPLETED": 33,
+              "FRONT_SIDE_MISSING": 34,
+              "BACK_SIDE_MISSING": 35,
+              "SCREENSHOTS": 36,
+              "BLACK_AND_WHITE": 37,
+              "INCOMPATIBLE_LANGUAGE": 38,
+              "EXPIRATION_DATE": 39,
+              "UNFILLED_ID": 40,
+              "BAD_SELFIE": 41,
+              "BAD_VIDEO_SELFIE": 42,
+              "BAD_FACE_MATCHING": 43,
+              "BAD_PROOF_OF_IDENTITY": 44,
+              "BAD_PROOF_OF_ADDRESS": 45,
+              "BAD_PROOF_OF_PAYMENT": 46,
+              "SELFIE_WITH_PAPER": 47,
+              "FRAUDULENT_LIVENESS": 48,
+              "OTHER": 49,
+              "REQUESTED_DATA_MISMATCH": 50,
+              "OK": 51,
+              "COMPANY_NOT_DEFINED_STRUCTURE": 52,
+              "COMPANY_NOT_DEFINED_BENEFICIARIES": 53,
+              "COMPANY_NOT_VALIDATED_BENEFICIARIES": 54,
+              "COMPANY_NOT_DEFINED_REPRESENTATIVES": 55,
+              "COMPANY_NOT_VALIDATED_REPRESENTATIVES": 56,
+              "APPLICANT_INTERRUPTED_INTERVIEW": 57,
+              "DOCUMENT_MISSING": 58,
+              "UNSUITABLE_ENV": 59,
+              "CONNECTION_INTERRUPTED": 60,
+              "UNSUPPORTED_LANGUAGE": 61,
+              "THIRD_PARTY_INVOLVED": 62,
+              "CHECK_UNAVAILABLE": 63,
+              "INCORRECT_SOCIAL_NUMBER": 64
+            }
+          },
+          "bytesSize": 0
         },
         "documentType": {
           "description": "Type of the document provided by the credential subject",
@@ -153,18 +230,42 @@
             "BANK_CARD",
             "COVID_VACCINATION_FORM",
             "OTHER"
-          ]
+          ],
+          "valueMap": {
+            "ID_CARD": 1,
+            "PASSPORT": 2,
+            "DRIVERS": 3,
+            "RESIDENCE_PERMIT": 4,
+            "UTILITY_BILL": 5,
+            "SELFIE": 6,
+            "VIDEO_SELFIE": 7,
+            "PROFILE_IMAGE": 8,
+            "ID_DOC_PHOTO": 9,
+            "AGREEMENT": 10,
+            "CONTRACT": 11,
+            "DRIVERS_TRANSLATION": 12,
+            "INVESTOR_DOC": 13,
+            "VEHICLE_REGISTRATION_CERTIFICATE": 14,
+            "INCOME_SOURCE": 15,
+            "PAYMENT_METHOD": 16,
+            "BANK_CARD": 17,
+            "COVID_VACCINATION_FORM": 18,
+            "OTHER": 19
+          },
+          "bytesSize": 8
         },
         "entryDate": {
           "description": "Entry date associated with the credential",
           "title": "Entry Date in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day",
-          "type": "integer"
+          "type": "integer",
+          "bytesSize": 32
         },
         "entryTime": {
           "description": "Entry time associated with the credential",
           "title": "Entry Time",
           "type": "string",
-          "format": "time"
+          "format": "time",
+          "bytesSize": 512
         },
         "personalData": {
           "description": "Original data extracted by the provider",
@@ -174,34 +275,40 @@
             "firstName": {
               "description": "First name of the credential subject",
               "title": "First Name",
-              "type": "string"
+              "type": "string",
+              "bytesSize": 512
             },
             "middleName": {
               "description": "Middle name of the credential subject",
               "title": "Middle Name",
-              "type": "string"
+              "type": "string",
+              "bytesSize": 512
             },
             "lastName": {
               "description": "Last name of the credential subject",
               "title": "Last Name",
-              "type": "string"
+              "type": "string",
+              "bytesSize": 512
             },
             "gender": {
               "description": "Gender of the credential subject",
               "title": "Gender",
-              "type": "string"
+              "type": "string",
+              "bytesSize": 512
             },
             "age": {
               "description": "Age of the credential subject",
               "title": "Age",
               "type": "integer",
               "minimum": 0,
-              "maximum": 125
+              "maximum": 125,
+              "bytesSize": 8
             },
             "citizenship": {
               "title": "Citizenship",
               "description": "Citizenship status of the credential subject - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
               "type": "string",
+              "bytesSize": 32,
               "enum": [
                 "AFG",
                 "ALB",
@@ -460,6 +567,7 @@
               "description": "Country of the credential subject - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
               "title": "Country",
               "type": "string",
+              "bytesSize": 32,
               "enum": [
                 "AFG",
                 "ALB",
@@ -717,17 +825,20 @@
             "fullName": {
               "description": "Full name of the credential subject",
               "title": "Full Name",
-              "type": "string"
+              "type": "string",
+              "bytesSize": 2048
             },
             "birthDate": {
               "title": "Birth Date",
               "description": "Birth Date of the credential subject in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day",
-              "type": "integer"
+              "type": "integer",
+              "bytesSize": 32
             },
             "countryOfBirth": {
               "title": "Country of Birth",
               "description": "Country of birth of the credential subject - - ISO 3166-1 alpha-3 country code (https://www.iban.com/country-codes)",
               "type": "string",
+              "bytesSize": 32,
               "enum": [
                 "AFG",
                 "ALB",
@@ -985,6 +1096,7 @@
             "stateOfBirth": {
               "title": "State of Birth",
               "type": "string",
+              "bytesSize": 512,
               "description": "State of birth of the credential subject"
             }
           }
@@ -992,78 +1104,30 @@
         "isSandbox": {
           "description": "Indicates if the credential was generated in a sandbox environment",
           "title": "Is Sandbox",
-          "type": "boolean"
+          "type": "boolean",
+          "bytesSize": 0
         }
       }
-    },
-    "@context": {
-      "type": [
-        "string",
-        "array",
-        "object"
-      ]
     },
     "expirationDate": {
       "format": "date-time",
-      "type": "string"
+      "type": "string",
+      "bytesSize": 0
     },
     "id": {
-      "type": "string"
+      "type": "string",
+      "bytesSize": 0
     },
     "issuanceDate": {
       "format": "date-time",
-      "type": "string"
-    },
-    "issuer": {
-      "type": [
-        "string",
-        "object"
-      ],
-      "format": "uri",
-      "properties": {
-        "id": {
-          "format": "uri",
-          "type": "string"
-        }
-      },
-      "required": [
-        "id"
-      ]
-    },
-    "type": {
-      "type": [
-        "string",
-        "array"
-      ],
-      "items": {
-        "type": "string"
-      }
-    },
-    "credentialSchema": {
-      "properties": {
-        "id": {
-          "format": "uri",
-          "type": "string"
-        },
-        "type": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "id",
-        "type"
-      ],
-      "type": "object"
+      "type": "string",
+      "bytesSize": 0
     }
   },
   "required": [
     "credentialSubject",
-    "@context",
     "id",
-    "issuanceDate",
-    "issuer",
-    "type",
-    "credentialSchema"
+    "issuanceDate"
   ],
   "type": "object"
 }

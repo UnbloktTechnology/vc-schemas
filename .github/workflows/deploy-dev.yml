@@ -71,6 +71,26 @@ jobs:
             # Perform update
             jq '.["$metadata"].version = "'"$target"'"' "$json_file_path" > temp.json && mv temp.json "$json_file_path"
           done
+          
+          # Go through all files in the tfhe/ folder
+          for file in $(find tfhe/ -type f -name "*.json"); do
+            echo "JSON file: $file"
+          
+            current=$(cat $file | jq -r '.["$metadata"].version')
+            target=$(semver bump patch "$current")
+          
+            echo "$current"
+            echo "$target"
+          
+            # Set the json file path
+            replacement=".json"
+            json_file_path="${file/.json/$replacement}"
+            echo "JSON file: $json_file_path"
+          
+            # Perform update
+            jq '.["$metadata"].version = "'"$target"'"' "$json_file_path" > temp.json && mv temp.json "$json_file_path"
+          done
+
 
       - name: Copy schemas to IPFS directory
         continue-on-error: true
@@ -80,6 +100,7 @@ jobs:
           mkdir ipfs
           touch ipfs/.gitkeep
           cp -r polygon-id/* ipfs/
+          cp -r tfhe/* ipfs/
           ls -al ipfs/
           ls -R ipfs/
 
@@ -97,6 +118,12 @@ jobs:
             # Parse HASH from uploaded file
             ipfs_hash=$(echo "$response" | jq -r '.pin.cid')
             echo "$ipfs_hash"
+
+            # Check if ipfs_hash is empty or null
+            if [[ -z "$ipfs_hash" || "$ipfs_hash" == "null" ]]; then
+              echo "IPFS hash is null or empty. Skipping $file..."
+              continue
+            fi
 
             # Set the json file path
             replacement=".json"

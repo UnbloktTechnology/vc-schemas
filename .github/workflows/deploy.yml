@@ -12,20 +12,21 @@ jobs:
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     outputs:
-      polygon-id: ${{ steps.changes.outputs.polygon-id }}
+      schemas: ${{ steps.changes.outputs.schemas }}
       ipfs: ${{ steps.ipfs_changes.outputs.ipfs }}
     steps:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.NPM_TOKEN }}
 
-      - name: Check for changes in polygon-id directory
+      - name: Check for changes in all schema directories
         uses: dorny/paths-filter@v3
         id: changes
         with:
          filters: |
-           polygon-id:
+           schemas:
              - 'polygon-id/**'
+             - 'tfhe/**'
 
       - name: Check for changes in ipfs directory
         uses: dorny/paths-filter@v3
@@ -39,7 +40,7 @@ jobs:
     name: Deploy to Dev
     needs: setup-job
     secrets: inherit
-    if: needs.setup-job.outputs.polygon-id == 'true' && github.event.pull_request.merged && github.event.pull_request.base.ref == 'development'
+    if: needs.setup-job.outputs.schemas == 'true' && github.event.pull_request.merged && github.event.pull_request.base.ref == 'development'
     uses: ./.github/workflows/deploy-dev.yml
     with:
       commit-sha: ${{ github.sha }}
