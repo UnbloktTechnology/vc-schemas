@@ -4,7 +4,7 @@
       "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmUFBpPnPanYZPcRKRnGFZeyYSpXx1L3XNngowjRtQFzrD"
     },
     "type": "IDInformation",
-    "version": "4.1.7"
+    "version": "4.1.8"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDInformation schema",
@@ -79,6 +79,7 @@
               "UNSATISFACTORY_PHOTOS",
               "DOCUMENT_PAGE_MISSING",
               "DOCUMENT_DAMAGED",
+              "DIGITAL_DOCUMENT",
               "REGULATIONS_VIOLATIONS",
               "INCONSISTENT_PROFILE",
               "PROBLEMATIC_APPLICANT_DATA",
@@ -115,9 +116,16 @@
               "OK",
               "COMPANY_NOT_DEFINED_STRUCTURE",
               "COMPANY_NOT_DEFINED_BENEFICIARIES",
+              "COMPANY_NOT_VALIDATED_BENEFICIAL_OWNERS",
               "COMPANY_NOT_VALIDATED_BENEFICIARIES",
+              "COMPANY_NOT_VALIDATED_DIRECTORS",
               "COMPANY_NOT_DEFINED_REPRESENTATIVES",
               "COMPANY_NOT_VALIDATED_REPRESENTATIVES",
+              "COMPANY_INCORRECT_DATA",
+              "UNSUITABLE_DOCUMENT",
+              "OUTDATED_DOCUMENT_VERSION",
+              "COMPANY_NOT_DEFINED_OWNERSHIP_STRUCTURE",
+              "COMPANY_INACTIVE_ENTITY",
               "APPLICANT_INTERRUPTED_INTERVIEW",
               "DOCUMENT_MISSING",
               "UNSUITABLE_ENV",
@@ -125,6 +133,8 @@
               "UNSUPPORTED_LANGUAGE",
               "THIRD_PARTY_INVOLVED",
               "CHECK_UNAVAILABLE",
+              "DB_DATA_NOT_FOUND",
+              "DB_DATA_MISMATCH",
               "INCORRECT_SOCIAL_NUMBER"
             ]
           }
