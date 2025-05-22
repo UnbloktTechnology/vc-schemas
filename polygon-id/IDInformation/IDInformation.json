@@ -40,20 +40,13 @@
           "description": "Review result from kyc provider",
           "title": "Review Result",
           "type": "string",
-          "enum": [
-            "RED",
-            "YELLOW",
-            "GREEN"
-          ]
+          "enum": ["RED", "YELLOW", "GREEN"]
         },
         "reviewRejectType": {
           "description": "Review reject type",
           "title": "Review Reject Type",
           "type": "string",
-          "enum": [
-            "FINAL",
-            "RETRY"
-          ]
+          "enum": ["FINAL", "RETRY"]
         },
         "reviewRejectLabels": {
           "description": "Reject labels",
@@ -79,6 +72,7 @@
               "UNSATISFACTORY_PHOTOS",
               "DOCUMENT_PAGE_MISSING",
               "DOCUMENT_DAMAGED",
+              "DIGITAL_DOCUMENT",
               "REGULATIONS_VIOLATIONS",
               "INCONSISTENT_PROFILE",
               "PROBLEMATIC_APPLICANT_DATA",
@@ -115,9 +109,16 @@
               "OK",
               "COMPANY_NOT_DEFINED_STRUCTURE",
               "COMPANY_NOT_DEFINED_BENEFICIARIES",
+              "COMPANY_NOT_VALIDATED_BENEFICIAL_OWNERS",
               "COMPANY_NOT_VALIDATED_BENEFICIARIES",
+              "COMPANY_NOT_VALIDATED_DIRECTORS",
               "COMPANY_NOT_DEFINED_REPRESENTATIVES",
               "COMPANY_NOT_VALIDATED_REPRESENTATIVES",
+              "COMPANY_INCORRECT_DATA",
+              "UNSUITABLE_DOCUMENT",
+              "OUTDATED_DOCUMENT_VERSION",
+              "COMPANY_NOT_DEFINED_OWNERSHIP_STRUCTURE",
+              "COMPANY_INACTIVE_ENTITY",
               "APPLICANT_INTERRUPTED_INTERVIEW",
               "DOCUMENT_MISSING",
               "UNSUITABLE_ENV",
@@ -125,6 +126,8 @@
               "UNSUPPORTED_LANGUAGE",
               "THIRD_PARTY_INVOLVED",
               "CHECK_UNAVAILABLE",
+              "DB_DATA_NOT_FOUND",
+              "DB_DATA_MISMATCH",
               "INCORRECT_SOCIAL_NUMBER"
             ]
           }
@@ -997,11 +1000,7 @@
       }
     },
     "@context": {
-      "type": [
-        "string",
-        "array",
-        "object"
-      ]
+      "type": ["string", "array", "object"]
     },
     "expirationDate": {
       "format": "date-time",
@@ -1015,10 +1014,7 @@
       "type": "string"
     },
     "issuer": {
-      "type": [
-        "string",
-        "object"
-      ],
+      "type": ["string", "object"],
       "format": "uri",
       "properties": {
         "id": {
@@ -1026,15 +1022,10 @@
           "type": "string"
         }
       },
-      "required": [
-        "id"
-      ]
+      "required": ["id"]
     },
     "type": {
-      "type": [
-        "string",
-        "array"
-      ],
+      "type": ["string", "array"],
       "items": {
         "type": "string"
       }
@@ -1049,10 +1040,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "id",
-        "type"
-      ],
+      "required": ["id", "type"],
       "type": "object"
     }
   },
