@@ -4,7 +4,7 @@
       "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmTYHuqTLNRyfUjncDNwd1KKw9sc7DiewTm1FJ4RPHYqcW"
     },
     "type": "IDImage",
-    "version": "4.1.6"
+    "version": "4.1.7"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "IDImage schema",
@@ -94,25 +94,42 @@
           "title": "Media Type",
           "description": "Media type of the front of the document (e.g. image/jpeg, image/png, application/pdf)",
           "type": "string",
-          "enum": ["image/jpeg", "image/jpg", "image/png", "application/pdf"]
+          "enum": [
+            "image/jpeg",
+            "image/jpg",
+            "image/png",
+            "application/pdf"
+          ]
         },
         "mediaType_back": {
           "title": "Media Type",
           "description": "Media type of the back of the document (e.g. image/jpeg, image/png, application/pdf)",
           "type": "string",
-          "enum": ["image/jpeg", "image/jpg", "image/png", "application/pdf"]
+          "enum": [
+            "image/jpeg",
+            "image/jpg",
+            "image/png",
+            "application/pdf"
+          ]
         },
         "reviewAnswer": {
           "description": "Review answer from kyc provider",
           "title": "Review Answer",
           "type": "string",
-          "enum": ["RED", "YELLOW", "GREEN"]
+          "enum": [
+            "RED",
+            "YELLOW",
+            "GREEN"
+          ]
         },
         "reviewRejectType": {
           "description": "Review reject type",
           "title": "Review Reject Type",
           "type": "string",
-          "enum": ["FINAL", "RETRY"]
+          "enum": [
+            "FINAL",
+            "RETRY"
+          ]
         },
         "reviewRejectLabels": {
           "description": "Reject labels",
@@ -196,7 +213,11 @@
       }
     },
     "@context": {
-      "type": ["string", "array", "object"]
+      "type": [
+        "string",
+        "array",
+        "object"
+      ]
     },
     "expirationDate": {
       "format": "date-time",
@@ -210,7 +231,10 @@
       "type": "string"
     },
     "issuer": {
-      "type": ["string", "object"],
+      "type": [
+        "string",
+        "object"
+      ],
       "format": "uri",
       "properties": {
         "id": {
@@ -218,10 +242,15 @@
           "type": "string"
         }
       },
-      "required": ["id"]
+      "required": [
+        "id"
+      ]
     },
     "type": {
-      "type": ["string", "array"],
+      "type": [
+        "string",
+        "array"
+      ],
       "items": {
         "type": "string"
       }
@@ -236,7 +265,10 @@
           "type": "string"
         }
       },
-      "required": ["id", "type"],
+      "required": [
+        "id",
+        "type"
+      ],
       "type": "object"
     }
   },
