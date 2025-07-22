@@ -996,6 +996,31 @@
               "title": "State of Birth",
               "type": "string",
               "description": "State of birth of the credential subject"
+            },
+            "number": {
+              "title": "Document Number",
+              "type": "string",
+              "description": "Document Number (Document Identifier)"
+            },
+            "validUntil": {
+              "title": "Document Valid Until",
+              "type": "number",
+              "description": "Document Valid Until in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day"
+            },
+            "issuedDate": {
+                "title": "Document Issued Date",
+                "type": "number",
+                "description": "Document Issued Date in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day"
+            },
+            "mrzLine1": {
+              "title": "MRZ Line 1",
+              "type": "string",
+              "description": "Machine Readable Zone Line 1"
+            },
+            "mrzLine2": {
+              "title": "MRZ Line 2",
+              "type": "string",
+              "description": "Machine Readable Zone Line 2"
             }
           }
         },
