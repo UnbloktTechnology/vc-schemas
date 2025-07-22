@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/IDInformation/IDInformation.jsonld"
     },
     "type": "IDInformation",
-    "version": "4.1.8-feature/core-3621-add-more-info-to-id-docs-1753197832234"
+    "version": "4.1.8"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDInformation schema",
@@ -1008,9 +1008,9 @@
               "description": "Document Valid Until in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day"
             },
             "issuedDate": {
-              "title": "Document Issued Date",
-              "type": "number",
-              "description": "Document Issued Date in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day"
+                "title": "Document Issued Date",
+                "type": "number",
+                "description": "Document Issued Date in integer format of yyyymmdd, example: 20231226 2023 year, 12-December, 26-day"
             },
             "mrzLine1": {
               "title": "MRZ Line 1",
