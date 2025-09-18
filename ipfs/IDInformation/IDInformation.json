@@ -4,7 +4,7 @@
       "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmUFBpPnPanYZPcRKRnGFZeyYSpXx1L3XNngowjRtQFzrD"
     },
     "type": "IDInformation",
-    "version": "4.1.11"
+    "version": "4.1.11-feat-CORE-3666-video-ident-statuses-1758209986738"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDInformation schema",
@@ -135,7 +135,24 @@
               "CHECK_UNAVAILABLE",
               "DB_DATA_NOT_FOUND",
               "DB_DATA_MISMATCH",
-              "INCORRECT_SOCIAL_NUMBER"
+              "INCORRECT_SOCIAL_NUMBER",
+              "NO_APPLICANT",
+              "NO_SUITABLE_DOCS",
+              "NOT_ALONE",
+              "CONNECTION_ISSUES",
+              "CAMERA_OR_LIGHTING_ISSUES",
+              "SOUND_ISSUES",
+              "PHONE_VERIFICATION_ISSUES",
+              "OTHER_VI_ISSUES",
+              "REFUSED_TO_CONTINUE",
+              "VIDEO_FILTERS_OR_MASKS",
+              "SUPPORTED_LANGUAGE_IS_NOT_AVAILABLE",
+              "ADDITIOANL_DATA_REQUIRED",
+              "VI_ATTEMPTS_LIMIT_REACHED",
+              "BEHAVIOR",
+              "PERSON_MISMATCH",
+              "THIRD_PARTY_GUIDANCE",
+              "SPONSORED_VERIFICATION"
             ]
           }
         },

@@ -4,7 +4,7 @@
       "jsonLdContext": "https://raw.githubusercontent.com/NexeraProtocol/vc-schemas/development/polygon-id/IDInformation/IDInformation.jsonld"
     },
     "type": "IDInformation",
-    "version": "4.1.11"
+    "version": "4.1.11-feat-CORE-3666-video-ident-statuses-1758209986738"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IDInformation schema",
