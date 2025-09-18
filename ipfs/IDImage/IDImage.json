@@ -4,7 +4,7 @@
       "jsonLdContext": "https://quicknode.quicknode-ipfs.com/ipfs/QmTYHuqTLNRyfUjncDNwd1KKw9sc7DiewTm1FJ4RPHYqcW"
     },
     "type": "IDImage",
-    "version": "4.1.11-feat-CORE-3666-video-ident-statuses-1758209986738"
+    "version": "4.1.11"
   },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "IDImage schema",
