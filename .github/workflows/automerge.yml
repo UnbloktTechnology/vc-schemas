@@ -99,7 +99,7 @@ jobs:
             --output /dev/null
 
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.event.pull_request.base.ref }}
           submodules: recursive
