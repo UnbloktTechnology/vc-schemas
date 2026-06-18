@@ -30,7 +30,7 @@ jobs:
           app_id: ${{ secrets.MERGE_BOT_APP_ID }}
           private_key: ${{ secrets.MERGE_BOT_PRIVATE_KEY }}
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           token: ${{ steps.generate_token.outputs.token }}
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of personal token
